@@ -1,7 +1,7 @@
 r"""Wrapper for fpdf_annot.h
 
 Generated with:
-/usr/local/bin/ctypesgen -lpdfium -L lib/ include/fpdf_annot.h include/fpdf_attachment.h include/fpdf_catalog.h include/fpdf_dataavail.h include/fpdf_doc.h include/fpdf_edit.h include/fpdf_ext.h include/fpdf_flatten.h include/fpdf_formfill.h include/fpdf_fwlevent.h include/fpdf_javascript.h include/fpdf_ppo.h include/fpdf_progressive.h include/fpdf_save.h include/fpdf_searchex.h include/fpdf_signature.h include/fpdf_structtree.h include/fpdf_sysfontinfo.h include/fpdf_text.h include/fpdf_thumbnail.h include/fpdf_transformpage.h include/fpdfview.h -o pdfium.py
+/usr/local/bin/ctypesgen -lpdfium -L lib/ include/fpdf_annot.h include/fpdf_attachment.h include/fpdf_catalog.h include/fpdf_dataavail.h include/fpdf_doc.h include/fpdf_edit.h include/fpdf_ext.h include/fpdf_flatten.h include/fpdf_formfill.h include/fpdf_fwlevent.h include/fpdf_javascript.h include/fpdf_ppo.h include/fpdf_progressive.h include/fpdf_save.h include/fpdf_searchex.h include/fpdf_signature.h include/fpdf_structtree.h include/fpdf_sysfontinfo.h include/fpdf_text.h include/fpdf_thumbnail.h include/fpdf_transformpage.h include/fpdfview.h -o pypdfium.py
 
 Do not modify this file.
 """
@@ -808,7 +808,7 @@ del loaderclass
 
 # End loader
 
-add_library_search_dirs(['pypdfium/linux/', 'pypdfium/mac/', 'pypdfium/win/'])
+add_library_search_dirs(['lib/'])
 
 # Begin libraries
 _libs["pdfium"] = load_library("pdfium")

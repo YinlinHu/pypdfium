@@ -1,14 +1,4 @@
-# PyPDFium
 
-
-## Installation
-```bash
-pip install pypdfium
-```
-
-## Quick start
-
-```python
 import sys
 from PIL import Image
 
@@ -48,4 +38,3 @@ if __name__ == "__main__":
     PDFIUM.FPDF_ClosePage(page)
     
     PDFIUM.FPDF_CloseDocument(doc)
-```

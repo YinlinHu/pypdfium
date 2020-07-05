@@ -1,3 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = '0.0.01'
+from pypdfium.pypdfium import *
+
+__version__ = '0.0.02'
+

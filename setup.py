@@ -10,11 +10,11 @@ setup(
       url='',
       author='Yinlin Hu',
       author_email='huyinlin@gmail.com',
-      license='MIT',
+      license='MIT License',
       packages=['pypdfium'],
       install_requires=[''], #external packages as dependencies
       classifiers=[
-      'License :: OSI Approved :: MIT',
+      'License :: OSI Approved :: MIT License',
       'Operating System :: POSIX :: Linux',
       'Programming Language :: Python :: 3',
       ],
