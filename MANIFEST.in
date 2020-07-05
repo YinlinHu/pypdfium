@@ -1,0 +1,3 @@
+include pypdfium/pdfium_version.txt
+include pypdfium/linux/pdfium
+
