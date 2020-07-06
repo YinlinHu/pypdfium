@@ -22,6 +22,8 @@ setup(
       classifiers=[
       'License :: OSI Approved :: MIT License',
       'Operating System :: POSIX :: Linux',
+      'Operating System :: MacOS :: MacOS X',
+      'Operating System :: Microsoft :: Windows',
       'Programming Language :: Python :: 3',
       ],
       include_package_data=True,
