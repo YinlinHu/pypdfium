@@ -24,7 +24,10 @@ if __name__ == "__main__":
     # render to bitmap
     bitmap = PDFIUM.FPDFBitmap_Create(width, height, 0)
     PDFIUM.FPDFBitmap_FillRect(bitmap, 0, 0, width, height, 0xFFFFFFFF)
-    PDFIUM.FPDF_RenderPageBitmap(bitmap, page, 0, 0, width, height, 0, PDFIUM.FPDF_LCD_TEXT | PDFIUM.FPDF_ANNOT)
+    PDFIUM.FPDF_RenderPageBitmap(
+        bitmap, page, 0, 0, width, height, 0, 
+        PDFIUM.FPDF_LCD_TEXT | PDFIUM.FPDF_ANNOT
+        )
     
     # retrieve data from bitmap
     buffer = PDFIUM.FPDFBitmap_GetBuffer(bitmap)
