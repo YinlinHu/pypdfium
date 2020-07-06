@@ -1,6 +1,6 @@
 # PyPDFium
 
-A simple python wrapper for PDFium.
+A simple python wrapper for [PDFium](https://opensource.google/projects/pdfium).
 
 ## Installation
 ```bash
