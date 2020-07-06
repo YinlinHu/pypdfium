@@ -2,5 +2,5 @@
 
 from pypdfium.pypdfium import *
 
-__version__ = '0.0.03'
+__version__ = '0.0.04'
 
