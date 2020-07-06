@@ -1,7 +1,7 @@
 r"""Wrapper for fpdf_annot.h
 
 Generated with:
-/usr/local/bin/ctypesgen -lpdfium -L lib/ include/fpdf_annot.h include/fpdf_attachment.h include/fpdf_catalog.h include/fpdf_dataavail.h include/fpdf_doc.h include/fpdf_edit.h include/fpdf_ext.h include/fpdf_flatten.h include/fpdf_formfill.h include/fpdf_fwlevent.h include/fpdf_javascript.h include/fpdf_ppo.h include/fpdf_progressive.h include/fpdf_save.h include/fpdf_searchex.h include/fpdf_signature.h include/fpdf_structtree.h include/fpdf_sysfontinfo.h include/fpdf_text.h include/fpdf_thumbnail.h include/fpdf_transformpage.h include/fpdfview.h -o pypdfium.py
+/usr/local/bin/ctypesgen -lpdfium -L lib include/fpdf_annot.h include/fpdf_attachment.h include/fpdf_catalog.h include/fpdf_dataavail.h include/fpdf_doc.h include/fpdf_edit.h include/fpdf_ext.h include/fpdf_flatten.h include/fpdf_formfill.h include/fpdf_fwlevent.h include/fpdf_javascript.h include/fpdf_ppo.h include/fpdf_progressive.h include/fpdf_save.h include/fpdf_searchex.h include/fpdf_signature.h include/fpdf_structtree.h include/fpdf_sysfontinfo.h include/fpdf_text.h include/fpdf_thumbnail.h include/fpdf_transformpage.h include/fpdfview.h -o pypdfium.py
 
 Do not modify this file.
 """
@@ -444,7 +444,7 @@ def ord_if_char(value):
 # End preamble
 
 _libs = {}
-_libdirs = ['lib/']
+_libdirs = ['lib']
 
 # Begin loader
 
@@ -808,7 +808,7 @@ del loaderclass
 
 # End loader
 
-add_library_search_dirs(['lib/'])
+add_library_search_dirs(['lib'])
 
 # Begin libraries
 _libs["pdfium"] = load_library("pdfium")
@@ -959,56 +959,62 @@ class struct_fpdf_schhandle_t__(Structure):
 FPDF_SCHHANDLE = POINTER(struct_fpdf_schhandle_t__)# /home/yhu/pdfium/include/fpdfview.h: 73
 
 # /home/yhu/pdfium/include/fpdfview.h: 74
+class struct_fpdf_signature_t__(Structure):
+    pass
+
+FPDF_SIGNATURE = POINTER(struct_fpdf_signature_t__)# /home/yhu/pdfium/include/fpdfview.h: 74
+
+# /home/yhu/pdfium/include/fpdfview.h: 75
 class struct_fpdf_structelement_t__(Structure):
     pass
 
-FPDF_STRUCTELEMENT = POINTER(struct_fpdf_structelement_t__)# /home/yhu/pdfium/include/fpdfview.h: 74
+FPDF_STRUCTELEMENT = POINTER(struct_fpdf_structelement_t__)# /home/yhu/pdfium/include/fpdfview.h: 75
 
-# /home/yhu/pdfium/include/fpdfview.h: 75
+# /home/yhu/pdfium/include/fpdfview.h: 76
 class struct_fpdf_structtree_t__(Structure):
     pass
 
-FPDF_STRUCTTREE = POINTER(struct_fpdf_structtree_t__)# /home/yhu/pdfium/include/fpdfview.h: 75
+FPDF_STRUCTTREE = POINTER(struct_fpdf_structtree_t__)# /home/yhu/pdfium/include/fpdfview.h: 76
 
-# /home/yhu/pdfium/include/fpdfview.h: 76
+# /home/yhu/pdfium/include/fpdfview.h: 77
 class struct_fpdf_textpage_t__(Structure):
     pass
 
-FPDF_TEXTPAGE = POINTER(struct_fpdf_textpage_t__)# /home/yhu/pdfium/include/fpdfview.h: 76
+FPDF_TEXTPAGE = POINTER(struct_fpdf_textpage_t__)# /home/yhu/pdfium/include/fpdfview.h: 77
 
-# /home/yhu/pdfium/include/fpdfview.h: 77
+# /home/yhu/pdfium/include/fpdfview.h: 78
 class struct_fpdf_widget_t__(Structure):
     pass
 
-FPDF_WIDGET = POINTER(struct_fpdf_widget_t__)# /home/yhu/pdfium/include/fpdfview.h: 77
+FPDF_WIDGET = POINTER(struct_fpdf_widget_t__)# /home/yhu/pdfium/include/fpdfview.h: 78
 
-FPDF_BOOL = c_int# /home/yhu/pdfium/include/fpdfview.h: 80
+FPDF_BOOL = c_int# /home/yhu/pdfium/include/fpdfview.h: 81
 
-FPDF_RESULT = c_int# /home/yhu/pdfium/include/fpdfview.h: 81
+FPDF_RESULT = c_int# /home/yhu/pdfium/include/fpdfview.h: 82
 
-FPDF_DWORD = c_ulong# /home/yhu/pdfium/include/fpdfview.h: 82
+FPDF_DWORD = c_ulong# /home/yhu/pdfium/include/fpdfview.h: 83
 
-FS_FLOAT = c_float# /home/yhu/pdfium/include/fpdfview.h: 83
+FS_FLOAT = c_float# /home/yhu/pdfium/include/fpdfview.h: 84
 
-enum__FPDF_DUPLEXTYPE_ = c_int# /home/yhu/pdfium/include/fpdfview.h: 91
+enum__FPDF_DUPLEXTYPE_ = c_int# /home/yhu/pdfium/include/fpdfview.h: 92
 
-DuplexUndefined = 0# /home/yhu/pdfium/include/fpdfview.h: 91
+DuplexUndefined = 0# /home/yhu/pdfium/include/fpdfview.h: 92
 
-Simplex = (DuplexUndefined + 1)# /home/yhu/pdfium/include/fpdfview.h: 91
+Simplex = (DuplexUndefined + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
 
-DuplexFlipShortEdge = (Simplex + 1)# /home/yhu/pdfium/include/fpdfview.h: 91
+DuplexFlipShortEdge = (Simplex + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
 
-DuplexFlipLongEdge = (DuplexFlipShortEdge + 1)# /home/yhu/pdfium/include/fpdfview.h: 91
+DuplexFlipLongEdge = (DuplexFlipShortEdge + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
 
-FPDF_DUPLEXTYPE = enum__FPDF_DUPLEXTYPE_# /home/yhu/pdfium/include/fpdfview.h: 91
+FPDF_DUPLEXTYPE = enum__FPDF_DUPLEXTYPE_# /home/yhu/pdfium/include/fpdfview.h: 92
 
-FPDF_WCHAR = c_ushort# /home/yhu/pdfium/include/fpdfview.h: 94
+FPDF_WCHAR = c_ushort# /home/yhu/pdfium/include/fpdfview.h: 95
 
-FPDF_BYTESTRING = String# /home/yhu/pdfium/include/fpdfview.h: 98
+FPDF_BYTESTRING = String# /home/yhu/pdfium/include/fpdfview.h: 99
 
-FPDF_WIDESTRING = POINTER(c_ushort)# /home/yhu/pdfium/include/fpdfview.h: 102
+FPDF_WIDESTRING = POINTER(c_ushort)# /home/yhu/pdfium/include/fpdfview.h: 103
 
-# /home/yhu/pdfium/include/fpdfview.h: 110
+# /home/yhu/pdfium/include/fpdfview.h: 111
 class struct_FPDF_BSTR_(Structure):
     pass
 
@@ -1021,11 +1027,11 @@ struct_FPDF_BSTR_._fields_ = [
     ('len', c_int),
 ]
 
-FPDF_BSTR = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 110
+FPDF_BSTR = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 111
 
-FPDF_STRING = String# /home/yhu/pdfium/include/fpdfview.h: 119
+FPDF_STRING = String# /home/yhu/pdfium/include/fpdfview.h: 120
 
-# /home/yhu/pdfium/include/fpdfview.h: 136
+# /home/yhu/pdfium/include/fpdfview.h: 137
 class struct__FS_MATRIX_(Structure):
     pass
 
@@ -1046,9 +1052,9 @@ struct__FS_MATRIX_._fields_ = [
     ('f', c_float),
 ]
 
-FS_MATRIX = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 136
+FS_MATRIX = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 137
 
-# /home/yhu/pdfium/include/fpdfview.h: 139
+# /home/yhu/pdfium/include/fpdfview.h: 140
 class struct__FS_RECTF_(Structure):
     pass
 
@@ -1065,13 +1071,13 @@ struct__FS_RECTF_._fields_ = [
     ('bottom', c_float),
 ]
 
-FS_LPRECTF = POINTER(struct__FS_RECTF_)# /home/yhu/pdfium/include/fpdfview.h: 148
+FS_LPRECTF = POINTER(struct__FS_RECTF_)# /home/yhu/pdfium/include/fpdfview.h: 149
 
-FS_RECTF = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 148
+FS_RECTF = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 149
 
-FS_LPCRECTF = POINTER(FS_RECTF)# /home/yhu/pdfium/include/fpdfview.h: 151
+FS_LPCRECTF = POINTER(FS_RECTF)# /home/yhu/pdfium/include/fpdfview.h: 152
 
-# /home/yhu/pdfium/include/fpdfview.h: 154
+# /home/yhu/pdfium/include/fpdfview.h: 155
 class struct_FS_SIZEF_(Structure):
     pass
 
@@ -1084,13 +1090,13 @@ struct_FS_SIZEF_._fields_ = [
     ('height', c_float),
 ]
 
-FS_LPSIZEF = POINTER(struct_FS_SIZEF_)# /home/yhu/pdfium/include/fpdfview.h: 157
+FS_LPSIZEF = POINTER(struct_FS_SIZEF_)# /home/yhu/pdfium/include/fpdfview.h: 158
 
-FS_SIZEF = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 157
+FS_SIZEF = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 158
 
-FS_LPCSIZEF = POINTER(FS_SIZEF)# /home/yhu/pdfium/include/fpdfview.h: 160
+FS_LPCSIZEF = POINTER(FS_SIZEF)# /home/yhu/pdfium/include/fpdfview.h: 161
 
-# /home/yhu/pdfium/include/fpdfview.h: 163
+# /home/yhu/pdfium/include/fpdfview.h: 164
 class struct_FS_POINTF_(Structure):
     pass
 
@@ -1103,19 +1109,19 @@ struct_FS_POINTF_._fields_ = [
     ('y', c_float),
 ]
 
-FS_LPPOINTF = POINTER(struct_FS_POINTF_)# /home/yhu/pdfium/include/fpdfview.h: 166
+FS_LPPOINTF = POINTER(struct_FS_POINTF_)# /home/yhu/pdfium/include/fpdfview.h: 167
 
-FS_POINTF = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 166
+FS_POINTF = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 167
 
-FS_LPCPOINTF = POINTER(FS_POINTF)# /home/yhu/pdfium/include/fpdfview.h: 169
+FS_LPCPOINTF = POINTER(FS_POINTF)# /home/yhu/pdfium/include/fpdfview.h: 170
 
-FPDF_ANNOTATION_SUBTYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 172
+FPDF_ANNOTATION_SUBTYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 173
 
-FPDF_ANNOT_APPEARANCEMODE = c_int# /home/yhu/pdfium/include/fpdfview.h: 173
+FPDF_ANNOT_APPEARANCEMODE = c_int# /home/yhu/pdfium/include/fpdfview.h: 174
 
-FPDF_OBJECT_TYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 176
+FPDF_OBJECT_TYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 177
 
-# /home/yhu/pdfium/include/fpdfview.h: 213
+# /home/yhu/pdfium/include/fpdfview.h: 214
 for _lib in _libs.values():
     if not _lib.has("FPDF_InitLibrary", "cdecl"):
         continue
@@ -1124,7 +1130,7 @@ for _lib in _libs.values():
     FPDF_InitLibrary.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 243
+# /home/yhu/pdfium/include/fpdfview.h: 244
 class struct_FPDF_LIBRARY_CONFIG_(Structure):
     pass
 
@@ -1143,9 +1149,9 @@ struct_FPDF_LIBRARY_CONFIG_._fields_ = [
     ('m_pPlatform', POINTER(None)),
 ]
 
-FPDF_LIBRARY_CONFIG = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 243
+FPDF_LIBRARY_CONFIG = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 244
 
-# /home/yhu/pdfium/include/fpdfview.h: 255
+# /home/yhu/pdfium/include/fpdfview.h: 256
 for _lib in _libs.values():
     if not _lib.has("FPDF_InitLibraryWithConfig", "cdecl"):
         continue
@@ -1154,7 +1160,7 @@ for _lib in _libs.values():
     FPDF_InitLibraryWithConfig.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 268
+# /home/yhu/pdfium/include/fpdfview.h: 269
 for _lib in _libs.values():
     if not _lib.has("FPDF_DestroyLibrary", "cdecl"):
         continue
@@ -1163,7 +1169,7 @@ for _lib in _libs.values():
     FPDF_DestroyLibrary.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 281
+# /home/yhu/pdfium/include/fpdfview.h: 282
 for _lib in _libs.values():
     if not _lib.has("FPDF_SetSandBoxPolicy", "cdecl"):
         continue
@@ -1172,7 +1178,7 @@ for _lib in _libs.values():
     FPDF_SetSandBoxPolicy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 355
+# /home/yhu/pdfium/include/fpdfview.h: 356
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadDocument", "cdecl"):
         continue
@@ -1181,7 +1187,7 @@ for _lib in _libs.values():
     FPDF_LoadDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 379
+# /home/yhu/pdfium/include/fpdfview.h: 380
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadMemDocument", "cdecl"):
         continue
@@ -1190,7 +1196,7 @@ for _lib in _libs.values():
     FPDF_LoadMemDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 404
+# /home/yhu/pdfium/include/fpdfview.h: 405
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadMemDocument64", "cdecl"):
         continue
@@ -1199,7 +1205,7 @@ for _lib in _libs.values():
     FPDF_LoadMemDocument64.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 428
+# /home/yhu/pdfium/include/fpdfview.h: 429
 class struct_anon_3(Structure):
     pass
 
@@ -1214,9 +1220,9 @@ struct_anon_3._fields_ = [
     ('m_Param', POINTER(None)),
 ]
 
-FPDF_FILEACCESS = struct_anon_3# /home/yhu/pdfium/include/fpdfview.h: 428
+FPDF_FILEACCESS = struct_anon_3# /home/yhu/pdfium/include/fpdfview.h: 429
 
-# /home/yhu/pdfium/include/fpdfview.h: 524
+# /home/yhu/pdfium/include/fpdfview.h: 525
 class struct_FPDF_FILEHANDLER_(Structure):
     pass
 
@@ -1239,9 +1245,9 @@ struct_FPDF_FILEHANDLER_._fields_ = [
     ('Truncate', CFUNCTYPE(UNCHECKED(FPDF_RESULT), POINTER(None), FPDF_DWORD)),
 ]
 
-FPDF_FILEHANDLER = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 524
+FPDF_FILEHANDLER = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 525
 
-# /home/yhu/pdfium/include/fpdfview.h: 547
+# /home/yhu/pdfium/include/fpdfview.h: 548
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadCustomDocument", "cdecl"):
         continue
@@ -1250,7 +1256,7 @@ for _lib in _libs.values():
     FPDF_LoadCustomDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 560
+# /home/yhu/pdfium/include/fpdfview.h: 561
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetFileVersion", "cdecl"):
         continue
@@ -1259,7 +1265,7 @@ for _lib in _libs.values():
     FPDF_GetFileVersion.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 584
+# /home/yhu/pdfium/include/fpdfview.h: 585
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetLastError", "cdecl"):
         continue
@@ -1268,7 +1274,7 @@ for _lib in _libs.values():
     FPDF_GetLastError.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 599
+# /home/yhu/pdfium/include/fpdfview.h: 600
 for _lib in _libs.values():
     if not _lib.has("FPDF_DocumentHasValidCrossReferenceTable", "cdecl"):
         continue
@@ -1277,7 +1283,7 @@ for _lib in _libs.values():
     FPDF_DocumentHasValidCrossReferenceTable.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 610
+# /home/yhu/pdfium/include/fpdfview.h: 611
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetDocPermissions", "cdecl"):
         continue
@@ -1286,7 +1292,7 @@ for _lib in _libs.values():
     FPDF_GetDocPermissions.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 621
+# /home/yhu/pdfium/include/fpdfview.h: 622
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetSecurityHandlerRevision", "cdecl"):
         continue
@@ -1295,7 +1301,7 @@ for _lib in _libs.values():
     FPDF_GetSecurityHandlerRevision.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 629
+# /home/yhu/pdfium/include/fpdfview.h: 630
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageCount", "cdecl"):
         continue
@@ -1304,7 +1310,7 @@ for _lib in _libs.values():
     FPDF_GetPageCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 641
+# /home/yhu/pdfium/include/fpdfview.h: 642
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadPage", "cdecl"):
         continue
@@ -1313,7 +1319,7 @@ for _lib in _libs.values():
     FPDF_LoadPage.restype = FPDF_PAGE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 652
+# /home/yhu/pdfium/include/fpdfview.h: 653
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageWidthF", "cdecl"):
         continue
@@ -1322,7 +1328,7 @@ for _lib in _libs.values():
     FPDF_GetPageWidthF.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 664
+# /home/yhu/pdfium/include/fpdfview.h: 665
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageWidth", "cdecl"):
         continue
@@ -1331,7 +1337,7 @@ for _lib in _libs.values():
     FPDF_GetPageWidth.restype = c_double
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 674
+# /home/yhu/pdfium/include/fpdfview.h: 675
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageHeightF", "cdecl"):
         continue
@@ -1340,7 +1346,7 @@ for _lib in _libs.values():
     FPDF_GetPageHeightF.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 686
+# /home/yhu/pdfium/include/fpdfview.h: 687
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageHeight", "cdecl"):
         continue
@@ -1349,7 +1355,7 @@ for _lib in _libs.values():
     FPDF_GetPageHeight.restype = c_double
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 698
+# /home/yhu/pdfium/include/fpdfview.h: 699
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageBoundingBox", "cdecl"):
         continue
@@ -1358,7 +1364,7 @@ for _lib in _libs.values():
     FPDF_GetPageBoundingBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 712
+# /home/yhu/pdfium/include/fpdfview.h: 713
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageSizeByIndexF", "cdecl"):
         continue
@@ -1367,7 +1373,7 @@ for _lib in _libs.values():
     FPDF_GetPageSizeByIndexF.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 730
+# /home/yhu/pdfium/include/fpdfview.h: 731
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageSizeByIndex", "cdecl"):
         continue
@@ -1376,7 +1382,7 @@ for _lib in _libs.values():
     FPDF_GetPageSizeByIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 778
+# /home/yhu/pdfium/include/fpdfview.h: 779
 class struct_FPDF_COLORSCHEME_(Structure):
     pass
 
@@ -1393,9 +1399,9 @@ struct_FPDF_COLORSCHEME_._fields_ = [
     ('text_stroke_color', FPDF_DWORD),
 ]
 
-FPDF_COLORSCHEME = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 778
+FPDF_COLORSCHEME = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 779
 
-# /home/yhu/pdfium/include/fpdfview.h: 838
+# /home/yhu/pdfium/include/fpdfview.h: 839
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmap", "cdecl"):
         continue
@@ -1404,7 +1410,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmap.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 866
+# /home/yhu/pdfium/include/fpdfview.h: 867
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmapWithMatrix", "cdecl"):
         continue
@@ -1413,7 +1419,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmapWithMatrix.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 884
+# /home/yhu/pdfium/include/fpdfview.h: 885
 for _lib in _libs.values():
     if not _lib.has("FPDF_ClosePage", "cdecl"):
         continue
@@ -1422,7 +1428,7 @@ for _lib in _libs.values():
     FPDF_ClosePage.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 892
+# /home/yhu/pdfium/include/fpdfview.h: 893
 for _lib in _libs.values():
     if not _lib.has("FPDF_CloseDocument", "cdecl"):
         continue
@@ -1431,7 +1437,7 @@ for _lib in _libs.values():
     FPDF_CloseDocument.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 935
+# /home/yhu/pdfium/include/fpdfview.h: 936
 for _lib in _libs.values():
     if not _lib.has("FPDF_DeviceToPage", "cdecl"):
         continue
@@ -1440,7 +1446,7 @@ for _lib in _libs.values():
     FPDF_DeviceToPage.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 972
+# /home/yhu/pdfium/include/fpdfview.h: 973
 for _lib in _libs.values():
     if not _lib.has("FPDF_PageToDevice", "cdecl"):
         continue
@@ -1449,7 +1455,7 @@ for _lib in _libs.values():
     FPDF_PageToDevice.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1013
+# /home/yhu/pdfium/include/fpdfview.h: 1014
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_Create", "cdecl"):
         continue
@@ -1458,7 +1464,7 @@ for _lib in _libs.values():
     FPDFBitmap_Create.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1054
+# /home/yhu/pdfium/include/fpdfview.h: 1055
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_CreateEx", "cdecl"):
         continue
@@ -1467,7 +1473,7 @@ for _lib in _libs.values():
     FPDFBitmap_CreateEx.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1070
+# /home/yhu/pdfium/include/fpdfview.h: 1071
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetFormat", "cdecl"):
         continue
@@ -1476,7 +1482,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetFormat.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1096
+# /home/yhu/pdfium/include/fpdfview.h: 1097
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_FillRect", "cdecl"):
         continue
@@ -1485,7 +1491,7 @@ for _lib in _libs.values():
     FPDFBitmap_FillRect.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1119
+# /home/yhu/pdfium/include/fpdfview.h: 1120
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetBuffer", "cdecl"):
         continue
@@ -1495,7 +1501,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetBuffer.errcheck = lambda v,*a : cast(v, c_void_p)
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1128
+# /home/yhu/pdfium/include/fpdfview.h: 1129
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetWidth", "cdecl"):
         continue
@@ -1504,7 +1510,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetWidth.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1137
+# /home/yhu/pdfium/include/fpdfview.h: 1138
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetHeight", "cdecl"):
         continue
@@ -1513,7 +1519,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetHeight.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1148
+# /home/yhu/pdfium/include/fpdfview.h: 1149
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetStride", "cdecl"):
         continue
@@ -1522,7 +1528,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetStride.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1160
+# /home/yhu/pdfium/include/fpdfview.h: 1161
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_Destroy", "cdecl"):
         continue
@@ -1531,7 +1537,7 @@ for _lib in _libs.values():
     FPDFBitmap_Destroy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1169
+# /home/yhu/pdfium/include/fpdfview.h: 1170
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintScaling", "cdecl"):
         continue
@@ -1540,7 +1546,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintScaling.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1178
+# /home/yhu/pdfium/include/fpdfview.h: 1179
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetNumCopies", "cdecl"):
         continue
@@ -1549,7 +1555,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetNumCopies.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1187
+# /home/yhu/pdfium/include/fpdfview.h: 1188
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRange", "cdecl"):
         continue
@@ -1558,7 +1564,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRange.restype = FPDF_PAGERANGE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1197
+# /home/yhu/pdfium/include/fpdfview.h: 1198
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl"):
         continue
@@ -1567,7 +1573,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRangeCount.restype = c_size_t
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1209
+# /home/yhu/pdfium/include/fpdfview.h: 1210
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl"):
         continue
@@ -1576,7 +1582,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRangeElement.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1219
+# /home/yhu/pdfium/include/fpdfview.h: 1220
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetDuplex", "cdecl"):
         continue
@@ -1585,7 +1591,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetDuplex.restype = FPDF_DUPLEXTYPE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1237
+# /home/yhu/pdfium/include/fpdfview.h: 1238
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetName", "cdecl"):
         continue
@@ -1594,7 +1600,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1249
+# /home/yhu/pdfium/include/fpdfview.h: 1250
 for _lib in _libs.values():
     if not _lib.has("FPDF_CountNamedDests", "cdecl"):
         continue
@@ -1603,7 +1609,7 @@ for _lib in _libs.values():
     FPDF_CountNamedDests.restype = FPDF_DWORD
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1259
+# /home/yhu/pdfium/include/fpdfview.h: 1260
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetNamedDestByName", "cdecl"):
         continue
@@ -1612,7 +1618,7 @@ for _lib in _libs.values():
     FPDF_GetNamedDestByName.restype = FPDF_DEST
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1282
+# /home/yhu/pdfium/include/fpdfview.h: 1283
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetNamedDest", "cdecl"):
         continue
@@ -4510,6 +4516,15 @@ for _lib in _libs.values():
     FPDF_GetSignatureCount.restype = c_int
     break
 
+# /home/yhu/pdfium/include/fpdf_signature.h: 35
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetSignatureObject", "cdecl"):
+        continue
+    FPDF_GetSignatureObject = _lib.get("FPDF_GetSignatureObject", "cdecl")
+    FPDF_GetSignatureObject.argtypes = [FPDF_DOCUMENT, c_int]
+    FPDF_GetSignatureObject.restype = FPDF_SIGNATURE
+    break
+
 # /home/yhu/pdfium/include/fpdf_structtree.h: 25
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructTree_GetForPage", "cdecl"):
@@ -5244,163 +5259,163 @@ try:
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 271
+# /home/yhu/pdfium/include/fpdfview.h: 272
 try:
     FPDF_POLICY_MACHINETIME_ACCESS = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 563
+# /home/yhu/pdfium/include/fpdfview.h: 564
 try:
     FPDF_ERR_SUCCESS = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 564
+# /home/yhu/pdfium/include/fpdfview.h: 565
 try:
     FPDF_ERR_UNKNOWN = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 565
+# /home/yhu/pdfium/include/fpdfview.h: 566
 try:
     FPDF_ERR_FILE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 566
+# /home/yhu/pdfium/include/fpdfview.h: 567
 try:
     FPDF_ERR_FORMAT = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 567
+# /home/yhu/pdfium/include/fpdfview.h: 568
 try:
     FPDF_ERR_PASSWORD = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 568
+# /home/yhu/pdfium/include/fpdfview.h: 569
 try:
     FPDF_ERR_SECURITY = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 569
+# /home/yhu/pdfium/include/fpdfview.h: 570
 try:
     FPDF_ERR_PAGE = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 738
+# /home/yhu/pdfium/include/fpdfview.h: 739
 try:
     FPDF_ANNOT = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 741
+# /home/yhu/pdfium/include/fpdfview.h: 742
 try:
     FPDF_LCD_TEXT = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 743
+# /home/yhu/pdfium/include/fpdfview.h: 744
 try:
     FPDF_NO_NATIVETEXT = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 745
+# /home/yhu/pdfium/include/fpdfview.h: 746
 try:
     FPDF_GRAYSCALE = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 747
+# /home/yhu/pdfium/include/fpdfview.h: 748
 try:
     FPDF_DEBUG_INFO = 128
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 749
+# /home/yhu/pdfium/include/fpdfview.h: 750
 try:
     FPDF_NO_CATCH = 256
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 751
+# /home/yhu/pdfium/include/fpdfview.h: 752
 try:
     FPDF_RENDER_LIMITEDIMAGECACHE = 512
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 753
+# /home/yhu/pdfium/include/fpdfview.h: 754
 try:
     FPDF_RENDER_FORCEHALFTONE = 1024
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 755
+# /home/yhu/pdfium/include/fpdfview.h: 756
 try:
     FPDF_PRINTING = 2048
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 758
+# /home/yhu/pdfium/include/fpdfview.h: 759
 try:
     FPDF_RENDER_NO_SMOOTHTEXT = 4096
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 760
+# /home/yhu/pdfium/include/fpdfview.h: 761
 try:
     FPDF_RENDER_NO_SMOOTHIMAGE = 8192
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 762
+# /home/yhu/pdfium/include/fpdfview.h: 763
 try:
     FPDF_RENDER_NO_SMOOTHPATH = 16384
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 765
+# /home/yhu/pdfium/include/fpdfview.h: 766
 try:
     FPDF_REVERSE_BYTE_ORDER = 16
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 769
+# /home/yhu/pdfium/include/fpdfview.h: 770
 try:
     FPDF_CONVERT_FILL_TO_STROKE = 32
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1019
+# /home/yhu/pdfium/include/fpdfview.h: 1020
 try:
     FPDFBitmap_Unknown = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1021
+# /home/yhu/pdfium/include/fpdfview.h: 1022
 try:
     FPDFBitmap_Gray = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1023
+# /home/yhu/pdfium/include/fpdfview.h: 1024
 try:
     FPDFBitmap_BGR = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1025
+# /home/yhu/pdfium/include/fpdfview.h: 1026
 try:
     FPDFBitmap_BGRx = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1027
+# /home/yhu/pdfium/include/fpdfview.h: 1028
 try:
     FPDFBitmap_BGRA = 4
 except:
@@ -6748,29 +6763,31 @@ fpdf_pathsegment_t = struct_fpdf_pathsegment_t# /home/yhu/pdfium/include/fpdfvie
 
 fpdf_schhandle_t__ = struct_fpdf_schhandle_t__# /home/yhu/pdfium/include/fpdfview.h: 73
 
-fpdf_structelement_t__ = struct_fpdf_structelement_t__# /home/yhu/pdfium/include/fpdfview.h: 74
+fpdf_signature_t__ = struct_fpdf_signature_t__# /home/yhu/pdfium/include/fpdfview.h: 74
 
-fpdf_structtree_t__ = struct_fpdf_structtree_t__# /home/yhu/pdfium/include/fpdfview.h: 75
+fpdf_structelement_t__ = struct_fpdf_structelement_t__# /home/yhu/pdfium/include/fpdfview.h: 75
 
-fpdf_textpage_t__ = struct_fpdf_textpage_t__# /home/yhu/pdfium/include/fpdfview.h: 76
+fpdf_structtree_t__ = struct_fpdf_structtree_t__# /home/yhu/pdfium/include/fpdfview.h: 76
 
-fpdf_widget_t__ = struct_fpdf_widget_t__# /home/yhu/pdfium/include/fpdfview.h: 77
+fpdf_textpage_t__ = struct_fpdf_textpage_t__# /home/yhu/pdfium/include/fpdfview.h: 77
 
-FPDF_BSTR_ = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 110
+fpdf_widget_t__ = struct_fpdf_widget_t__# /home/yhu/pdfium/include/fpdfview.h: 78
 
-_FS_MATRIX_ = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 136
+FPDF_BSTR_ = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 111
 
-_FS_RECTF_ = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 139
+_FS_MATRIX_ = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 137
 
-FS_SIZEF_ = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 154
+_FS_RECTF_ = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 140
 
-FS_POINTF_ = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 163
+FS_SIZEF_ = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 155
 
-FPDF_LIBRARY_CONFIG_ = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 243
+FS_POINTF_ = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 164
 
-FPDF_FILEHANDLER_ = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 524
+FPDF_LIBRARY_CONFIG_ = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 244
 
-FPDF_COLORSCHEME_ = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 778
+FPDF_FILEHANDLER_ = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 525
+
+FPDF_COLORSCHEME_ = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 779
 
 _FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/yhu/pdfium/include/fpdf_doc.h: 55
 
