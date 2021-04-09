@@ -1,3 +1,7 @@
+#! /usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
 """
 SPDX-FileCopyrightText: 2021 Manuel Geißer <geisserml@gmail.com>
 
@@ -97,7 +101,9 @@ for platform, file in files.items():
 
 
 # finally, call ctypesgen
-subprocess.run([f"ctypesgen -lpdfium -L {thisdirectory}linux_tar/lib {thisdirectory}linux_tar/include/*.h -o pypdfium/pypdfium.py"], shell=True)
+ctypesgen_command = f"ctypesgen -lpdfium -L {thisdirectory}linux_tar/lib {thisdirectory}linux_tar/include/*.h -o pypdfium/pypdfium.py"
+print(ctypesgen_command)
+subprocess.run([ctypesgen_command], shell=True)
 
 
 # delete the extracted Linux pdfium binary + headers
