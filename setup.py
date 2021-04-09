@@ -1,3 +1,9 @@
+"""
+SPDX-FileCopyrightText: 2020 Yinlin Hu <huyinlin@gmail.com>
+SPDX-FileCopyrightText: 2021 Manuel Geißer <geisserml@gmail.com>
+
+SPDX-License-Identifier: MIT
+"""
 
 from setuptools import setup
 from pypdfium import __version__
@@ -13,9 +19,11 @@ setup(
       long_description=readme(),
       long_description_content_type="text/markdown",
       keywords='Python PDFium',
-      url='https://github.com/YinlinHu/pypdfium',
+      url='https://github.com/mara004/pypdfium',
       author='Yinlin Hu',
       author_email='huyinlin@gmail.com',
+      maintainer='Manuel Geißer',
+      maintainer_email='geisserml@gmail.com',
       license='MIT License',
       packages=['pypdfium'],
       install_requires=[''], #external packages as dependencies

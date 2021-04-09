@@ -1,7 +1,7 @@
 r"""Wrapper for fpdf_annot.h
 
 Generated with:
-/usr/local/bin/ctypesgen -lpdfium -L lib include/fpdf_annot.h include/fpdf_attachment.h include/fpdf_catalog.h include/fpdf_dataavail.h include/fpdf_doc.h include/fpdf_edit.h include/fpdf_ext.h include/fpdf_flatten.h include/fpdf_formfill.h include/fpdf_fwlevent.h include/fpdf_javascript.h include/fpdf_ppo.h include/fpdf_progressive.h include/fpdf_save.h include/fpdf_searchex.h include/fpdf_signature.h include/fpdf_structtree.h include/fpdf_sysfontinfo.h include/fpdf_text.h include/fpdf_thumbnail.h include/fpdf_transformpage.h include/fpdfview.h -o pypdfium.py
+/usr/local/bin/ctypesgen -lpdfium -L /home/manuel/projects/pypdfium//linux_tar/lib /home/manuel/projects/pypdfium//linux_tar/include/fpdf_annot.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_attachment.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_catalog.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_dataavail.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_doc.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_edit.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_ext.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_flatten.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_formfill.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_fwlevent.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_javascript.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_ppo.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_progressive.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_save.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_searchex.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_signature.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_structtree.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_sysfontinfo.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_text.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_thumbnail.h /home/manuel/projects/pypdfium//linux_tar/include/fpdf_transformpage.h /home/manuel/projects/pypdfium//linux_tar/include/fpdfview.h -o pypdfium/pypdfium.py
 
 Do not modify this file.
 """
@@ -444,7 +444,7 @@ def ord_if_char(value):
 # End preamble
 
 _libs = {}
-_libdirs = ['lib']
+_libdirs = ['/home/manuel/projects/pypdfium//linux_tar/lib']
 
 # Begin loader
 
@@ -808,7 +808,7 @@ del loaderclass
 
 # End loader
 
-add_library_search_dirs(['lib'])
+add_library_search_dirs(['/home/manuel/projects/pypdfium//linux_tar/lib'])
 
 # Begin libraries
 _libs["pdfium"] = load_library("pdfium")
@@ -818,203 +818,203 @@ _libs["pdfium"] = load_library("pdfium")
 
 # No modules
 
-enum_anon_2 = c_int# /home/yhu/pdfium/include/fpdfview.h: 51
+enum_anon_2 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_UNKNOWN = (-1)# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_UNKNOWN = (-1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_FILL = 0# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_FILL = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_STROKE = 1# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_STROKE = 1# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_FILL_STROKE = 2# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_FILL_STROKE = 2# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_INVISIBLE = 3# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_INVISIBLE = 3# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_FILL_CLIP = 4# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_FILL_CLIP = 4# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_STROKE_CLIP = 5# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_STROKE_CLIP = 5# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_FILL_STROKE_CLIP = 6# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_FILL_STROKE_CLIP = 6# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_CLIP = 7# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_CLIP = 7# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXTRENDERMODE_LAST = FPDF_TEXTRENDERMODE_CLIP# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXTRENDERMODE_LAST = FPDF_TEXTRENDERMODE_CLIP# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-FPDF_TEXT_RENDERMODE = enum_anon_2# /home/yhu/pdfium/include/fpdfview.h: 51
+FPDF_TEXT_RENDERMODE = enum_anon_2# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 51
 
-# /home/yhu/pdfium/include/fpdfview.h: 54
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 54
 class struct_fpdf_action_t__(Structure):
     pass
 
-FPDF_ACTION = POINTER(struct_fpdf_action_t__)# /home/yhu/pdfium/include/fpdfview.h: 54
+FPDF_ACTION = POINTER(struct_fpdf_action_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 54
 
-# /home/yhu/pdfium/include/fpdfview.h: 55
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 55
 class struct_fpdf_annotation_t__(Structure):
     pass
 
-FPDF_ANNOTATION = POINTER(struct_fpdf_annotation_t__)# /home/yhu/pdfium/include/fpdfview.h: 55
+FPDF_ANNOTATION = POINTER(struct_fpdf_annotation_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 55
 
-# /home/yhu/pdfium/include/fpdfview.h: 56
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 56
 class struct_fpdf_attachment_t__(Structure):
     pass
 
-FPDF_ATTACHMENT = POINTER(struct_fpdf_attachment_t__)# /home/yhu/pdfium/include/fpdfview.h: 56
+FPDF_ATTACHMENT = POINTER(struct_fpdf_attachment_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 56
 
-# /home/yhu/pdfium/include/fpdfview.h: 57
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 57
 class struct_fpdf_bitmap_t__(Structure):
     pass
 
-FPDF_BITMAP = POINTER(struct_fpdf_bitmap_t__)# /home/yhu/pdfium/include/fpdfview.h: 57
+FPDF_BITMAP = POINTER(struct_fpdf_bitmap_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 57
 
-# /home/yhu/pdfium/include/fpdfview.h: 58
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 58
 class struct_fpdf_bookmark_t__(Structure):
     pass
 
-FPDF_BOOKMARK = POINTER(struct_fpdf_bookmark_t__)# /home/yhu/pdfium/include/fpdfview.h: 58
+FPDF_BOOKMARK = POINTER(struct_fpdf_bookmark_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 58
 
-# /home/yhu/pdfium/include/fpdfview.h: 59
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 59
 class struct_fpdf_clippath_t__(Structure):
     pass
 
-FPDF_CLIPPATH = POINTER(struct_fpdf_clippath_t__)# /home/yhu/pdfium/include/fpdfview.h: 59
+FPDF_CLIPPATH = POINTER(struct_fpdf_clippath_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 59
 
-# /home/yhu/pdfium/include/fpdfview.h: 60
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 60
 class struct_fpdf_dest_t__(Structure):
     pass
 
-FPDF_DEST = POINTER(struct_fpdf_dest_t__)# /home/yhu/pdfium/include/fpdfview.h: 60
+FPDF_DEST = POINTER(struct_fpdf_dest_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 60
 
-# /home/yhu/pdfium/include/fpdfview.h: 61
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 61
 class struct_fpdf_document_t__(Structure):
     pass
 
-FPDF_DOCUMENT = POINTER(struct_fpdf_document_t__)# /home/yhu/pdfium/include/fpdfview.h: 61
+FPDF_DOCUMENT = POINTER(struct_fpdf_document_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 61
 
-# /home/yhu/pdfium/include/fpdfview.h: 62
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 62
 class struct_fpdf_font_t__(Structure):
     pass
 
-FPDF_FONT = POINTER(struct_fpdf_font_t__)# /home/yhu/pdfium/include/fpdfview.h: 62
+FPDF_FONT = POINTER(struct_fpdf_font_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 62
 
-# /home/yhu/pdfium/include/fpdfview.h: 63
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 63
 class struct_fpdf_form_handle_t__(Structure):
     pass
 
-FPDF_FORMHANDLE = POINTER(struct_fpdf_form_handle_t__)# /home/yhu/pdfium/include/fpdfview.h: 63
+FPDF_FORMHANDLE = POINTER(struct_fpdf_form_handle_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 63
 
-# /home/yhu/pdfium/include/fpdfview.h: 64
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 64
 class struct_fpdf_javascript_action_t(Structure):
     pass
 
-FPDF_JAVASCRIPT_ACTION = POINTER(struct_fpdf_javascript_action_t)# /home/yhu/pdfium/include/fpdfview.h: 64
+FPDF_JAVASCRIPT_ACTION = POINTER(struct_fpdf_javascript_action_t)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 64
 
-# /home/yhu/pdfium/include/fpdfview.h: 65
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 65
 class struct_fpdf_link_t__(Structure):
     pass
 
-FPDF_LINK = POINTER(struct_fpdf_link_t__)# /home/yhu/pdfium/include/fpdfview.h: 65
+FPDF_LINK = POINTER(struct_fpdf_link_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 65
 
-# /home/yhu/pdfium/include/fpdfview.h: 66
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 66
 class struct_fpdf_page_t__(Structure):
     pass
 
-FPDF_PAGE = POINTER(struct_fpdf_page_t__)# /home/yhu/pdfium/include/fpdfview.h: 66
+FPDF_PAGE = POINTER(struct_fpdf_page_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 66
 
-# /home/yhu/pdfium/include/fpdfview.h: 67
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 67
 class struct_fpdf_pagelink_t__(Structure):
     pass
 
-FPDF_PAGELINK = POINTER(struct_fpdf_pagelink_t__)# /home/yhu/pdfium/include/fpdfview.h: 67
+FPDF_PAGELINK = POINTER(struct_fpdf_pagelink_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 67
 
-# /home/yhu/pdfium/include/fpdfview.h: 68
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 68
 class struct_fpdf_pageobject_t__(Structure):
     pass
 
-FPDF_PAGEOBJECT = POINTER(struct_fpdf_pageobject_t__)# /home/yhu/pdfium/include/fpdfview.h: 68
+FPDF_PAGEOBJECT = POINTER(struct_fpdf_pageobject_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 68
 
-# /home/yhu/pdfium/include/fpdfview.h: 69
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 69
 class struct_fpdf_pageobjectmark_t__(Structure):
     pass
 
-FPDF_PAGEOBJECTMARK = POINTER(struct_fpdf_pageobjectmark_t__)# /home/yhu/pdfium/include/fpdfview.h: 69
+FPDF_PAGEOBJECTMARK = POINTER(struct_fpdf_pageobjectmark_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 69
 
-# /home/yhu/pdfium/include/fpdfview.h: 70
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 70
 class struct_fpdf_pagerange_t__(Structure):
     pass
 
-FPDF_PAGERANGE = POINTER(struct_fpdf_pagerange_t__)# /home/yhu/pdfium/include/fpdfview.h: 70
+FPDF_PAGERANGE = POINTER(struct_fpdf_pagerange_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 70
 
-# /home/yhu/pdfium/include/fpdfview.h: 71
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 71
 class struct_fpdf_pathsegment_t(Structure):
     pass
 
-FPDF_PATHSEGMENT = POINTER(struct_fpdf_pathsegment_t)# /home/yhu/pdfium/include/fpdfview.h: 71
+FPDF_PATHSEGMENT = POINTER(struct_fpdf_pathsegment_t)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 71
 
-FPDF_RECORDER = POINTER(None)# /home/yhu/pdfium/include/fpdfview.h: 72
+FPDF_RECORDER = POINTER(None)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 72
 
-# /home/yhu/pdfium/include/fpdfview.h: 73
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 73
 class struct_fpdf_schhandle_t__(Structure):
     pass
 
-FPDF_SCHHANDLE = POINTER(struct_fpdf_schhandle_t__)# /home/yhu/pdfium/include/fpdfview.h: 73
+FPDF_SCHHANDLE = POINTER(struct_fpdf_schhandle_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 73
 
-# /home/yhu/pdfium/include/fpdfview.h: 74
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 74
 class struct_fpdf_signature_t__(Structure):
     pass
 
-FPDF_SIGNATURE = POINTER(struct_fpdf_signature_t__)# /home/yhu/pdfium/include/fpdfview.h: 74
+FPDF_SIGNATURE = POINTER(struct_fpdf_signature_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 74
 
-# /home/yhu/pdfium/include/fpdfview.h: 75
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 75
 class struct_fpdf_structelement_t__(Structure):
     pass
 
-FPDF_STRUCTELEMENT = POINTER(struct_fpdf_structelement_t__)# /home/yhu/pdfium/include/fpdfview.h: 75
+FPDF_STRUCTELEMENT = POINTER(struct_fpdf_structelement_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 75
 
-# /home/yhu/pdfium/include/fpdfview.h: 76
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 76
 class struct_fpdf_structtree_t__(Structure):
     pass
 
-FPDF_STRUCTTREE = POINTER(struct_fpdf_structtree_t__)# /home/yhu/pdfium/include/fpdfview.h: 76
+FPDF_STRUCTTREE = POINTER(struct_fpdf_structtree_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 76
 
-# /home/yhu/pdfium/include/fpdfview.h: 77
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 77
 class struct_fpdf_textpage_t__(Structure):
     pass
 
-FPDF_TEXTPAGE = POINTER(struct_fpdf_textpage_t__)# /home/yhu/pdfium/include/fpdfview.h: 77
+FPDF_TEXTPAGE = POINTER(struct_fpdf_textpage_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 77
 
-# /home/yhu/pdfium/include/fpdfview.h: 78
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 78
 class struct_fpdf_widget_t__(Structure):
     pass
 
-FPDF_WIDGET = POINTER(struct_fpdf_widget_t__)# /home/yhu/pdfium/include/fpdfview.h: 78
+FPDF_WIDGET = POINTER(struct_fpdf_widget_t__)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 78
 
-FPDF_BOOL = c_int# /home/yhu/pdfium/include/fpdfview.h: 81
+FPDF_BOOL = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 81
 
-FPDF_RESULT = c_int# /home/yhu/pdfium/include/fpdfview.h: 82
+FPDF_RESULT = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 82
 
-FPDF_DWORD = c_ulong# /home/yhu/pdfium/include/fpdfview.h: 83
+FPDF_DWORD = c_ulong# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 83
 
-FS_FLOAT = c_float# /home/yhu/pdfium/include/fpdfview.h: 84
+FS_FLOAT = c_float# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 84
 
-enum__FPDF_DUPLEXTYPE_ = c_int# /home/yhu/pdfium/include/fpdfview.h: 92
+enum__FPDF_DUPLEXTYPE_ = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-DuplexUndefined = 0# /home/yhu/pdfium/include/fpdfview.h: 92
+DuplexUndefined = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-Simplex = (DuplexUndefined + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
+Simplex = (DuplexUndefined + 1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-DuplexFlipShortEdge = (Simplex + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
+DuplexFlipShortEdge = (Simplex + 1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-DuplexFlipLongEdge = (DuplexFlipShortEdge + 1)# /home/yhu/pdfium/include/fpdfview.h: 92
+DuplexFlipLongEdge = (DuplexFlipShortEdge + 1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-FPDF_DUPLEXTYPE = enum__FPDF_DUPLEXTYPE_# /home/yhu/pdfium/include/fpdfview.h: 92
+FPDF_DUPLEXTYPE = enum__FPDF_DUPLEXTYPE_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 92
 
-FPDF_WCHAR = c_ushort# /home/yhu/pdfium/include/fpdfview.h: 95
+FPDF_WCHAR = c_ushort# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 95
 
-FPDF_BYTESTRING = String# /home/yhu/pdfium/include/fpdfview.h: 99
+FPDF_BYTESTRING = String# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 99
 
-FPDF_WIDESTRING = POINTER(c_ushort)# /home/yhu/pdfium/include/fpdfview.h: 103
+FPDF_WIDESTRING = POINTER(c_ushort)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 103
 
-# /home/yhu/pdfium/include/fpdfview.h: 111
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 111
 class struct_FPDF_BSTR_(Structure):
     pass
 
@@ -1027,11 +1027,11 @@ struct_FPDF_BSTR_._fields_ = [
     ('len', c_int),
 ]
 
-FPDF_BSTR = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 111
+FPDF_BSTR = struct_FPDF_BSTR_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 111
 
-FPDF_STRING = String# /home/yhu/pdfium/include/fpdfview.h: 120
+FPDF_STRING = String# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 120
 
-# /home/yhu/pdfium/include/fpdfview.h: 137
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 137
 class struct__FS_MATRIX_(Structure):
     pass
 
@@ -1052,9 +1052,9 @@ struct__FS_MATRIX_._fields_ = [
     ('f', c_float),
 ]
 
-FS_MATRIX = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 137
+FS_MATRIX = struct__FS_MATRIX_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 137
 
-# /home/yhu/pdfium/include/fpdfview.h: 140
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 140
 class struct__FS_RECTF_(Structure):
     pass
 
@@ -1071,13 +1071,13 @@ struct__FS_RECTF_._fields_ = [
     ('bottom', c_float),
 ]
 
-FS_LPRECTF = POINTER(struct__FS_RECTF_)# /home/yhu/pdfium/include/fpdfview.h: 149
+FS_LPRECTF = POINTER(struct__FS_RECTF_)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 149
 
-FS_RECTF = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 149
+FS_RECTF = struct__FS_RECTF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 149
 
-FS_LPCRECTF = POINTER(FS_RECTF)# /home/yhu/pdfium/include/fpdfview.h: 152
+FS_LPCRECTF = POINTER(FS_RECTF)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 152
 
-# /home/yhu/pdfium/include/fpdfview.h: 155
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 155
 class struct_FS_SIZEF_(Structure):
     pass
 
@@ -1090,13 +1090,13 @@ struct_FS_SIZEF_._fields_ = [
     ('height', c_float),
 ]
 
-FS_LPSIZEF = POINTER(struct_FS_SIZEF_)# /home/yhu/pdfium/include/fpdfview.h: 158
+FS_LPSIZEF = POINTER(struct_FS_SIZEF_)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 158
 
-FS_SIZEF = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 158
+FS_SIZEF = struct_FS_SIZEF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 158
 
-FS_LPCSIZEF = POINTER(FS_SIZEF)# /home/yhu/pdfium/include/fpdfview.h: 161
+FS_LPCSIZEF = POINTER(FS_SIZEF)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 161
 
-# /home/yhu/pdfium/include/fpdfview.h: 164
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 164
 class struct_FS_POINTF_(Structure):
     pass
 
@@ -1109,19 +1109,19 @@ struct_FS_POINTF_._fields_ = [
     ('y', c_float),
 ]
 
-FS_LPPOINTF = POINTER(struct_FS_POINTF_)# /home/yhu/pdfium/include/fpdfview.h: 167
+FS_LPPOINTF = POINTER(struct_FS_POINTF_)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 167
 
-FS_POINTF = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 167
+FS_POINTF = struct_FS_POINTF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 167
 
-FS_LPCPOINTF = POINTER(FS_POINTF)# /home/yhu/pdfium/include/fpdfview.h: 170
+FS_LPCPOINTF = POINTER(FS_POINTF)# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 170
 
-FPDF_ANNOTATION_SUBTYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 173
+FPDF_ANNOTATION_SUBTYPE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 173
 
-FPDF_ANNOT_APPEARANCEMODE = c_int# /home/yhu/pdfium/include/fpdfview.h: 174
+FPDF_ANNOT_APPEARANCEMODE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 174
 
-FPDF_OBJECT_TYPE = c_int# /home/yhu/pdfium/include/fpdfview.h: 177
+FPDF_OBJECT_TYPE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 177
 
-# /home/yhu/pdfium/include/fpdfview.h: 214
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 214
 for _lib in _libs.values():
     if not _lib.has("FPDF_InitLibrary", "cdecl"):
         continue
@@ -1130,7 +1130,7 @@ for _lib in _libs.values():
     FPDF_InitLibrary.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 244
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 244
 class struct_FPDF_LIBRARY_CONFIG_(Structure):
     pass
 
@@ -1149,9 +1149,9 @@ struct_FPDF_LIBRARY_CONFIG_._fields_ = [
     ('m_pPlatform', POINTER(None)),
 ]
 
-FPDF_LIBRARY_CONFIG = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 244
+FPDF_LIBRARY_CONFIG = struct_FPDF_LIBRARY_CONFIG_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 244
 
-# /home/yhu/pdfium/include/fpdfview.h: 256
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 256
 for _lib in _libs.values():
     if not _lib.has("FPDF_InitLibraryWithConfig", "cdecl"):
         continue
@@ -1160,7 +1160,7 @@ for _lib in _libs.values():
     FPDF_InitLibraryWithConfig.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 269
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 269
 for _lib in _libs.values():
     if not _lib.has("FPDF_DestroyLibrary", "cdecl"):
         continue
@@ -1169,7 +1169,7 @@ for _lib in _libs.values():
     FPDF_DestroyLibrary.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 282
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 282
 for _lib in _libs.values():
     if not _lib.has("FPDF_SetSandBoxPolicy", "cdecl"):
         continue
@@ -1178,7 +1178,7 @@ for _lib in _libs.values():
     FPDF_SetSandBoxPolicy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 356
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 357
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadDocument", "cdecl"):
         continue
@@ -1187,7 +1187,7 @@ for _lib in _libs.values():
     FPDF_LoadDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 380
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 381
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadMemDocument", "cdecl"):
         continue
@@ -1196,7 +1196,7 @@ for _lib in _libs.values():
     FPDF_LoadMemDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 405
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 406
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadMemDocument64", "cdecl"):
         continue
@@ -1205,7 +1205,7 @@ for _lib in _libs.values():
     FPDF_LoadMemDocument64.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 429
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 430
 class struct_anon_3(Structure):
     pass
 
@@ -1220,9 +1220,9 @@ struct_anon_3._fields_ = [
     ('m_Param', POINTER(None)),
 ]
 
-FPDF_FILEACCESS = struct_anon_3# /home/yhu/pdfium/include/fpdfview.h: 429
+FPDF_FILEACCESS = struct_anon_3# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 430
 
-# /home/yhu/pdfium/include/fpdfview.h: 525
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 526
 class struct_FPDF_FILEHANDLER_(Structure):
     pass
 
@@ -1245,9 +1245,9 @@ struct_FPDF_FILEHANDLER_._fields_ = [
     ('Truncate', CFUNCTYPE(UNCHECKED(FPDF_RESULT), POINTER(None), FPDF_DWORD)),
 ]
 
-FPDF_FILEHANDLER = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 525
+FPDF_FILEHANDLER = struct_FPDF_FILEHANDLER_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 526
 
-# /home/yhu/pdfium/include/fpdfview.h: 548
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 549
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadCustomDocument", "cdecl"):
         continue
@@ -1256,7 +1256,7 @@ for _lib in _libs.values():
     FPDF_LoadCustomDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 561
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 562
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetFileVersion", "cdecl"):
         continue
@@ -1265,7 +1265,7 @@ for _lib in _libs.values():
     FPDF_GetFileVersion.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 585
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 586
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetLastError", "cdecl"):
         continue
@@ -1274,7 +1274,7 @@ for _lib in _libs.values():
     FPDF_GetLastError.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 600
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 601
 for _lib in _libs.values():
     if not _lib.has("FPDF_DocumentHasValidCrossReferenceTable", "cdecl"):
         continue
@@ -1283,7 +1283,16 @@ for _lib in _libs.values():
     FPDF_DocumentHasValidCrossReferenceTable.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 611
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 618
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetTrailerEnds", "cdecl"):
+        continue
+    FPDF_GetTrailerEnds = _lib.get("FPDF_GetTrailerEnds", "cdecl")
+    FPDF_GetTrailerEnds.argtypes = [FPDF_DOCUMENT, POINTER(c_uint), c_ulong]
+    FPDF_GetTrailerEnds.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 631
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetDocPermissions", "cdecl"):
         continue
@@ -1292,7 +1301,7 @@ for _lib in _libs.values():
     FPDF_GetDocPermissions.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 622
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 642
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetSecurityHandlerRevision", "cdecl"):
         continue
@@ -1301,7 +1310,7 @@ for _lib in _libs.values():
     FPDF_GetSecurityHandlerRevision.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 630
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 650
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageCount", "cdecl"):
         continue
@@ -1310,7 +1319,7 @@ for _lib in _libs.values():
     FPDF_GetPageCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 642
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 662
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadPage", "cdecl"):
         continue
@@ -1319,7 +1328,7 @@ for _lib in _libs.values():
     FPDF_LoadPage.restype = FPDF_PAGE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 653
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 673
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageWidthF", "cdecl"):
         continue
@@ -1328,7 +1337,7 @@ for _lib in _libs.values():
     FPDF_GetPageWidthF.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 665
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 685
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageWidth", "cdecl"):
         continue
@@ -1337,7 +1346,7 @@ for _lib in _libs.values():
     FPDF_GetPageWidth.restype = c_double
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 675
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 695
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageHeightF", "cdecl"):
         continue
@@ -1346,7 +1355,7 @@ for _lib in _libs.values():
     FPDF_GetPageHeightF.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 687
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 707
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageHeight", "cdecl"):
         continue
@@ -1355,7 +1364,7 @@ for _lib in _libs.values():
     FPDF_GetPageHeight.restype = c_double
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 699
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 719
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageBoundingBox", "cdecl"):
         continue
@@ -1364,7 +1373,7 @@ for _lib in _libs.values():
     FPDF_GetPageBoundingBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 713
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 733
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageSizeByIndexF", "cdecl"):
         continue
@@ -1373,7 +1382,7 @@ for _lib in _libs.values():
     FPDF_GetPageSizeByIndexF.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 731
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 751
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageSizeByIndex", "cdecl"):
         continue
@@ -1382,7 +1391,7 @@ for _lib in _libs.values():
     FPDF_GetPageSizeByIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 779
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 799
 class struct_FPDF_COLORSCHEME_(Structure):
     pass
 
@@ -1399,9 +1408,9 @@ struct_FPDF_COLORSCHEME_._fields_ = [
     ('text_stroke_color', FPDF_DWORD),
 ]
 
-FPDF_COLORSCHEME = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 779
+FPDF_COLORSCHEME = struct_FPDF_COLORSCHEME_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 799
 
-# /home/yhu/pdfium/include/fpdfview.h: 839
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 859
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmap", "cdecl"):
         continue
@@ -1410,7 +1419,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmap.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 867
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 887
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmapWithMatrix", "cdecl"):
         continue
@@ -1419,7 +1428,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmapWithMatrix.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 885
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 905
 for _lib in _libs.values():
     if not _lib.has("FPDF_ClosePage", "cdecl"):
         continue
@@ -1428,7 +1437,7 @@ for _lib in _libs.values():
     FPDF_ClosePage.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 893
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 913
 for _lib in _libs.values():
     if not _lib.has("FPDF_CloseDocument", "cdecl"):
         continue
@@ -1437,7 +1446,7 @@ for _lib in _libs.values():
     FPDF_CloseDocument.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 936
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 956
 for _lib in _libs.values():
     if not _lib.has("FPDF_DeviceToPage", "cdecl"):
         continue
@@ -1446,7 +1455,7 @@ for _lib in _libs.values():
     FPDF_DeviceToPage.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 973
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 993
 for _lib in _libs.values():
     if not _lib.has("FPDF_PageToDevice", "cdecl"):
         continue
@@ -1455,7 +1464,7 @@ for _lib in _libs.values():
     FPDF_PageToDevice.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1014
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1034
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_Create", "cdecl"):
         continue
@@ -1464,7 +1473,7 @@ for _lib in _libs.values():
     FPDFBitmap_Create.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1055
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1075
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_CreateEx", "cdecl"):
         continue
@@ -1473,7 +1482,7 @@ for _lib in _libs.values():
     FPDFBitmap_CreateEx.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1071
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1091
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetFormat", "cdecl"):
         continue
@@ -1482,7 +1491,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetFormat.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1097
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1117
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_FillRect", "cdecl"):
         continue
@@ -1491,7 +1500,7 @@ for _lib in _libs.values():
     FPDFBitmap_FillRect.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1120
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1140
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetBuffer", "cdecl"):
         continue
@@ -1501,7 +1510,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetBuffer.errcheck = lambda v,*a : cast(v, c_void_p)
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1129
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1149
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetWidth", "cdecl"):
         continue
@@ -1510,7 +1519,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetWidth.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1138
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1158
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetHeight", "cdecl"):
         continue
@@ -1519,7 +1528,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetHeight.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1149
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1169
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_GetStride", "cdecl"):
         continue
@@ -1528,7 +1537,7 @@ for _lib in _libs.values():
     FPDFBitmap_GetStride.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1161
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1181
 for _lib in _libs.values():
     if not _lib.has("FPDFBitmap_Destroy", "cdecl"):
         continue
@@ -1537,7 +1546,7 @@ for _lib in _libs.values():
     FPDFBitmap_Destroy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1170
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1190
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintScaling", "cdecl"):
         continue
@@ -1546,7 +1555,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintScaling.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1179
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1199
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetNumCopies", "cdecl"):
         continue
@@ -1555,7 +1564,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetNumCopies.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1188
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1208
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRange", "cdecl"):
         continue
@@ -1564,7 +1573,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRange.restype = FPDF_PAGERANGE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1198
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1218
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl"):
         continue
@@ -1573,7 +1582,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRangeCount.restype = c_size_t
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1210
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1230
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl"):
         continue
@@ -1582,7 +1591,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetPrintPageRangeElement.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1220
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1240
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetDuplex", "cdecl"):
         continue
@@ -1591,7 +1600,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetDuplex.restype = FPDF_DUPLEXTYPE
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1238
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1258
 for _lib in _libs.values():
     if not _lib.has("FPDF_VIEWERREF_GetName", "cdecl"):
         continue
@@ -1600,7 +1609,7 @@ for _lib in _libs.values():
     FPDF_VIEWERREF_GetName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1250
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1270
 for _lib in _libs.values():
     if not _lib.has("FPDF_CountNamedDests", "cdecl"):
         continue
@@ -1609,7 +1618,7 @@ for _lib in _libs.values():
     FPDF_CountNamedDests.restype = FPDF_DWORD
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1260
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1280
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetNamedDestByName", "cdecl"):
         continue
@@ -1618,7 +1627,7 @@ for _lib in _libs.values():
     FPDF_GetNamedDestByName.restype = FPDF_DEST
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 1283
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1303
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetNamedDest", "cdecl"):
         continue
@@ -1627,15 +1636,42 @@ for _lib in _libs.values():
     FPDF_GetNamedDest.restype = FPDF_DEST
     break
 
-enum_anon_4 = c_int# /home/yhu/pdfium/include/fpdf_doc.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1315
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetXFAPacketCount", "cdecl"):
+        continue
+    FPDF_GetXFAPacketCount = _lib.get("FPDF_GetXFAPacketCount", "cdecl")
+    FPDF_GetXFAPacketCount.argtypes = [FPDF_DOCUMENT]
+    FPDF_GetXFAPacketCount.restype = c_int
+    break
 
-FILEIDTYPE_PERMANENT = 0# /home/yhu/pdfium/include/fpdf_doc.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1333
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetXFAPacketName", "cdecl"):
+        continue
+    FPDF_GetXFAPacketName = _lib.get("FPDF_GetXFAPacketName", "cdecl")
+    FPDF_GetXFAPacketName.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), c_ulong]
+    FPDF_GetXFAPacketName.restype = c_ulong
+    break
 
-FILEIDTYPE_CHANGING = 1# /home/yhu/pdfium/include/fpdf_doc.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1360
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetXFAPacketContent", "cdecl"):
+        continue
+    FPDF_GetXFAPacketContent = _lib.get("FPDF_GetXFAPacketContent", "cdecl")
+    FPDF_GetXFAPacketContent.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), c_ulong, POINTER(c_ulong)]
+    FPDF_GetXFAPacketContent.restype = FPDF_BOOL
+    break
 
-FPDF_FILEIDTYPE = enum_anon_4# /home/yhu/pdfium/include/fpdf_doc.h: 44
+enum_anon_4 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 46
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 55
+FILEIDTYPE_PERMANENT = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 46
+
+FILEIDTYPE_CHANGING = 1# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 46
+
+FPDF_FILEIDTYPE = enum_anon_4# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 46
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 57
 class struct__FS_QUADPOINTSF(Structure):
     pass
 
@@ -1660,9 +1696,9 @@ struct__FS_QUADPOINTSF._fields_ = [
     ('y4', FS_FLOAT),
 ]
 
-FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/yhu/pdfium/include/fpdf_doc.h: 55
+FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 57
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 66
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 68
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_GetFirstChild", "cdecl"):
         continue
@@ -1671,7 +1707,7 @@ for _lib in _libs.values():
     FPDFBookmark_GetFirstChild.restype = FPDF_BOOKMARK
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 76
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 78
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_GetNextSibling", "cdecl"):
         continue
@@ -1680,7 +1716,7 @@ for _lib in _libs.values():
     FPDFBookmark_GetNextSibling.restype = FPDF_BOOKMARK
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 92
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 94
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_GetTitle", "cdecl"):
         continue
@@ -1689,7 +1725,7 @@ for _lib in _libs.values():
     FPDFBookmark_GetTitle.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 106
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 108
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_Find", "cdecl"):
         continue
@@ -1698,7 +1734,7 @@ for _lib in _libs.values():
     FPDFBookmark_Find.restype = FPDF_BOOKMARK
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 116
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 118
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_GetDest", "cdecl"):
         continue
@@ -1707,7 +1743,7 @@ for _lib in _libs.values():
     FPDFBookmark_GetDest.restype = FPDF_DEST
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 126
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 128
 for _lib in _libs.values():
     if not _lib.has("FPDFBookmark_GetAction", "cdecl"):
         continue
@@ -1716,7 +1752,7 @@ for _lib in _libs.values():
     FPDFBookmark_GetAction.restype = FPDF_ACTION
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 138
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 140
 for _lib in _libs.values():
     if not _lib.has("FPDFAction_GetType", "cdecl"):
         continue
@@ -1725,7 +1761,7 @@ for _lib in _libs.values():
     FPDFAction_GetType.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 152
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 154
 for _lib in _libs.values():
     if not _lib.has("FPDFAction_GetDest", "cdecl"):
         continue
@@ -1734,7 +1770,7 @@ for _lib in _libs.values():
     FPDFAction_GetDest.restype = FPDF_DEST
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 170
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 172
 for _lib in _libs.values():
     if not _lib.has("FPDFAction_GetFilePath", "cdecl"):
         continue
@@ -1743,7 +1779,7 @@ for _lib in _libs.values():
     FPDFAction_GetFilePath.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 186
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 188
 for _lib in _libs.values():
     if not _lib.has("FPDFAction_GetURIPath", "cdecl"):
         continue
@@ -1752,7 +1788,7 @@ for _lib in _libs.values():
     FPDFAction_GetURIPath.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 197
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 199
 for _lib in _libs.values():
     if not _lib.has("FPDFDest_GetDestPageIndex", "cdecl"):
         continue
@@ -1761,7 +1797,7 @@ for _lib in _libs.values():
     FPDFDest_GetDestPageIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 210
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 212
 for _lib in _libs.values():
     if not _lib.has("FPDFDest_GetView", "cdecl"):
         continue
@@ -1770,7 +1806,7 @@ for _lib in _libs.values():
     FPDFDest_GetView.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 227
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 229
 for _lib in _libs.values():
     if not _lib.has("FPDFDest_GetLocationInPage", "cdecl"):
         continue
@@ -1779,7 +1815,7 @@ for _lib in _libs.values():
     FPDFDest_GetLocationInPage.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 245
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 247
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetLinkAtPoint", "cdecl"):
         continue
@@ -1788,7 +1824,7 @@ for _lib in _libs.values():
     FPDFLink_GetLinkAtPoint.restype = FPDF_LINK
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 260
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 262
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetLinkZOrderAtPoint", "cdecl"):
         continue
@@ -1797,7 +1833,7 @@ for _lib in _libs.values():
     FPDFLink_GetLinkZOrderAtPoint.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 272
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 274
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetDest", "cdecl"):
         continue
@@ -1806,7 +1842,7 @@ for _lib in _libs.values():
     FPDFLink_GetDest.restype = FPDF_DEST
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 280
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 282
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetAction", "cdecl"):
         continue
@@ -1815,7 +1851,7 @@ for _lib in _libs.values():
     FPDFLink_GetAction.restype = FPDF_ACTION
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 290
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 292
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_Enumerate", "cdecl"):
         continue
@@ -1824,7 +1860,7 @@ for _lib in _libs.values():
     FPDFLink_Enumerate.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 303
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 305
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetAnnot", "cdecl"):
         continue
@@ -1833,7 +1869,7 @@ for _lib in _libs.values():
     FPDFLink_GetAnnot.restype = FPDF_ANNOTATION
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 311
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 313
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetAnnotRect", "cdecl"):
         continue
@@ -1842,7 +1878,7 @@ for _lib in _libs.values():
     FPDFLink_GetAnnotRect.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 319
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 321
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_CountQuadPoints", "cdecl"):
         continue
@@ -1851,7 +1887,7 @@ for _lib in _libs.values():
     FPDFLink_CountQuadPoints.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 329
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 331
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetQuadPoints", "cdecl"):
         continue
@@ -1860,7 +1896,16 @@ for _lib in _libs.values():
     FPDFLink_GetQuadPoints.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 348
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 344
+for _lib in _libs.values():
+    if not _lib.has("FPDF_GetPageAAction", "cdecl"):
+        continue
+    FPDF_GetPageAAction = _lib.get("FPDF_GetPageAAction", "cdecl")
+    FPDF_GetPageAAction.argtypes = [FPDF_PAGE, c_int]
+    FPDF_GetPageAAction.restype = FPDF_ACTION
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 362
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetFileIdentifier", "cdecl"):
         continue
@@ -1869,7 +1914,7 @@ for _lib in _libs.values():
     FPDF_GetFileIdentifier.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 374
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 388
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetMetaText", "cdecl"):
         continue
@@ -1878,7 +1923,7 @@ for _lib in _libs.values():
     FPDF_GetMetaText.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 392
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 406
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetPageLabel", "cdecl"):
         continue
@@ -1887,7 +1932,7 @@ for _lib in _libs.values():
     FPDF_GetPageLabel.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 52
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 52
 class struct__IPDF_JsPlatform(Structure):
     pass
 
@@ -1922,11 +1967,11 @@ struct__IPDF_JsPlatform._fields_ = [
     ('m_v8EmbedderSlot', c_uint),
 ]
 
-IPDF_JSPLATFORM = struct__IPDF_JsPlatform# /home/yhu/pdfium/include/fpdf_formfill.h: 321
+IPDF_JSPLATFORM = struct__IPDF_JsPlatform# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 321
 
-TimerCallback = CFUNCTYPE(UNCHECKED(None), c_int)# /home/yhu/pdfium/include/fpdf_formfill.h: 339
+TimerCallback = CFUNCTYPE(UNCHECKED(None), c_int)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 339
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 353
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 353
 class struct__FPDF_SYSTEMTIME(Structure):
     pass
 
@@ -1951,9 +1996,9 @@ struct__FPDF_SYSTEMTIME._fields_ = [
     ('wMilliseconds', c_ushort),
 ]
 
-FPDF_SYSTEMTIME = struct__FPDF_SYSTEMTIME# /home/yhu/pdfium/include/fpdf_formfill.h: 353
+FPDF_SYSTEMTIME = struct__FPDF_SYSTEMTIME# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 353
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 375
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 375
 class struct__FPDF_FORMFILLINFO(Structure):
     pass
 
@@ -2032,9 +2077,9 @@ struct__FPDF_FORMFILLINFO._fields_ = [
     ('FFI_DoURIActionWithKeyboardModifier', CFUNCTYPE(UNCHECKED(None), POINTER(struct__FPDF_FORMFILLINFO), FPDF_BYTESTRING, c_int)),
 ]
 
-FPDF_FORMFILLINFO = struct__FPDF_FORMFILLINFO# /home/yhu/pdfium/include/fpdf_formfill.h: 1136
+FPDF_FORMFILLINFO = struct__FPDF_FORMFILLINFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1136
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1150
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1150
 for _lib in _libs.values():
     if not _lib.has("FPDFDOC_InitFormFillEnvironment", "cdecl"):
         continue
@@ -2043,7 +2088,7 @@ for _lib in _libs.values():
     FPDFDOC_InitFormFillEnvironment.restype = FPDF_FORMHANDLE
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1165
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1165
 for _lib in _libs.values():
     if not _lib.has("FPDFDOC_ExitFormFillEnvironment", "cdecl"):
         continue
@@ -2052,7 +2097,7 @@ for _lib in _libs.values():
     FPDFDOC_ExitFormFillEnvironment.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1178
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1178
 for _lib in _libs.values():
     if not _lib.has("FORM_OnAfterLoadPage", "cdecl"):
         continue
@@ -2061,7 +2106,7 @@ for _lib in _libs.values():
     FORM_OnAfterLoadPage.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1192
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1192
 for _lib in _libs.values():
     if not _lib.has("FORM_OnBeforeClosePage", "cdecl"):
         continue
@@ -2070,7 +2115,7 @@ for _lib in _libs.values():
     FORM_OnBeforeClosePage.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1210
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1210
 for _lib in _libs.values():
     if not _lib.has("FORM_DoDocumentJSAction", "cdecl"):
         continue
@@ -2079,7 +2124,7 @@ for _lib in _libs.values():
     FORM_DoDocumentJSAction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1226
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1226
 for _lib in _libs.values():
     if not _lib.has("FORM_DoDocumentOpenAction", "cdecl"):
         continue
@@ -2088,7 +2133,7 @@ for _lib in _libs.values():
     FORM_DoDocumentOpenAction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1255
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1255
 for _lib in _libs.values():
     if not _lib.has("FORM_DoDocumentAAction", "cdecl"):
         continue
@@ -2097,7 +2142,7 @@ for _lib in _libs.values():
     FORM_DoDocumentAAction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1280
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1280
 for _lib in _libs.values():
     if not _lib.has("FORM_DoPageAAction", "cdecl"):
         continue
@@ -2106,7 +2151,7 @@ for _lib in _libs.values():
     FORM_DoPageAAction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1299
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1299
 for _lib in _libs.values():
     if not _lib.has("FORM_OnMouseMove", "cdecl"):
         continue
@@ -2115,7 +2160,7 @@ for _lib in _libs.values():
     FORM_OnMouseMove.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1330
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1330
 for _lib in _libs.values():
     if not _lib.has("FORM_OnMouseWheel", "cdecl"):
         continue
@@ -2124,7 +2169,7 @@ for _lib in _libs.values():
     FORM_OnMouseWheel.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1355
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1355
 for _lib in _libs.values():
     if not _lib.has("FORM_OnFocus", "cdecl"):
         continue
@@ -2133,7 +2178,7 @@ for _lib in _libs.values():
     FORM_OnFocus.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1377
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1377
 for _lib in _libs.values():
     if not _lib.has("FORM_OnLButtonDown", "cdecl"):
         continue
@@ -2142,7 +2187,7 @@ for _lib in _libs.values():
     FORM_OnLButtonDown.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1390
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1390
 for _lib in _libs.values():
     if not _lib.has("FORM_OnRButtonDown", "cdecl"):
         continue
@@ -2151,7 +2196,7 @@ for _lib in _libs.values():
     FORM_OnRButtonDown.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1409
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1409
 for _lib in _libs.values():
     if not _lib.has("FORM_OnLButtonUp", "cdecl"):
         continue
@@ -2160,7 +2205,7 @@ for _lib in _libs.values():
     FORM_OnLButtonUp.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1422
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1422
 for _lib in _libs.values():
     if not _lib.has("FORM_OnRButtonUp", "cdecl"):
         continue
@@ -2169,7 +2214,7 @@ for _lib in _libs.values():
     FORM_OnRButtonUp.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1445
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1445
 for _lib in _libs.values():
     if not _lib.has("FORM_OnLButtonDoubleClick", "cdecl"):
         continue
@@ -2178,7 +2223,7 @@ for _lib in _libs.values():
     FORM_OnLButtonDoubleClick.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1464
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1464
 for _lib in _libs.values():
     if not _lib.has("FORM_OnKeyDown", "cdecl"):
         continue
@@ -2187,7 +2232,7 @@ for _lib in _libs.values():
     FORM_OnKeyDown.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1482
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1482
 for _lib in _libs.values():
     if not _lib.has("FORM_OnKeyUp", "cdecl"):
         continue
@@ -2196,7 +2241,7 @@ for _lib in _libs.values():
     FORM_OnKeyUp.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1501
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1501
 for _lib in _libs.values():
     if not _lib.has("FORM_OnChar", "cdecl"):
         continue
@@ -2205,7 +2250,7 @@ for _lib in _libs.values():
     FORM_OnChar.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1524
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1524
 for _lib in _libs.values():
     if not _lib.has("FORM_GetFocusedText", "cdecl"):
         continue
@@ -2214,7 +2259,7 @@ for _lib in _libs.values():
     FORM_GetFocusedText.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1547
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1547
 for _lib in _libs.values():
     if not _lib.has("FORM_GetSelectedText", "cdecl"):
         continue
@@ -2223,7 +2268,7 @@ for _lib in _libs.values():
     FORM_GetSelectedText.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1567
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1567
 for _lib in _libs.values():
     if not _lib.has("FORM_ReplaceSelection", "cdecl"):
         continue
@@ -2232,7 +2277,7 @@ for _lib in _libs.values():
     FORM_ReplaceSelection.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1584
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1584
 for _lib in _libs.values():
     if not _lib.has("FORM_SelectAllText", "cdecl"):
         continue
@@ -2241,7 +2286,7 @@ for _lib in _libs.values():
     FORM_SelectAllText.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1597
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1597
 for _lib in _libs.values():
     if not _lib.has("FORM_CanUndo", "cdecl"):
         continue
@@ -2250,7 +2295,7 @@ for _lib in _libs.values():
     FORM_CanUndo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1611
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1611
 for _lib in _libs.values():
     if not _lib.has("FORM_CanRedo", "cdecl"):
         continue
@@ -2259,7 +2304,7 @@ for _lib in _libs.values():
     FORM_CanRedo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1624
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1624
 for _lib in _libs.values():
     if not _lib.has("FORM_Undo", "cdecl"):
         continue
@@ -2268,7 +2313,7 @@ for _lib in _libs.values():
     FORM_Undo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1637
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1637
 for _lib in _libs.values():
     if not _lib.has("FORM_Redo", "cdecl"):
         continue
@@ -2277,7 +2322,7 @@ for _lib in _libs.values():
     FORM_Redo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1652
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1652
 for _lib in _libs.values():
     if not _lib.has("FORM_ForceToKillFocus", "cdecl"):
         continue
@@ -2286,7 +2331,7 @@ for _lib in _libs.values():
     FORM_ForceToKillFocus.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1677
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1677
 for _lib in _libs.values():
     if not _lib.has("FORM_GetFocusedAnnot", "cdecl"):
         continue
@@ -2295,7 +2340,7 @@ for _lib in _libs.values():
     FORM_GetFocusedAnnot.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1696
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1696
 for _lib in _libs.values():
     if not _lib.has("FORM_SetFocusedAnnot", "cdecl"):
         continue
@@ -2304,7 +2349,7 @@ for _lib in _libs.values():
     FORM_SetFocusedAnnot.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1752
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1752
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_HasFormFieldAtPoint", "cdecl"):
         continue
@@ -2313,7 +2358,7 @@ for _lib in _libs.values():
     FPDFPage_HasFormFieldAtPoint.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1771
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1771
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_FormFieldZOrderAtPoint", "cdecl"):
         continue
@@ -2322,7 +2367,7 @@ for _lib in _libs.values():
     FPDFPage_FormFieldZOrderAtPoint.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1799
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1799
 for _lib in _libs.values():
     if not _lib.has("FPDF_SetFormFieldHighlightColor", "cdecl"):
         continue
@@ -2331,7 +2376,7 @@ for _lib in _libs.values():
     FPDF_SetFormFieldHighlightColor.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1818
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1818
 for _lib in _libs.values():
     if not _lib.has("FPDF_SetFormFieldHighlightAlpha", "cdecl"):
         continue
@@ -2340,7 +2385,7 @@ for _lib in _libs.values():
     FPDF_SetFormFieldHighlightAlpha.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1833
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1833
 for _lib in _libs.values():
     if not _lib.has("FPDF_RemoveFormFieldHighlight", "cdecl"):
         continue
@@ -2349,7 +2394,7 @@ for _lib in _libs.values():
     FPDF_RemoveFormFieldHighlight.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1872
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1872
 for _lib in _libs.values():
     if not _lib.has("FPDF_FFLDraw", "cdecl"):
         continue
@@ -2358,7 +2403,7 @@ for _lib in _libs.values():
     FPDF_FFLDraw.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1905
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1905
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetFormType", "cdecl"):
         continue
@@ -2367,7 +2412,7 @@ for _lib in _libs.values():
     FPDF_GetFormType.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1931
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1931
 for _lib in _libs.values():
     if not _lib.has("FORM_SetIndexSelected", "cdecl"):
         continue
@@ -2376,7 +2421,7 @@ for _lib in _libs.values():
     FORM_SetIndexSelected.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1956
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1956
 for _lib in _libs.values():
     if not _lib.has("FORM_IsIndexSelected", "cdecl"):
         continue
@@ -2385,7 +2430,7 @@ for _lib in _libs.values():
     FORM_IsIndexSelected.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1968
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1968
 for _lib in _libs.values():
     if not _lib.has("FPDF_LoadXFA", "cdecl"):
         continue
@@ -2394,15 +2439,15 @@ for _lib in _libs.values():
     FPDF_LoadXFA.restype = FPDF_BOOL
     break
 
-enum_FPDFANNOT_COLORTYPE = c_int# /home/yhu/pdfium/include/fpdf_annot.h: 89
+enum_FPDFANNOT_COLORTYPE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
-FPDFANNOT_COLORTYPE_Color = 0# /home/yhu/pdfium/include/fpdf_annot.h: 89
+FPDFANNOT_COLORTYPE_Color = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
-FPDFANNOT_COLORTYPE_InteriorColor = (FPDFANNOT_COLORTYPE_Color + 1)# /home/yhu/pdfium/include/fpdf_annot.h: 89
+FPDFANNOT_COLORTYPE_InteriorColor = (FPDFANNOT_COLORTYPE_Color + 1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
-FPDFANNOT_COLORTYPE = enum_FPDFANNOT_COLORTYPE# /home/yhu/pdfium/include/fpdf_annot.h: 89
+FPDFANNOT_COLORTYPE = enum_FPDFANNOT_COLORTYPE# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 100
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 101
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_IsSupportedSubtype", "cdecl"):
         continue
@@ -2411,7 +2456,7 @@ for _lib in _libs.values():
     FPDFAnnot_IsSupportedSubtype.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 113
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 114
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_CreateAnnot", "cdecl"):
         continue
@@ -2420,7 +2465,7 @@ for _lib in _libs.values():
     FPDFPage_CreateAnnot.restype = FPDF_ANNOTATION
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 121
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 122
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetAnnotCount", "cdecl"):
         continue
@@ -2429,7 +2474,7 @@ for _lib in _libs.values():
     FPDFPage_GetAnnotCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 131
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 132
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetAnnot", "cdecl"):
         continue
@@ -2438,7 +2483,7 @@ for _lib in _libs.values():
     FPDFPage_GetAnnot.restype = FPDF_ANNOTATION
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 142
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 143
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetAnnotIndex", "cdecl"):
         continue
@@ -2447,7 +2492,7 @@ for _lib in _libs.values():
     FPDFPage_GetAnnotIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 151
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 152
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_CloseAnnot", "cdecl"):
         continue
@@ -2456,7 +2501,7 @@ for _lib in _libs.values():
     FPDFPage_CloseAnnot.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 160
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 161
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_RemoveAnnot", "cdecl"):
         continue
@@ -2465,7 +2510,7 @@ for _lib in _libs.values():
     FPDFPage_RemoveAnnot.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 170
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 171
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetSubtype", "cdecl"):
         continue
@@ -2474,7 +2519,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetSubtype.restype = FPDF_ANNOTATION_SUBTYPE
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 181
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 182
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_IsObjectSupportedSubtype", "cdecl"):
         continue
@@ -2483,7 +2528,7 @@ for _lib in _libs.values():
     FPDFAnnot_IsObjectSupportedSubtype.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 195
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 196
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_UpdateObject", "cdecl"):
         continue
@@ -2492,7 +2537,7 @@ for _lib in _libs.values():
     FPDFAnnot_UpdateObject.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 210
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 211
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_AddInkStroke", "cdecl"):
         continue
@@ -2501,7 +2546,7 @@ for _lib in _libs.values():
     FPDFAnnot_AddInkStroke.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 223
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 224
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_RemoveInkList", "cdecl"):
         continue
@@ -2510,7 +2555,7 @@ for _lib in _libs.values():
     FPDFAnnot_RemoveInkList.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 237
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 238
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_AppendObject", "cdecl"):
         continue
@@ -2519,7 +2564,7 @@ for _lib in _libs.values():
     FPDFAnnot_AppendObject.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 246
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 247
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetObjectCount", "cdecl"):
         continue
@@ -2528,7 +2573,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetObjectCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 256
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 257
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetObject", "cdecl"):
         continue
@@ -2537,7 +2582,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetObject.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 266
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 267
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_RemoveObject", "cdecl"):
         continue
@@ -2546,7 +2591,7 @@ for _lib in _libs.values():
     FPDFAnnot_RemoveObject.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 279
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 280
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetColor", "cdecl"):
         continue
@@ -2555,7 +2600,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 298
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 299
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetColor", "cdecl"):
         continue
@@ -2564,7 +2609,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 318
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 319
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_HasAttachmentPoints", "cdecl"):
         continue
@@ -2573,7 +2618,7 @@ for _lib in _libs.values():
     FPDFAnnot_HasAttachmentPoints.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 334
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 335
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetAttachmentPoints", "cdecl"):
         continue
@@ -2582,7 +2627,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetAttachmentPoints.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 349
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 350
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_AppendAttachmentPoints", "cdecl"):
         continue
@@ -2591,7 +2636,7 @@ for _lib in _libs.values():
     FPDFAnnot_AppendAttachmentPoints.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 359
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 360
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_CountAttachmentPoints", "cdecl"):
         continue
@@ -2600,7 +2645,7 @@ for _lib in _libs.values():
     FPDFAnnot_CountAttachmentPoints.restype = c_size_t
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 370
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 371
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetAttachmentPoints", "cdecl"):
         continue
@@ -2609,7 +2654,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetAttachmentPoints.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 384
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 385
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetRect", "cdecl"):
         continue
@@ -2618,7 +2663,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetRect.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 394
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 395
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetRect", "cdecl"):
         continue
@@ -2627,7 +2672,52 @@ for _lib in _libs.values():
     FPDFAnnot_GetRect.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 404
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 410
+for _lib in _libs.values():
+    if not _lib.has("FPDFAnnot_GetVertices", "cdecl"):
+        continue
+    FPDFAnnot_GetVertices = _lib.get("FPDFAnnot_GetVertices", "cdecl")
+    FPDFAnnot_GetVertices.argtypes = [FPDF_ANNOTATION, POINTER(FS_POINTF), c_ulong]
+    FPDFAnnot_GetVertices.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 422
+for _lib in _libs.values():
+    if not _lib.has("FPDFAnnot_GetInkListCount", "cdecl"):
+        continue
+    FPDFAnnot_GetInkListCount = _lib.get("FPDFAnnot_GetInkListCount", "cdecl")
+    FPDFAnnot_GetInkListCount.argtypes = [FPDF_ANNOTATION]
+    FPDFAnnot_GetInkListCount.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 437
+for _lib in _libs.values():
+    if not _lib.has("FPDFAnnot_GetInkListPath", "cdecl"):
+        continue
+    FPDFAnnot_GetInkListPath = _lib.get("FPDFAnnot_GetInkListPath", "cdecl")
+    FPDFAnnot_GetInkListPath.argtypes = [FPDF_ANNOTATION, c_ulong, POINTER(FS_POINTF), c_ulong]
+    FPDFAnnot_GetInkListPath.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 451
+for _lib in _libs.values():
+    if not _lib.has("FPDFAnnot_GetLine", "cdecl"):
+        continue
+    FPDFAnnot_GetLine = _lib.get("FPDFAnnot_GetLine", "cdecl")
+    FPDFAnnot_GetLine.argtypes = [FPDF_ANNOTATION, POINTER(FS_POINTF), POINTER(FS_POINTF)]
+    FPDFAnnot_GetLine.restype = FPDF_BOOL
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 466
+for _lib in _libs.values():
+    if not _lib.has("FPDFAnnot_GetBorder", "cdecl"):
+        continue
+    FPDFAnnot_GetBorder = _lib.get("FPDFAnnot_GetBorder", "cdecl")
+    FPDFAnnot_GetBorder.argtypes = [FPDF_ANNOTATION, POINTER(c_float), POINTER(c_float), POINTER(c_float)]
+    FPDFAnnot_GetBorder.restype = FPDF_BOOL
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 478
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_HasKey", "cdecl"):
         continue
@@ -2636,7 +2726,7 @@ for _lib in _libs.values():
     FPDFAnnot_HasKey.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 415
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 489
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetValueType", "cdecl"):
         continue
@@ -2645,7 +2735,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetValueType.restype = FPDF_OBJECT_TYPE
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 428
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 502
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetStringValue", "cdecl"):
         continue
@@ -2654,7 +2744,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetStringValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 448
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 522
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetStringValue", "cdecl"):
         continue
@@ -2663,7 +2753,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetStringValue.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 465
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 539
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetNumberValue", "cdecl"):
         continue
@@ -2672,7 +2762,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetNumberValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 482
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 556
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetAP", "cdecl"):
         continue
@@ -2681,7 +2771,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetAP.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 504
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 578
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetAP", "cdecl"):
         continue
@@ -2690,7 +2780,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetAP.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 520
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 594
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetLinkedAnnot", "cdecl"):
         continue
@@ -2699,7 +2789,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetLinkedAnnot.restype = FPDF_ANNOTATION
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 528
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 602
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFlags", "cdecl"):
         continue
@@ -2708,7 +2798,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFlags.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 537
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 611
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetFlags", "cdecl"):
         continue
@@ -2717,7 +2807,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetFlags.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 549
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 623
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldFlags", "cdecl"):
         continue
@@ -2726,7 +2816,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldFlags.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 566
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 640
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldAtPoint", "cdecl"):
         continue
@@ -2735,7 +2825,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldAtPoint.restype = FPDF_ANNOTATION
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 584
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 658
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldName", "cdecl"):
         continue
@@ -2744,7 +2834,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 600
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 674
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldType", "cdecl"):
         continue
@@ -2753,7 +2843,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldType.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 616
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 690
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldValue", "cdecl"):
         continue
@@ -2762,7 +2852,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldValue.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 631
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 705
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetOptionCount", "cdecl"):
         continue
@@ -2771,7 +2861,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetOptionCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 653
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 727
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetOptionLabel", "cdecl"):
         continue
@@ -2780,7 +2870,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetOptionLabel.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 671
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 745
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_IsOptionSelected", "cdecl"):
         continue
@@ -2789,7 +2879,7 @@ for _lib in _libs.values():
     FPDFAnnot_IsOptionSelected.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 688
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 762
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFontSize", "cdecl"):
         continue
@@ -2798,7 +2888,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFontSize.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 701
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 775
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_IsChecked", "cdecl"):
         continue
@@ -2807,7 +2897,7 @@ for _lib in _libs.values():
     FPDFAnnot_IsChecked.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 716
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 790
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_SetFocusableSubtypes", "cdecl"):
         continue
@@ -2816,7 +2906,7 @@ for _lib in _libs.values():
     FPDFAnnot_SetFocusableSubtypes.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 729
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 803
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFocusableSubtypesCount", "cdecl"):
         continue
@@ -2825,7 +2915,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFocusableSubtypesCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 745
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 819
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFocusableSubtypes", "cdecl"):
         continue
@@ -2834,7 +2924,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFocusableSubtypes.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 756
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 830
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetLink", "cdecl"):
         continue
@@ -2843,7 +2933,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetLink.restype = FPDF_LINK
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 770
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 844
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormControlCount", "cdecl"):
         continue
@@ -2852,7 +2942,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormControlCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 784
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 858
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormControlIndex", "cdecl"):
         continue
@@ -2861,7 +2951,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormControlIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 801
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 875
 for _lib in _libs.values():
     if not _lib.has("FPDFAnnot_GetFormFieldExportValue", "cdecl"):
         continue
@@ -2870,7 +2960,7 @@ for _lib in _libs.values():
     FPDFAnnot_GetFormFieldExportValue.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 22
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_GetAttachmentCount", "cdecl"):
         continue
@@ -2879,7 +2969,7 @@ for _lib in _libs.values():
     FPDFDoc_GetAttachmentCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 35
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_AddAttachment", "cdecl"):
         continue
@@ -2888,7 +2978,7 @@ for _lib in _libs.values():
     FPDFDoc_AddAttachment.restype = FPDF_ATTACHMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 46
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 46
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_GetAttachment", "cdecl"):
         continue
@@ -2897,7 +2987,7 @@ for _lib in _libs.values():
     FPDFDoc_GetAttachment.restype = FPDF_ATTACHMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 59
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 59
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_DeleteAttachment", "cdecl"):
         continue
@@ -2906,7 +2996,7 @@ for _lib in _libs.values():
     FPDFDoc_DeleteAttachment.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 72
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 72
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_GetName", "cdecl"):
         continue
@@ -2915,7 +3005,7 @@ for _lib in _libs.values():
     FPDFAttachment_GetName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 84
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 84
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_HasKey", "cdecl"):
         continue
@@ -2924,7 +3014,7 @@ for _lib in _libs.values():
     FPDFAttachment_HasKey.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 95
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 95
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_GetValueType", "cdecl"):
         continue
@@ -2933,7 +3023,7 @@ for _lib in _libs.values():
     FPDFAttachment_GetValueType.restype = FPDF_OBJECT_TYPE
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 108
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 108
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_SetStringValue", "cdecl"):
         continue
@@ -2942,7 +3032,7 @@ for _lib in _libs.values():
     FPDFAttachment_SetStringValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 129
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 129
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_GetStringValue", "cdecl"):
         continue
@@ -2951,7 +3041,7 @@ for _lib in _libs.values():
     FPDFAttachment_GetStringValue.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 146
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 146
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_SetFile", "cdecl"):
         continue
@@ -2960,7 +3050,7 @@ for _lib in _libs.values():
     FPDFAttachment_SetFile.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_attachment.h: 170
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 170
 for _lib in _libs.values():
     if not _lib.has("FPDFAttachment_GetFile", "cdecl"):
         continue
@@ -2969,7 +3059,7 @@ for _lib in _libs.values():
     FPDFAttachment_GetFile.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_catalog.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_catalog.h: 28
 for _lib in _libs.values():
     if not _lib.has("FPDFCatalog_IsTagged", "cdecl"):
         continue
@@ -2978,7 +3068,7 @@ for _lib in _libs.values():
     FPDFCatalog_IsTagged.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 33
 class struct__FX_FILEAVAIL(Structure):
     pass
 
@@ -2991,11 +3081,11 @@ struct__FX_FILEAVAIL._fields_ = [
     ('IsDataAvail', CFUNCTYPE(UNCHECKED(FPDF_BOOL), POINTER(struct__FX_FILEAVAIL), c_size_t, c_size_t)),
 ]
 
-FX_FILEAVAIL = struct__FX_FILEAVAIL# /home/yhu/pdfium/include/fpdf_dataavail.h: 52
+FX_FILEAVAIL = struct__FX_FILEAVAIL# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 52
 
-FPDF_AVAIL = POINTER(None)# /home/yhu/pdfium/include/fpdf_dataavail.h: 53
+FPDF_AVAIL = POINTER(None)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 53
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 63
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 63
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_Create", "cdecl"):
         continue
@@ -3004,7 +3094,7 @@ for _lib in _libs.values():
     FPDFAvail_Create.restype = FPDF_AVAIL
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 69
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 69
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_Destroy", "cdecl"):
         continue
@@ -3013,7 +3103,7 @@ for _lib in _libs.values():
     FPDFAvail_Destroy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 72
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 72
 class struct__FX_DOWNLOADHINTS(Structure):
     pass
 
@@ -3026,9 +3116,9 @@ struct__FX_DOWNLOADHINTS._fields_ = [
     ('AddSegment', CFUNCTYPE(UNCHECKED(None), POINTER(struct__FX_DOWNLOADHINTS), c_size_t, c_size_t)),
 ]
 
-FX_DOWNLOADHINTS = struct__FX_DOWNLOADHINTS# /home/yhu/pdfium/include/fpdf_dataavail.h: 91
+FX_DOWNLOADHINTS = struct__FX_DOWNLOADHINTS# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 91
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 110
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 110
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_IsDocAvail", "cdecl"):
         continue
@@ -3037,7 +3127,7 @@ for _lib in _libs.values():
     FPDFAvail_IsDocAvail.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 125
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 125
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_GetDocument", "cdecl"):
         continue
@@ -3046,7 +3136,7 @@ for _lib in _libs.values():
     FPDFAvail_GetDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 136
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 136
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_GetFirstPageNum", "cdecl"):
         continue
@@ -3055,7 +3145,7 @@ for _lib in _libs.values():
     FPDFAvail_GetFirstPageNum.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 158
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 158
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_IsPageAvail", "cdecl"):
         continue
@@ -3064,7 +3154,7 @@ for _lib in _libs.values():
     FPDFAvail_IsPageAvail.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 183
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 183
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_IsFormAvail", "cdecl"):
         continue
@@ -3073,7 +3163,7 @@ for _lib in _libs.values():
     FPDFAvail_IsFormAvail.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 199
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 199
 for _lib in _libs.values():
     if not _lib.has("FPDFAvail_IsLinearized", "cdecl"):
         continue
@@ -3084,7 +3174,7 @@ for _lib in _libs.values():
 
 __time_t = c_long# /usr/include/x86_64-linux-gnu/bits/types.h: 160
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 91
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 91
 class struct_FPDF_IMAGEOBJ_METADATA(Structure):
     pass
 
@@ -3107,9 +3197,9 @@ struct_FPDF_IMAGEOBJ_METADATA._fields_ = [
     ('marked_content_id', c_int),
 ]
 
-FPDF_IMAGEOBJ_METADATA = struct_FPDF_IMAGEOBJ_METADATA# /home/yhu/pdfium/include/fpdf_edit.h: 91
+FPDF_IMAGEOBJ_METADATA = struct_FPDF_IMAGEOBJ_METADATA# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 91
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 100
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 100
 for _lib in _libs.values():
     if not _lib.has("FPDF_CreateNewDocument", "cdecl"):
         continue
@@ -3118,7 +3208,7 @@ for _lib in _libs.values():
     FPDF_CreateNewDocument.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 115
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 115
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_New", "cdecl"):
         continue
@@ -3127,7 +3217,7 @@ for _lib in _libs.values():
     FPDFPage_New.restype = FPDF_PAGE
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 124
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 124
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_Delete", "cdecl"):
         continue
@@ -3136,7 +3226,7 @@ for _lib in _libs.values():
     FPDFPage_Delete.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 136
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 136
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetRotation", "cdecl"):
         continue
@@ -3145,7 +3235,7 @@ for _lib in _libs.values():
     FPDFPage_GetRotation.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 146
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 146
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetRotation", "cdecl"):
         continue
@@ -3154,7 +3244,7 @@ for _lib in _libs.values():
     FPDFPage_SetRotation.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 153
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 153
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_InsertObject", "cdecl"):
         continue
@@ -3163,7 +3253,7 @@ for _lib in _libs.values():
     FPDFPage_InsertObject.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 167
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 167
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_RemoveObject", "cdecl"):
         continue
@@ -3172,7 +3262,7 @@ for _lib in _libs.values():
     FPDFPage_RemoveObject.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 174
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 174
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_CountObjects", "cdecl"):
         continue
@@ -3181,7 +3271,7 @@ for _lib in _libs.values():
     FPDFPage_CountObjects.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 182
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 182
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetObject", "cdecl"):
         continue
@@ -3190,7 +3280,7 @@ for _lib in _libs.values():
     FPDFPage_GetObject.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 190
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 190
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_HasTransparency", "cdecl"):
         continue
@@ -3199,7 +3289,7 @@ for _lib in _libs.values():
     FPDFPage_HasTransparency.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 200
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 200
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GenerateContent", "cdecl"):
         continue
@@ -3208,7 +3298,7 @@ for _lib in _libs.values():
     FPDFPage_GenerateContent.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 209
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 209
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_Destroy", "cdecl"):
         continue
@@ -3217,7 +3307,7 @@ for _lib in _libs.values():
     FPDFPageObj_Destroy.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 217
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 217
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_HasTransparency", "cdecl"):
         continue
@@ -3226,7 +3316,7 @@ for _lib in _libs.values():
     FPDFPageObj_HasTransparency.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 225
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 225
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetType", "cdecl"):
         continue
@@ -3235,7 +3325,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetType.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 242
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 242
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_Transform", "cdecl"):
         continue
@@ -3244,7 +3334,7 @@ for _lib in _libs.values():
     FPDFPageObj_Transform.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 264
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 264
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_TransformAnnots", "cdecl"):
         continue
@@ -3253,7 +3343,7 @@ for _lib in _libs.values():
     FPDFPage_TransformAnnots.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 278
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 278
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_NewImageObj", "cdecl"):
         continue
@@ -3262,7 +3352,7 @@ for _lib in _libs.values():
     FPDFPageObj_NewImageObj.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 288
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 288
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_CountMarks", "cdecl"):
         continue
@@ -3271,7 +3361,7 @@ for _lib in _libs.values():
     FPDFPageObj_CountMarks.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 301
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 301
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetMark", "cdecl"):
         continue
@@ -3280,7 +3370,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetMark.restype = FPDF_PAGEOBJECTMARK
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 314
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 314
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_AddMark", "cdecl"):
         continue
@@ -3289,7 +3379,7 @@ for _lib in _libs.values():
     FPDFPageObj_AddMark.restype = FPDF_PAGEOBJECTMARK
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 325
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 325
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_RemoveMark", "cdecl"):
         continue
@@ -3298,7 +3388,7 @@ for _lib in _libs.values():
     FPDFPageObj_RemoveMark.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 341
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 341
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetName", "cdecl"):
         continue
@@ -3307,7 +3397,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetName.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 354
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 354
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_CountParams", "cdecl"):
         continue
@@ -3316,7 +3406,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_CountParams.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 371
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 371
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetParamKey", "cdecl"):
         continue
@@ -3325,7 +3415,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetParamKey.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 385
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 385
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetParamValueType", "cdecl"):
         continue
@@ -3334,7 +3424,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetParamValueType.restype = FPDF_OBJECT_TYPE
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 400
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 400
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetParamIntValue", "cdecl"):
         continue
@@ -3343,7 +3433,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetParamIntValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 420
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 420
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetParamStringValue", "cdecl"):
         continue
@@ -3352,7 +3442,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetParamStringValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 441
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 441
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_GetParamBlobValue", "cdecl"):
         continue
@@ -3361,7 +3451,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_GetParamBlobValue.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 460
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 460
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_SetIntParam", "cdecl"):
         continue
@@ -3370,7 +3460,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_SetIntParam.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 479
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 479
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_SetStringParam", "cdecl"):
         continue
@@ -3379,7 +3469,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_SetStringParam.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 499
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 499
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_SetBlobParam", "cdecl"):
         continue
@@ -3388,7 +3478,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_SetBlobParam.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 515
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 515
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObjMark_RemoveParam", "cdecl"):
         continue
@@ -3397,7 +3487,7 @@ for _lib in _libs.values():
     FPDFPageObjMark_RemoveParam.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 534
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 534
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_LoadJpegFile", "cdecl"):
         continue
@@ -3406,7 +3496,7 @@ for _lib in _libs.values():
     FPDFImageObj_LoadJpegFile.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 556
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 556
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_LoadJpegFileInline", "cdecl"):
         continue
@@ -3415,7 +3505,7 @@ for _lib in _libs.values():
     FPDFImageObj_LoadJpegFileInline.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 579
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 579
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetMatrix", "cdecl"):
         continue
@@ -3424,7 +3514,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 604
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 604
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_SetMatrix", "cdecl"):
         continue
@@ -3433,7 +3523,7 @@ for _lib in _libs.values():
     FPDFImageObj_SetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 621
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 621
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_SetBitmap", "cdecl"):
         continue
@@ -3442,7 +3532,7 @@ for _lib in _libs.values():
     FPDFImageObj_SetBitmap.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 634
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 636
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetBitmap", "cdecl"):
         continue
@@ -3451,7 +3541,16 @@ for _lib in _libs.values():
     FPDFImageObj_GetBitmap.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 647
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 652
+for _lib in _libs.values():
+    if not _lib.has("FPDFImageObj_GetRenderedBitmap", "cdecl"):
+        continue
+    FPDFImageObj_GetRenderedBitmap = _lib.get("FPDFImageObj_GetRenderedBitmap", "cdecl")
+    FPDFImageObj_GetRenderedBitmap.argtypes = [FPDF_DOCUMENT, FPDF_PAGE, FPDF_PAGEOBJECT]
+    FPDFImageObj_GetRenderedBitmap.restype = FPDF_BITMAP
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 667
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetImageDataDecoded", "cdecl"):
         continue
@@ -3460,7 +3559,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetImageDataDecoded.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 661
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 681
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetImageDataRaw", "cdecl"):
         continue
@@ -3469,7 +3568,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetImageDataRaw.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 671
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 691
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetImageFilterCount", "cdecl"):
         continue
@@ -3478,7 +3577,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetImageFilterCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 685
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 705
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetImageFilter", "cdecl"):
         continue
@@ -3487,7 +3586,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetImageFilter.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 702
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 722
 for _lib in _libs.values():
     if not _lib.has("FPDFImageObj_GetImageMetadata", "cdecl"):
         continue
@@ -3496,7 +3595,7 @@ for _lib in _libs.values():
     FPDFImageObj_GetImageMetadata.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 712
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 732
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_CreateNewPath", "cdecl"):
         continue
@@ -3505,7 +3604,7 @@ for _lib in _libs.values():
     FPDFPageObj_CreateNewPath.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 723
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 743
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_CreateNewRect", "cdecl"):
         continue
@@ -3514,7 +3613,7 @@ for _lib in _libs.values():
     FPDFPageObj_CreateNewRect.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 738
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 758
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetBounds", "cdecl"):
         continue
@@ -3523,7 +3622,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetBounds.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 753
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 773
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetBlendMode", "cdecl"):
         continue
@@ -3532,7 +3631,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetBlendMode.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 766
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 786
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetStrokeColor", "cdecl"):
         continue
@@ -3541,7 +3640,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetStrokeColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 782
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 802
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetStrokeColor", "cdecl"):
         continue
@@ -3550,7 +3649,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetStrokeColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 795
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 815
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetStrokeWidth", "cdecl"):
         continue
@@ -3559,7 +3658,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetStrokeWidth.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 805
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 825
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetStrokeWidth", "cdecl"):
         continue
@@ -3568,7 +3667,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetStrokeWidth.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 815
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 835
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetLineJoin", "cdecl"):
         continue
@@ -3577,7 +3676,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetLineJoin.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 825
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 845
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetLineJoin", "cdecl"):
         continue
@@ -3586,7 +3685,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetLineJoin.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 835
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 855
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetLineCap", "cdecl"):
         continue
@@ -3595,7 +3694,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetLineCap.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 845
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 865
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetLineCap", "cdecl"):
         continue
@@ -3604,7 +3703,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetLineCap.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 857
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 877
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_SetFillColor", "cdecl"):
         continue
@@ -3613,7 +3712,7 @@ for _lib in _libs.values():
     FPDFPageObj_SetFillColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 873
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 893
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetFillColor", "cdecl"):
         continue
@@ -3622,7 +3721,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetFillColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 888
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 907
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_CountSegments", "cdecl"):
         continue
@@ -3631,7 +3730,7 @@ for _lib in _libs.values():
     FPDFPath_CountSegments.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 898
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 916
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_GetPathSegment", "cdecl"):
         continue
@@ -3640,7 +3739,7 @@ for _lib in _libs.values():
     FPDFPath_GetPathSegment.restype = FPDF_PATHSEGMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 909
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 926
 for _lib in _libs.values():
     if not _lib.has("FPDFPathSegment_GetPoint", "cdecl"):
         continue
@@ -3649,7 +3748,7 @@ for _lib in _libs.values():
     FPDFPathSegment_GetPoint.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 918
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 934
 for _lib in _libs.values():
     if not _lib.has("FPDFPathSegment_GetType", "cdecl"):
         continue
@@ -3658,7 +3757,7 @@ for _lib in _libs.values():
     FPDFPathSegment_GetType.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 927
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 942
 for _lib in _libs.values():
     if not _lib.has("FPDFPathSegment_GetClose", "cdecl"):
         continue
@@ -3667,7 +3766,7 @@ for _lib in _libs.values():
     FPDFPathSegment_GetClose.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 939
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 954
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_MoveTo", "cdecl"):
         continue
@@ -3676,7 +3775,7 @@ for _lib in _libs.values():
     FPDFPath_MoveTo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 952
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 967
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_LineTo", "cdecl"):
         continue
@@ -3685,7 +3784,7 @@ for _lib in _libs.values():
     FPDFPath_LineTo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 967
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 982
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_BezierTo", "cdecl"):
         continue
@@ -3694,7 +3793,7 @@ for _lib in _libs.values():
     FPDFPath_BezierTo.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 983
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 998
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_Close", "cdecl"):
         continue
@@ -3703,7 +3802,7 @@ for _lib in _libs.values():
     FPDFPath_Close.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 992
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1007
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_SetDrawMode", "cdecl"):
         continue
@@ -3712,7 +3811,7 @@ for _lib in _libs.values():
     FPDFPath_SetDrawMode.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1004
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1019
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_GetDrawMode", "cdecl"):
         continue
@@ -3721,7 +3820,7 @@ for _lib in _libs.values():
     FPDFPath_GetDrawMode.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1020
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1035
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_GetMatrix", "cdecl"):
         continue
@@ -3730,7 +3829,7 @@ for _lib in _libs.values():
     FPDFPath_GetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1035
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1050
 for _lib in _libs.values():
     if not _lib.has("FPDFPath_SetMatrix", "cdecl"):
         continue
@@ -3739,7 +3838,7 @@ for _lib in _libs.values():
     FPDFPath_SetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1046
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1061
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_NewTextObj", "cdecl"):
         continue
@@ -3748,7 +3847,7 @@ for _lib in _libs.values():
     FPDFPageObj_NewTextObj.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1057
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1072
 for _lib in _libs.values():
     if not _lib.has("FPDFText_SetText", "cdecl"):
         continue
@@ -3757,7 +3856,7 @@ for _lib in _libs.values():
     FPDFText_SetText.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1072
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1087
 for _lib in _libs.values():
     if not _lib.has("FPDFText_LoadFont", "cdecl"):
         continue
@@ -3766,7 +3865,7 @@ for _lib in _libs.values():
     FPDFText_LoadFont.restype = FPDF_FONT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1090
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1105
 for _lib in _libs.values():
     if not _lib.has("FPDFText_LoadStandardFont", "cdecl"):
         continue
@@ -3775,7 +3874,7 @@ for _lib in _libs.values():
     FPDFText_LoadStandardFont.restype = FPDF_FONT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1104
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1119
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_GetMatrix", "cdecl"):
         continue
@@ -3784,7 +3883,7 @@ for _lib in _libs.values():
     FPDFTextObj_GetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1114
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1129
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_GetFontSize", "cdecl"):
         continue
@@ -3793,7 +3892,7 @@ for _lib in _libs.values():
     FPDFTextObj_GetFontSize.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1119
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1134
 for _lib in _libs.values():
     if not _lib.has("FPDFFont_Close", "cdecl"):
         continue
@@ -3802,7 +3901,7 @@ for _lib in _libs.values():
     FPDFFont_Close.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1129
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1144
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_CreateTextObj", "cdecl"):
         continue
@@ -3811,7 +3910,7 @@ for _lib in _libs.values():
     FPDFPageObj_CreateTextObj.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1141
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1156
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_GetTextRenderMode", "cdecl"):
         continue
@@ -3820,7 +3919,7 @@ for _lib in _libs.values():
     FPDFTextObj_GetTextRenderMode.restype = FPDF_TEXT_RENDERMODE
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1152
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1167
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_SetTextRenderMode", "cdecl"):
         continue
@@ -3829,7 +3928,7 @@ for _lib in _libs.values():
     FPDFTextObj_SetTextRenderMode.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1169
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1184
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_GetFontName", "cdecl"):
         continue
@@ -3838,7 +3937,7 @@ for _lib in _libs.values():
     FPDFTextObj_GetFontName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1188
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1203
 for _lib in _libs.values():
     if not _lib.has("FPDFTextObj_GetText", "cdecl"):
         continue
@@ -3847,7 +3946,7 @@ for _lib in _libs.values():
     FPDFTextObj_GetText.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1200
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1215
 for _lib in _libs.values():
     if not _lib.has("FPDFFormObj_CountObjects", "cdecl"):
         continue
@@ -3856,7 +3955,7 @@ for _lib in _libs.values():
     FPDFFormObj_CountObjects.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1210
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1225
 for _lib in _libs.values():
     if not _lib.has("FPDFFormObj_GetObject", "cdecl"):
         continue
@@ -3865,7 +3964,7 @@ for _lib in _libs.values():
     FPDFFormObj_GetObject.restype = FPDF_PAGEOBJECT
     break
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 1225
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1240
 for _lib in _libs.values():
     if not _lib.has("FPDFFormObj_GetMatrix", "cdecl"):
         continue
@@ -3907,7 +4006,7 @@ struct_tm._fields_ = [
     ('tm_zone', String),
 ]
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 51
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 51
 class struct__UNSUPPORT_INFO(Structure):
     pass
 
@@ -3920,9 +4019,9 @@ struct__UNSUPPORT_INFO._fields_ = [
     ('FSDK_UnSupport_Handler', CFUNCTYPE(UNCHECKED(None), POINTER(struct__UNSUPPORT_INFO), c_int)),
 ]
 
-UNSUPPORT_INFO = struct__UNSUPPORT_INFO# /home/yhu/pdfium/include/fpdf_ext.h: 62
+UNSUPPORT_INFO = struct__UNSUPPORT_INFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 62
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 70
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 70
 for _lib in _libs.values():
     if not _lib.has("FSDK_SetUnSpObjProcessHandler", "cdecl"):
         continue
@@ -3931,7 +4030,7 @@ for _lib in _libs.values():
     FSDK_SetUnSpObjProcessHandler.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 79
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 79
 for _lib in _libs.values():
     if not _lib.has("FSDK_SetTimeFunction", "cdecl"):
         continue
@@ -3940,7 +4039,7 @@ for _lib in _libs.values():
     FSDK_SetTimeFunction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 89
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 89
 for _lib in _libs.values():
     if not _lib.has("FSDK_SetLocaltimeFunction", "cdecl"):
         continue
@@ -3949,7 +4048,7 @@ for _lib in _libs.values():
     FSDK_SetLocaltimeFunction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 113
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 113
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_GetPageMode", "cdecl"):
         continue
@@ -3958,7 +4057,7 @@ for _lib in _libs.values():
     FPDFDoc_GetPageMode.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 38
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 38
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_Flatten", "cdecl"):
         continue
@@ -3967,371 +4066,371 @@ for _lib in _libs.values():
     FPDFPage_Flatten.restype = c_int
     break
 
-enum_anon_6 = c_int# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+enum_anon_6 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_ShiftKey = (1 << 0)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_ShiftKey = (1 << 0)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_ControlKey = (1 << 1)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_ControlKey = (1 << 1)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_AltKey = (1 << 2)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_AltKey = (1 << 2)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_MetaKey = (1 << 3)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_MetaKey = (1 << 3)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_KeyPad = (1 << 4)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_KeyPad = (1 << 4)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_AutoRepeat = (1 << 5)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_AutoRepeat = (1 << 5)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_LeftButtonDown = (1 << 6)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_LeftButtonDown = (1 << 6)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_MiddleButtonDown = (1 << 7)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_MiddleButtonDown = (1 << 7)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG_RightButtonDown = (1 << 8)# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG_RightButtonDown = (1 << 8)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-FWL_EVENTFLAG = enum_anon_6# /home/yhu/pdfium/include/fpdf_fwlevent.h: 28
+FWL_EVENTFLAG = enum_anon_6# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
-enum_anon_7 = c_int# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+enum_anon_7 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Back = 8# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Back = 8# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Tab = 9# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Tab = 9# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NewLine = 10# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NewLine = 10# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Clear = 12# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Clear = 12# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Return = 13# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Return = 13# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Shift = 16# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Shift = 16# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Control = 17# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Control = 17# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Menu = 18# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Menu = 18# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Pause = 19# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Pause = 19# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Capital = 20# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Capital = 20# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Kana = 21# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Kana = 21# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Hangul = 21# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Hangul = 21# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Junja = 23# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Junja = 23# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Final = 24# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Final = 24# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Hanja = 25# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Hanja = 25# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Kanji = 25# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Kanji = 25# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Escape = 27# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Escape = 27# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Convert = 28# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Convert = 28# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NonConvert = 29# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NonConvert = 29# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Accept = 30# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Accept = 30# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_ModeChange = 31# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_ModeChange = 31# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Space = 32# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Space = 32# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Prior = 33# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Prior = 33# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Next = 34# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Next = 34# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_End = 35# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_End = 35# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Home = 36# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Home = 36# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Left = 37# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Left = 37# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Up = 38# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Up = 38# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Right = 39# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Right = 39# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Down = 40# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Down = 40# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Select = 41# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Select = 41# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Print = 42# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Print = 42# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Execute = 43# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Execute = 43# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Snapshot = 44# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Snapshot = 44# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Insert = 45# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Insert = 45# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Delete = 46# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Delete = 46# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Help = 47# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Help = 47# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_0 = 48# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_0 = 48# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_1 = 49# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_1 = 49# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_2 = 50# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_2 = 50# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_3 = 51# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_3 = 51# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_4 = 52# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_4 = 52# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_5 = 53# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_5 = 53# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_6 = 54# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_6 = 54# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_7 = 55# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_7 = 55# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_8 = 56# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_8 = 56# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_9 = 57# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_9 = 57# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_A = 65# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_A = 65# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_B = 66# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_B = 66# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_C = 67# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_C = 67# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_D = 68# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_D = 68# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_E = 69# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_E = 69# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F = 70# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F = 70# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_G = 71# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_G = 71# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_H = 72# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_H = 72# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_I = 73# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_I = 73# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_J = 74# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_J = 74# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_K = 75# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_K = 75# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_L = 76# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_L = 76# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_M = 77# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_M = 77# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_N = 78# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_N = 78# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_O = 79# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_O = 79# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_P = 80# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_P = 80# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Q = 81# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Q = 81# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_R = 82# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_R = 82# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_S = 83# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_S = 83# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_T = 84# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_T = 84# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_U = 85# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_U = 85# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_V = 86# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_V = 86# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_W = 87# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_W = 87# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_X = 88# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_X = 88# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Y = 89# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Y = 89# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Z = 90# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Z = 90# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_LWin = 91# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_LWin = 91# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Command = 91# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Command = 91# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_RWin = 92# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_RWin = 92# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Apps = 93# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Apps = 93# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Sleep = 95# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Sleep = 95# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad0 = 96# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad0 = 96# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad1 = 97# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad1 = 97# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad2 = 98# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad2 = 98# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad3 = 99# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad3 = 99# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad4 = 100# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad4 = 100# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad5 = 101# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad5 = 101# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad6 = 102# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad6 = 102# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad7 = 103# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad7 = 103# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad8 = 104# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad8 = 104# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NumPad9 = 105# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NumPad9 = 105# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Multiply = 106# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Multiply = 106# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Add = 107# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Add = 107# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Separator = 108# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Separator = 108# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Subtract = 109# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Subtract = 109# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Decimal = 110# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Decimal = 110# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Divide = 111# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Divide = 111# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F1 = 112# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F1 = 112# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F2 = 113# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F2 = 113# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F3 = 114# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F3 = 114# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F4 = 115# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F4 = 115# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F5 = 116# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F5 = 116# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F6 = 117# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F6 = 117# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F7 = 118# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F7 = 118# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F8 = 119# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F8 = 119# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F9 = 120# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F9 = 120# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F10 = 121# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F10 = 121# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F11 = 122# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F11 = 122# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F12 = 123# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F12 = 123# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F13 = 124# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F13 = 124# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F14 = 125# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F14 = 125# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F15 = 126# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F15 = 126# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F16 = 127# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F16 = 127# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F17 = 128# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F17 = 128# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F18 = 129# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F18 = 129# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F19 = 130# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F19 = 130# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F20 = 131# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F20 = 131# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F21 = 132# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F21 = 132# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F22 = 133# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F22 = 133# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F23 = 134# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F23 = 134# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_F24 = 135# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_F24 = 135# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NunLock = 144# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NunLock = 144# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Scroll = 145# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Scroll = 145# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_LShift = 160# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_LShift = 160# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_RShift = 161# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_RShift = 161# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_LControl = 162# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_LControl = 162# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_RControl = 163# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_RControl = 163# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_LMenu = 164# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_LMenu = 164# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_RMenu = 165# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_RMenu = 165# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Back = 166# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Back = 166# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Forward = 167# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Forward = 167# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Refresh = 168# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Refresh = 168# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Stop = 169# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Stop = 169# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Search = 170# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Search = 170# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Favorites = 171# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Favorites = 171# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_BROWSER_Home = 172# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_BROWSER_Home = 172# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_VOLUME_Mute = 173# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_VOLUME_Mute = 173# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_VOLUME_Down = 174# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_VOLUME_Down = 174# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_VOLUME_Up = 175# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_VOLUME_Up = 175# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_NEXT_Track = 176# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_NEXT_Track = 176# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_PREV_Track = 177# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_PREV_Track = 177# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_Stop = 178# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_Stop = 178# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_PLAY_Pause = 179# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_PLAY_Pause = 179# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_LAUNCH_Mail = 180# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_LAUNCH_Mail = 180# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_LAUNCH_MEDIA_Select = 181# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_LAUNCH_MEDIA_Select = 181# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_LAUNCH_APP1 = 182# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_LAUNCH_APP1 = 182# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_MEDIA_LAUNCH_APP2 = 183# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_MEDIA_LAUNCH_APP2 = 183# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_1 = 186# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_1 = 186# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_Plus = 187# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_Plus = 187# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_Comma = 188# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_Comma = 188# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_Minus = 189# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_Minus = 189# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_Period = 190# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_Period = 190# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_2 = 191# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_2 = 191# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_3 = 192# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_3 = 192# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_4 = 219# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_4 = 219# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_5 = 220# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_5 = 220# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_6 = 221# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_6 = 221# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_7 = 222# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_7 = 222# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_8 = 223# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_8 = 223# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_102 = 226# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_102 = 226# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_ProcessKey = 229# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_ProcessKey = 229# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Packet = 231# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Packet = 231# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Attn = 246# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Attn = 246# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Crsel = 247# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Crsel = 247# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Exsel = 248# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Exsel = 248# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Ereof = 249# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Ereof = 249# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Play = 250# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Play = 250# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Zoom = 251# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Zoom = 251# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_NoName = 252# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_NoName = 252# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_PA1 = 253# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_PA1 = 253# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_OEM_Clear = 254# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_OEM_Clear = 254# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEY_Unknown = 0# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEY_Unknown = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-FWL_VKEYCODE = enum_anon_7# /home/yhu/pdfium/include/fpdf_fwlevent.h: 201
+FWL_VKEYCODE = enum_anon_7# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
-# /home/yhu/pdfium/include/fpdf_javascript.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 22
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_GetJavaScriptActionCount", "cdecl"):
         continue
@@ -4340,7 +4439,7 @@ for _lib in _libs.values():
     FPDFDoc_GetJavaScriptActionCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_javascript.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 34
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_GetJavaScriptAction", "cdecl"):
         continue
@@ -4349,7 +4448,7 @@ for _lib in _libs.values():
     FPDFDoc_GetJavaScriptAction.restype = FPDF_JAVASCRIPT_ACTION
     break
 
-# /home/yhu/pdfium/include/fpdf_javascript.h: 41
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 41
 for _lib in _libs.values():
     if not _lib.has("FPDFDoc_CloseJavaScriptAction", "cdecl"):
         continue
@@ -4358,7 +4457,7 @@ for _lib in _libs.values():
     FPDFDoc_CloseJavaScriptAction.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_javascript.h: 54
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 54
 for _lib in _libs.values():
     if not _lib.has("FPDFJavaScriptAction_GetName", "cdecl"):
         continue
@@ -4367,7 +4466,7 @@ for _lib in _libs.values():
     FPDFJavaScriptAction_GetName.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_javascript.h: 69
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 69
 for _lib in _libs.values():
     if not _lib.has("FPDFJavaScriptAction_GetScript", "cdecl"):
         continue
@@ -4376,7 +4475,7 @@ for _lib in _libs.values():
     FPDFJavaScriptAction_GetScript.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_ppo.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 26
 for _lib in _libs.values():
     if not _lib.has("FPDF_ImportPages", "cdecl"):
         continue
@@ -4385,7 +4484,7 @@ for _lib in _libs.values():
     FPDF_ImportPages.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_ppo.h: 49
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 49
 for _lib in _libs.values():
     if not _lib.has("FPDF_ImportNPagesToOne", "cdecl"):
         continue
@@ -4394,7 +4493,7 @@ for _lib in _libs.values():
     FPDF_ImportNPagesToOne.restype = FPDF_DOCUMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_ppo.h: 62
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 62
 for _lib in _libs.values():
     if not _lib.has("FPDF_CopyViewerPreferences", "cdecl"):
         continue
@@ -4403,7 +4502,7 @@ for _lib in _libs.values():
     FPDF_CopyViewerPreferences.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 25
 class struct__IFSDK_PAUSE(Structure):
     pass
 
@@ -4418,9 +4517,9 @@ struct__IFSDK_PAUSE._fields_ = [
     ('user', POINTER(None)),
 ]
 
-IFSDK_PAUSE = struct__IFSDK_PAUSE# /home/yhu/pdfium/include/fpdf_progressive.h: 47
+IFSDK_PAUSE = struct__IFSDK_PAUSE# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 47
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 83
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 83
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmapWithColorScheme_Start", "cdecl"):
         continue
@@ -4429,7 +4528,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmapWithColorScheme_Start.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 121
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 121
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPageBitmap_Start", "cdecl"):
         continue
@@ -4438,7 +4537,7 @@ for _lib in _libs.values():
     FPDF_RenderPageBitmap_Start.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 142
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 142
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPage_Continue", "cdecl"):
         continue
@@ -4447,7 +4546,7 @@ for _lib in _libs.values():
     FPDF_RenderPage_Continue.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 153
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 153
 for _lib in _libs.values():
     if not _lib.has("FPDF_RenderPage_Close", "cdecl"):
         continue
@@ -4456,7 +4555,7 @@ for _lib in _libs.values():
     FPDF_RenderPage_Close.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_save.h: 19
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 19
 class struct_FPDF_FILEWRITE_(Structure):
     pass
 
@@ -4469,9 +4568,9 @@ struct_FPDF_FILEWRITE_._fields_ = [
     ('WriteBlock', CFUNCTYPE(UNCHECKED(c_int), POINTER(struct_FPDF_FILEWRITE_), POINTER(None), c_ulong)),
 ]
 
-FPDF_FILEWRITE = struct_FPDF_FILEWRITE_# /home/yhu/pdfium/include/fpdf_save.h: 42
+FPDF_FILEWRITE = struct_FPDF_FILEWRITE_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 42
 
-# /home/yhu/pdfium/include/fpdf_save.h: 59
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 59
 for _lib in _libs.values():
     if not _lib.has("FPDF_SaveAsCopy", "cdecl"):
         continue
@@ -4480,7 +4579,7 @@ for _lib in _libs.values():
     FPDF_SaveAsCopy.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_save.h: 76
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 76
 for _lib in _libs.values():
     if not _lib.has("FPDF_SaveWithVersion", "cdecl"):
         continue
@@ -4489,7 +4588,7 @@ for _lib in _libs.values():
     FPDF_SaveWithVersion.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_searchex.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_searchex.h: 24
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetCharIndexFromTextIndex", "cdecl"):
         continue
@@ -4498,7 +4597,7 @@ for _lib in _libs.values():
     FPDFText_GetCharIndexFromTextIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_searchex.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_searchex.h: 33
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetTextIndexFromCharIndex", "cdecl"):
         continue
@@ -4507,7 +4606,7 @@ for _lib in _libs.values():
     FPDFText_GetTextIndexFromCharIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_signature.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 22
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetSignatureCount", "cdecl"):
         continue
@@ -4516,7 +4615,7 @@ for _lib in _libs.values():
     FPDF_GetSignatureCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_signature.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 35
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetSignatureObject", "cdecl"):
         continue
@@ -4525,7 +4624,61 @@ for _lib in _libs.values():
     FPDF_GetSignatureObject.restype = FPDF_SIGNATURE
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 52
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetContents", "cdecl"):
+        continue
+    FPDFSignatureObj_GetContents = _lib.get("FPDFSignatureObj_GetContents", "cdecl")
+    FPDFSignatureObj_GetContents.argtypes = [FPDF_SIGNATURE, POINTER(None), c_ulong]
+    FPDFSignatureObj_GetContents.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 74
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetByteRange", "cdecl"):
+        continue
+    FPDFSignatureObj_GetByteRange = _lib.get("FPDFSignatureObj_GetByteRange", "cdecl")
+    FPDFSignatureObj_GetByteRange.argtypes = [FPDF_SIGNATURE, POINTER(c_int), c_ulong]
+    FPDFSignatureObj_GetByteRange.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 93
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetSubFilter", "cdecl"):
+        continue
+    FPDFSignatureObj_GetSubFilter = _lib.get("FPDFSignatureObj_GetSubFilter", "cdecl")
+    FPDFSignatureObj_GetSubFilter.argtypes = [FPDF_SIGNATURE, String, c_ulong]
+    FPDFSignatureObj_GetSubFilter.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 112
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetReason", "cdecl"):
+        continue
+    FPDFSignatureObj_GetReason = _lib.get("FPDFSignatureObj_GetReason", "cdecl")
+    FPDFSignatureObj_GetReason.argtypes = [FPDF_SIGNATURE, POINTER(None), c_ulong]
+    FPDFSignatureObj_GetReason.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 136
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetTime", "cdecl"):
+        continue
+    FPDFSignatureObj_GetTime = _lib.get("FPDFSignatureObj_GetTime", "cdecl")
+    FPDFSignatureObj_GetTime.argtypes = [FPDF_SIGNATURE, String, c_ulong]
+    FPDFSignatureObj_GetTime.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 149
+for _lib in _libs.values():
+    if not _lib.has("FPDFSignatureObj_GetDocMDPPermission", "cdecl"):
+        continue
+    FPDFSignatureObj_GetDocMDPPermission = _lib.get("FPDFSignatureObj_GetDocMDPPermission", "cdecl")
+    FPDFSignatureObj_GetDocMDPPermission.argtypes = [FPDF_SIGNATURE]
+    FPDFSignatureObj_GetDocMDPPermission.restype = c_uint
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 25
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructTree_GetForPage", "cdecl"):
         continue
@@ -4534,7 +4687,7 @@ for _lib in _libs.values():
     FPDF_StructTree_GetForPage.restype = FPDF_STRUCTTREE
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 35
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructTree_Close", "cdecl"):
         continue
@@ -4543,7 +4696,7 @@ for _lib in _libs.values():
     FPDF_StructTree_Close.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 45
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 45
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructTree_CountChildren", "cdecl"):
         continue
@@ -4552,7 +4705,7 @@ for _lib in _libs.values():
     FPDF_StructTree_CountChildren.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 56
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 56
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructTree_GetChildAtIndex", "cdecl"):
         continue
@@ -4561,7 +4714,7 @@ for _lib in _libs.values():
     FPDF_StructTree_GetChildAtIndex.restype = FPDF_STRUCTELEMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 74
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 74
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_GetAltText", "cdecl"):
         continue
@@ -4570,7 +4723,34 @@ for _lib in _libs.values():
     FPDF_StructElement_GetAltText.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 86
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 95
+for _lib in _libs.values():
+    if not _lib.has("FPDF_StructElement_GetID", "cdecl"):
+        continue
+    FPDF_StructElement_GetID = _lib.get("FPDF_StructElement_GetID", "cdecl")
+    FPDF_StructElement_GetID.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
+    FPDF_StructElement_GetID.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 116
+for _lib in _libs.values():
+    if not _lib.has("FPDF_StructElement_GetLang", "cdecl"):
+        continue
+    FPDF_StructElement_GetLang = _lib.get("FPDF_StructElement_GetLang", "cdecl")
+    FPDF_StructElement_GetLang.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
+    FPDF_StructElement_GetLang.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 138
+for _lib in _libs.values():
+    if not _lib.has("FPDF_StructElement_GetStringAttribute", "cdecl"):
+        continue
+    FPDF_StructElement_GetStringAttribute = _lib.get("FPDF_StructElement_GetStringAttribute", "cdecl")
+    FPDF_StructElement_GetStringAttribute.argtypes = [FPDF_STRUCTELEMENT, FPDF_BYTESTRING, POINTER(None), c_ulong]
+    FPDF_StructElement_GetStringAttribute.restype = c_ulong
+    break
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 151
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_GetMarkedContentID", "cdecl"):
         continue
@@ -4579,7 +4759,7 @@ for _lib in _libs.values():
     FPDF_StructElement_GetMarkedContentID.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 104
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 169
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_GetType", "cdecl"):
         continue
@@ -4588,7 +4768,7 @@ for _lib in _libs.values():
     FPDF_StructElement_GetType.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 124
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 189
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_GetTitle", "cdecl"):
         continue
@@ -4597,7 +4777,7 @@ for _lib in _libs.values():
     FPDF_StructElement_GetTitle.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 135
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 200
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_CountChildren", "cdecl"):
         continue
@@ -4606,7 +4786,7 @@ for _lib in _libs.values():
     FPDF_StructElement_CountChildren.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_structtree.h: 148
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 213
 for _lib in _libs.values():
     if not _lib.has("FPDF_StructElement_GetChildAtIndex", "cdecl"):
         continue
@@ -4615,7 +4795,7 @@ for _lib in _libs.values():
     FPDF_StructElement_GetChildAtIndex.restype = FPDF_STRUCTELEMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 44
 class struct__FPDF_SYSFONTINFO(Structure):
     pass
 
@@ -4642,9 +4822,9 @@ struct__FPDF_SYSFONTINFO._fields_ = [
     ('DeleteFont', CFUNCTYPE(UNCHECKED(None), POINTER(struct__FPDF_SYSFONTINFO), POINTER(None))),
 ]
 
-FPDF_SYSFONTINFO = struct__FPDF_SYSFONTINFO# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 223
+FPDF_SYSFONTINFO = struct__FPDF_SYSFONTINFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 223
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 232
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 232
 class struct_FPDF_CharsetFontMap_(Structure):
     pass
 
@@ -4657,9 +4837,9 @@ struct_FPDF_CharsetFontMap_._fields_ = [
     ('fontname', String),
 ]
 
-FPDF_CharsetFontMap = struct_FPDF_CharsetFontMap_# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 232
+FPDF_CharsetFontMap = struct_FPDF_CharsetFontMap_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 232
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 244
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 244
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetDefaultTTFMap", "cdecl"):
         continue
@@ -4668,7 +4848,7 @@ for _lib in _libs.values():
     FPDF_GetDefaultTTFMap.restype = POINTER(FPDF_CharsetFontMap)
     break
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 259
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 259
 for _lib in _libs.values():
     if not _lib.has("FPDF_AddInstalledFont", "cdecl"):
         continue
@@ -4677,7 +4857,7 @@ for _lib in _libs.values():
     FPDF_AddInstalledFont.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 276
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 276
 for _lib in _libs.values():
     if not _lib.has("FPDF_SetSystemFontInfo", "cdecl"):
         continue
@@ -4686,7 +4866,7 @@ for _lib in _libs.values():
     FPDF_SetSystemFontInfo.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 293
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 293
 for _lib in _libs.values():
     if not _lib.has("FPDF_GetDefaultSystemFontInfo", "cdecl"):
         continue
@@ -4695,7 +4875,7 @@ for _lib in _libs.values():
     FPDF_GetDefaultSystemFontInfo.restype = POINTER(FPDF_SYSFONTINFO)
     break
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 307
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 307
 for _lib in _libs.values():
     if not _lib.has("FPDF_FreeDefaultSystemFontInfo", "cdecl"):
         continue
@@ -4704,7 +4884,7 @@ for _lib in _libs.values():
     FPDF_FreeDefaultSystemFontInfo.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 31
 for _lib in _libs.values():
     if not _lib.has("FPDFText_LoadPage", "cdecl"):
         continue
@@ -4713,7 +4893,7 @@ for _lib in _libs.values():
     FPDFText_LoadPage.restype = FPDF_TEXTPAGE
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 42
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 42
 for _lib in _libs.values():
     if not _lib.has("FPDFText_ClosePage", "cdecl"):
         continue
@@ -4722,7 +4902,7 @@ for _lib in _libs.values():
     FPDFText_ClosePage.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 60
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 60
 for _lib in _libs.values():
     if not _lib.has("FPDFText_CountChars", "cdecl"):
         continue
@@ -4731,7 +4911,7 @@ for _lib in _libs.values():
     FPDFText_CountChars.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 75
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 75
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetUnicode", "cdecl"):
         continue
@@ -4740,7 +4920,7 @@ for _lib in _libs.values():
     FPDFText_GetUnicode.restype = c_uint
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 88
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 88
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetFontSize", "cdecl"):
         continue
@@ -4749,7 +4929,7 @@ for _lib in _libs.values():
     FPDFText_GetFontSize.restype = c_double
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 111
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 111
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetFontInfo", "cdecl"):
         continue
@@ -4758,7 +4938,7 @@ for _lib in _libs.values():
     FPDFText_GetFontInfo.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 129
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 129
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetFontWeight", "cdecl"):
         continue
@@ -4767,7 +4947,7 @@ for _lib in _libs.values():
     FPDFText_GetFontWeight.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 146
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 146
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetTextRenderMode", "cdecl"):
         continue
@@ -4776,7 +4956,7 @@ for _lib in _libs.values():
     FPDFText_GetTextRenderMode.restype = FPDF_TEXT_RENDERMODE
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 168
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 168
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetFillColor", "cdecl"):
         continue
@@ -4785,7 +4965,7 @@ for _lib in _libs.values():
     FPDFText_GetFillColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 195
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 195
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetStrokeColor", "cdecl"):
         continue
@@ -4794,7 +4974,7 @@ for _lib in _libs.values():
     FPDFText_GetStrokeColor.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 214
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 214
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetCharAngle", "cdecl"):
         continue
@@ -4803,7 +4983,7 @@ for _lib in _libs.values():
     FPDFText_GetCharAngle.restype = c_float
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 238
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 238
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetCharBox", "cdecl"):
         continue
@@ -4812,7 +4992,7 @@ for _lib in _libs.values():
     FPDFText_GetCharBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 263
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 263
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetLooseCharBox", "cdecl"):
         continue
@@ -4821,7 +5001,7 @@ for _lib in _libs.values():
     FPDFText_GetLooseCharBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 279
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 279
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetMatrix", "cdecl"):
         continue
@@ -4830,7 +5010,7 @@ for _lib in _libs.values():
     FPDFText_GetMatrix.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 299
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 299
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetCharOrigin", "cdecl"):
         continue
@@ -4839,7 +5019,7 @@ for _lib in _libs.values():
     FPDFText_GetCharOrigin.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 322
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 322
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetCharIndexAtPos", "cdecl"):
         continue
@@ -4848,7 +5028,7 @@ for _lib in _libs.values():
     FPDFText_GetCharIndexAtPos.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 345
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 345
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetText", "cdecl"):
         continue
@@ -4857,7 +5037,7 @@ for _lib in _libs.values():
     FPDFText_GetText.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 366
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 366
 for _lib in _libs.values():
     if not _lib.has("FPDFText_CountRects", "cdecl"):
         continue
@@ -4866,7 +5046,7 @@ for _lib in _libs.values():
     FPDFText_CountRects.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 392
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 392
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetRect", "cdecl"):
         continue
@@ -4875,7 +5055,7 @@ for _lib in _libs.values():
     FPDFText_GetRect.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 423
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 423
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetBoundedText", "cdecl"):
         continue
@@ -4884,7 +5064,7 @@ for _lib in _libs.values():
     FPDFText_GetBoundedText.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 453
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 453
 for _lib in _libs.values():
     if not _lib.has("FPDFText_FindStart", "cdecl"):
         continue
@@ -4893,7 +5073,7 @@ for _lib in _libs.values():
     FPDFText_FindStart.restype = FPDF_SCHHANDLE
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 466
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 466
 for _lib in _libs.values():
     if not _lib.has("FPDFText_FindNext", "cdecl"):
         continue
@@ -4902,7 +5082,7 @@ for _lib in _libs.values():
     FPDFText_FindNext.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 476
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 476
 for _lib in _libs.values():
     if not _lib.has("FPDFText_FindPrev", "cdecl"):
         continue
@@ -4911,7 +5091,7 @@ for _lib in _libs.values():
     FPDFText_FindPrev.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 486
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 486
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetSchResultIndex", "cdecl"):
         continue
@@ -4920,7 +5100,7 @@ for _lib in _libs.values():
     FPDFText_GetSchResultIndex.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 496
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 496
 for _lib in _libs.values():
     if not _lib.has("FPDFText_GetSchCount", "cdecl"):
         continue
@@ -4929,7 +5109,7 @@ for _lib in _libs.values():
     FPDFText_GetSchCount.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 506
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 506
 for _lib in _libs.values():
     if not _lib.has("FPDFText_FindClose", "cdecl"):
         continue
@@ -4938,7 +5118,7 @@ for _lib in _libs.values():
     FPDFText_FindClose.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 528
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 528
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_LoadWebLinks", "cdecl"):
         continue
@@ -4947,7 +5127,7 @@ for _lib in _libs.values():
     FPDFLink_LoadWebLinks.restype = FPDF_PAGELINK
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 537
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 537
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_CountWebLinks", "cdecl"):
         continue
@@ -4956,7 +5136,7 @@ for _lib in _libs.values():
     FPDFLink_CountWebLinks.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 558
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 558
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetURL", "cdecl"):
         continue
@@ -4965,7 +5145,7 @@ for _lib in _libs.values():
     FPDFLink_GetURL.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 572
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 572
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_CountRects", "cdecl"):
         continue
@@ -4974,7 +5154,7 @@ for _lib in _libs.values():
     FPDFLink_CountRects.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 595
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 595
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetRect", "cdecl"):
         continue
@@ -4983,7 +5163,7 @@ for _lib in _libs.values():
     FPDFLink_GetRect.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 618
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 618
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_GetTextRange", "cdecl"):
         continue
@@ -4992,7 +5172,7 @@ for _lib in _libs.values():
     FPDFLink_GetTextRange.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_text.h: 630
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 630
 for _lib in _libs.values():
     if not _lib.has("FPDFLink_CloseWebLinks", "cdecl"):
         continue
@@ -5001,7 +5181,7 @@ for _lib in _libs.values():
     FPDFLink_CloseWebLinks.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_thumbnail.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 28
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetDecodedThumbnailData", "cdecl"):
         continue
@@ -5010,7 +5190,7 @@ for _lib in _libs.values():
     FPDFPage_GetDecodedThumbnailData.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_thumbnail.h: 43
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 43
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetRawThumbnailData", "cdecl"):
         continue
@@ -5019,7 +5199,7 @@ for _lib in _libs.values():
     FPDFPage_GetRawThumbnailData.restype = c_ulong
     break
 
-# /home/yhu/pdfium/include/fpdf_thumbnail.h: 53
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 53
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetThumbnailAsBitmap", "cdecl"):
         continue
@@ -5028,7 +5208,7 @@ for _lib in _libs.values():
     FPDFPage_GetThumbnailAsBitmap.restype = FPDF_BITMAP
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 26
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetMediaBox", "cdecl"):
         continue
@@ -5037,7 +5217,7 @@ for _lib in _libs.values():
     FPDFPage_SetMediaBox.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 41
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 41
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetCropBox", "cdecl"):
         continue
@@ -5046,7 +5226,7 @@ for _lib in _libs.values():
     FPDFPage_SetCropBox.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 56
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 56
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetBleedBox", "cdecl"):
         continue
@@ -5055,7 +5235,7 @@ for _lib in _libs.values():
     FPDFPage_SetBleedBox.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 71
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 71
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetTrimBox", "cdecl"):
         continue
@@ -5064,7 +5244,7 @@ for _lib in _libs.values():
     FPDFPage_SetTrimBox.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 86
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 86
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_SetArtBox", "cdecl"):
         continue
@@ -5073,7 +5253,7 @@ for _lib in _libs.values():
     FPDFPage_SetArtBox.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 104
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 104
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetMediaBox", "cdecl"):
         continue
@@ -5082,7 +5262,7 @@ for _lib in _libs.values():
     FPDFPage_GetMediaBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 122
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 122
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetCropBox", "cdecl"):
         continue
@@ -5091,7 +5271,7 @@ for _lib in _libs.values():
     FPDFPage_GetCropBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 140
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 140
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetBleedBox", "cdecl"):
         continue
@@ -5100,7 +5280,7 @@ for _lib in _libs.values():
     FPDFPage_GetBleedBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 158
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 158
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetTrimBox", "cdecl"):
         continue
@@ -5109,7 +5289,7 @@ for _lib in _libs.values():
     FPDFPage_GetTrimBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 176
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 176
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_GetArtBox", "cdecl"):
         continue
@@ -5118,7 +5298,7 @@ for _lib in _libs.values():
     FPDFPage_GetArtBox.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 198
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 198
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_TransFormWithClip", "cdecl"):
         continue
@@ -5127,7 +5307,7 @@ for _lib in _libs.values():
     FPDFPage_TransFormWithClip.restype = FPDF_BOOL
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 215
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 215
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_TransformClipPath", "cdecl"):
         continue
@@ -5136,7 +5316,7 @@ for _lib in _libs.values():
     FPDFPageObj_TransformClipPath.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 233
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 233
 for _lib in _libs.values():
     if not _lib.has("FPDFPageObj_GetClipPath", "cdecl"):
         continue
@@ -5145,7 +5325,7 @@ for _lib in _libs.values():
     FPDFPageObj_GetClipPath.restype = FPDF_CLIPPATH
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 241
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 241
 for _lib in _libs.values():
     if not _lib.has("FPDFClipPath_CountPaths", "cdecl"):
         continue
@@ -5154,7 +5334,7 @@ for _lib in _libs.values():
     FPDFClipPath_CountPaths.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 251
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 251
 for _lib in _libs.values():
     if not _lib.has("FPDFClipPath_CountPathSegments", "cdecl"):
         continue
@@ -5163,7 +5343,7 @@ for _lib in _libs.values():
     FPDFClipPath_CountPathSegments.restype = c_int
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 264
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 264
 for _lib in _libs.values():
     if not _lib.has("FPDFClipPath_GetPathSegment", "cdecl"):
         continue
@@ -5172,7 +5352,7 @@ for _lib in _libs.values():
     FPDFClipPath_GetPathSegment.restype = FPDF_PATHSEGMENT
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 279
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 279
 for _lib in _libs.values():
     if not _lib.has("FPDF_CreateClipPath", "cdecl"):
         continue
@@ -5181,7 +5361,7 @@ for _lib in _libs.values():
     FPDF_CreateClipPath.restype = FPDF_CLIPPATH
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 289
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 289
 for _lib in _libs.values():
     if not _lib.has("FPDF_DestroyClipPath", "cdecl"):
         continue
@@ -5190,7 +5370,7 @@ for _lib in _libs.values():
     FPDF_DestroyClipPath.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdf_transformpage.h: 301
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 301
 for _lib in _libs.values():
     if not _lib.has("FPDFPage_InsertClipPath", "cdecl"):
         continue
@@ -5199,1619 +5379,1631 @@ for _lib in _libs.values():
     FPDFPage_InsertClipPath.restype = None
     break
 
-# /home/yhu/pdfium/include/fpdfview.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 28
 try:
     FPDF_OBJECT_UNKNOWN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 29
 try:
     FPDF_OBJECT_BOOLEAN = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 30
 try:
     FPDF_OBJECT_NUMBER = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 31
 try:
     FPDF_OBJECT_STRING = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 32
 try:
     FPDF_OBJECT_NAME = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 33
 try:
     FPDF_OBJECT_ARRAY = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 34
 try:
     FPDF_OBJECT_DICTIONARY = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 35
 try:
     FPDF_OBJECT_STREAM = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 36
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 36
 try:
     FPDF_OBJECT_NULLOBJ = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 37
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 37
 try:
     FPDF_OBJECT_REFERENCE = 9
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 272
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 272
 try:
     FPDF_POLICY_MACHINETIME_ACCESS = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 564
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 565
 try:
     FPDF_ERR_SUCCESS = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 565
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 566
 try:
     FPDF_ERR_UNKNOWN = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 566
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 567
 try:
     FPDF_ERR_FILE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 567
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 568
 try:
     FPDF_ERR_FORMAT = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 568
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 569
 try:
     FPDF_ERR_PASSWORD = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 569
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 570
 try:
     FPDF_ERR_SECURITY = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 570
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 571
 try:
     FPDF_ERR_PAGE = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 739
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 759
 try:
     FPDF_ANNOT = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 742
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 762
 try:
     FPDF_LCD_TEXT = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 744
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 764
 try:
     FPDF_NO_NATIVETEXT = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 746
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 766
 try:
     FPDF_GRAYSCALE = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 748
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 768
 try:
     FPDF_DEBUG_INFO = 128
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 750
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 770
 try:
     FPDF_NO_CATCH = 256
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 752
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 772
 try:
     FPDF_RENDER_LIMITEDIMAGECACHE = 512
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 754
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 774
 try:
     FPDF_RENDER_FORCEHALFTONE = 1024
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 756
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 776
 try:
     FPDF_PRINTING = 2048
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 759
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 779
 try:
     FPDF_RENDER_NO_SMOOTHTEXT = 4096
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 761
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 781
 try:
     FPDF_RENDER_NO_SMOOTHIMAGE = 8192
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 763
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 783
 try:
     FPDF_RENDER_NO_SMOOTHPATH = 16384
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 766
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 786
 try:
     FPDF_REVERSE_BYTE_ORDER = 16
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 770
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 790
 try:
     FPDF_CONVERT_FILL_TO_STROKE = 32
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1020
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1040
 try:
     FPDFBitmap_Unknown = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1022
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1042
 try:
     FPDFBitmap_Gray = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1024
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1044
 try:
     FPDFBitmap_BGR = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1026
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1046
 try:
     FPDFBitmap_BGRx = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdfview.h: 1028
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1048
 try:
     FPDFBitmap_BGRA = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 18
 try:
     PDFACTION_UNSUPPORTED = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 20
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 20
 try:
     PDFACTION_GOTO = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 22
 try:
     PDFACTION_REMOTEGOTO = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 24
 try:
     PDFACTION_URI = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 26
 try:
     PDFACTION_LAUNCH = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 28
+try:
+    PDFACTION_EMBEDDEDGOTO = 5
+except:
+    pass
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 31
 try:
     PDFDEST_VIEW_UNKNOWN_MODE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 32
 try:
     PDFDEST_VIEW_XYZ = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 33
 try:
     PDFDEST_VIEW_FIT = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 34
 try:
     PDFDEST_VIEW_FITH = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 35
 try:
     PDFDEST_VIEW_FITV = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 36
 try:
     PDFDEST_VIEW_FITR = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 37
 try:
     PDFDEST_VIEW_FITB = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 36
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 38
 try:
     PDFDEST_VIEW_FITBH = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_doc.h: 37
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 39
 try:
     PDFDEST_VIEW_FITBV = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 16
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 16
 try:
     FORMTYPE_NONE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 17
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 17
 try:
     FORMTYPE_ACRO_FORM = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 18
 try:
     FORMTYPE_XFA_FULL = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 19
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 19
 try:
     FORMTYPE_XFA_FOREGROUND = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 21
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 21
 try:
     FORMTYPE_COUNT = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 23
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 23
 try:
     JSPLATFORM_ALERT_BUTTON_OK = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 24
 try:
     JSPLATFORM_ALERT_BUTTON_OKCANCEL = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 25
 try:
     JSPLATFORM_ALERT_BUTTON_YESNO = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 26
 try:
     JSPLATFORM_ALERT_BUTTON_YESNOCANCEL = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 27
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 27
 try:
     JSPLATFORM_ALERT_BUTTON_DEFAULT = JSPLATFORM_ALERT_BUTTON_OK
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 29
 try:
     JSPLATFORM_ALERT_ICON_ERROR = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 30
 try:
     JSPLATFORM_ALERT_ICON_WARNING = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 31
 try:
     JSPLATFORM_ALERT_ICON_QUESTION = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 32
 try:
     JSPLATFORM_ALERT_ICON_STATUS = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 33
 try:
     JSPLATFORM_ALERT_ICON_ASTERISK = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 34
 try:
     JSPLATFORM_ALERT_ICON_DEFAULT = JSPLATFORM_ALERT_ICON_ERROR
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 36
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 36
 try:
     JSPLATFORM_ALERT_RETURN_OK = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 37
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 37
 try:
     JSPLATFORM_ALERT_RETURN_CANCEL = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 38
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 38
 try:
     JSPLATFORM_ALERT_RETURN_NO = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 39
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 39
 try:
     JSPLATFORM_ALERT_RETURN_YES = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 41
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 41
 try:
     JSPLATFORM_BEEP_ERROR = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 42
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 42
 try:
     JSPLATFORM_BEEP_WARNING = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 43
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 43
 try:
     JSPLATFORM_BEEP_QUESTION = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 44
 try:
     JSPLATFORM_BEEP_STATUS = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 45
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 45
 try:
     JSPLATFORM_BEEP_DEFAULT = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 324
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 324
 try:
     FXCT_ARROW = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 325
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 325
 try:
     FXCT_NESW = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 326
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 326
 try:
     FXCT_NWSE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 327
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 327
 try:
     FXCT_VBEAM = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 328
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 328
 try:
     FXCT_HBEAM = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 329
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 329
 try:
     FXCT_HAND = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1234
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1234
 try:
     FPDFDOC_AACTION_WC = 16
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1235
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1235
 try:
     FPDFDOC_AACTION_WS = 17
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1236
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1236
 try:
     FPDFDOC_AACTION_DS = 18
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1237
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1237
 try:
     FPDFDOC_AACTION_WP = 19
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1238
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1238
 try:
     FPDFDOC_AACTION_DP = 20
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1261
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1261
 try:
     FPDFPAGE_AACTION_OPEN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1262
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1262
 try:
     FPDFPAGE_AACTION_CLOSE = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1701
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1701
 try:
     FPDF_FORMFIELD_UNKNOWN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1702
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1702
 try:
     FPDF_FORMFIELD_PUSHBUTTON = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1703
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1703
 try:
     FPDF_FORMFIELD_CHECKBOX = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1704
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1704
 try:
     FPDF_FORMFIELD_RADIOBUTTON = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1705
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1705
 try:
     FPDF_FORMFIELD_COMBOBOX = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1706
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1706
 try:
     FPDF_FORMFIELD_LISTBOX = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1707
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1707
 try:
     FPDF_FORMFIELD_TEXTFIELD = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1708
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1708
 try:
     FPDF_FORMFIELD_SIGNATURE = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_formfill.h: 1723
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1723
 try:
     FPDF_FORMFIELD_COUNT = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 22
 try:
     FPDF_ANNOT_UNKNOWN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 23
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 23
 try:
     FPDF_ANNOT_TEXT = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 24
 try:
     FPDF_ANNOT_LINK = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 25
 try:
     FPDF_ANNOT_FREETEXT = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 26
 try:
     FPDF_ANNOT_LINE = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 27
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 27
 try:
     FPDF_ANNOT_SQUARE = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 28
 try:
     FPDF_ANNOT_CIRCLE = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 29
 try:
     FPDF_ANNOT_POLYGON = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 30
 try:
     FPDF_ANNOT_POLYLINE = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 31
 try:
     FPDF_ANNOT_HIGHLIGHT = 9
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 32
 try:
     FPDF_ANNOT_UNDERLINE = 10
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 33
 try:
     FPDF_ANNOT_SQUIGGLY = 11
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 34
 try:
     FPDF_ANNOT_STRIKEOUT = 12
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 35
 try:
     FPDF_ANNOT_STAMP = 13
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 36
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 36
 try:
     FPDF_ANNOT_CARET = 14
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 37
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 37
 try:
     FPDF_ANNOT_INK = 15
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 38
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 38
 try:
     FPDF_ANNOT_POPUP = 16
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 39
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 39
 try:
     FPDF_ANNOT_FILEATTACHMENT = 17
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 40
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 40
 try:
     FPDF_ANNOT_SOUND = 18
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 41
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 41
 try:
     FPDF_ANNOT_MOVIE = 19
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 42
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 42
 try:
     FPDF_ANNOT_WIDGET = 20
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 43
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 43
 try:
     FPDF_ANNOT_SCREEN = 21
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 44
 try:
     FPDF_ANNOT_PRINTERMARK = 22
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 45
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 45
 try:
     FPDF_ANNOT_TRAPNET = 23
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 46
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 46
 try:
     FPDF_ANNOT_WATERMARK = 24
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 47
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 47
 try:
     FPDF_ANNOT_THREED = 25
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 48
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 48
 try:
     FPDF_ANNOT_RICHMEDIA = 26
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 49
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 49
 try:
     FPDF_ANNOT_XFAWIDGET = 27
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 52
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 50
+try:
+    FPDF_ANNOT_REDACT = 28
+except:
+    pass
+
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 53
 try:
     FPDF_ANNOT_FLAG_NONE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 53
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 54
 try:
     FPDF_ANNOT_FLAG_INVISIBLE = (1 << 0)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 54
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 55
 try:
     FPDF_ANNOT_FLAG_HIDDEN = (1 << 1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 55
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 56
 try:
     FPDF_ANNOT_FLAG_PRINT = (1 << 2)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 56
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 57
 try:
     FPDF_ANNOT_FLAG_NOZOOM = (1 << 3)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 57
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 58
 try:
     FPDF_ANNOT_FLAG_NOROTATE = (1 << 4)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 58
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 59
 try:
     FPDF_ANNOT_FLAG_NOVIEW = (1 << 5)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 59
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 60
 try:
     FPDF_ANNOT_FLAG_READONLY = (1 << 6)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 60
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 61
 try:
     FPDF_ANNOT_FLAG_LOCKED = (1 << 7)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 61
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 62
 try:
     FPDF_ANNOT_FLAG_TOGGLENOVIEW = (1 << 8)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 63
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 64
 try:
     FPDF_ANNOT_APPEARANCEMODE_NORMAL = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 64
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 65
 try:
     FPDF_ANNOT_APPEARANCEMODE_ROLLOVER = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 65
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 66
 try:
     FPDF_ANNOT_APPEARANCEMODE_DOWN = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 66
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 67
 try:
     FPDF_ANNOT_APPEARANCEMODE_COUNT = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 70
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 71
 try:
     FPDF_FORMFLAG_NONE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 71
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 72
 try:
     FPDF_FORMFLAG_READONLY = (1 << 0)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 72
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 73
 try:
     FPDF_FORMFLAG_REQUIRED = (1 << 1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 73
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 74
 try:
     FPDF_FORMFLAG_NOEXPORT = (1 << 2)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 77
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 78
 try:
     FPDF_FORMFLAG_TEXT_MULTILINE = (1 << 12)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 78
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 79
 try:
     FPDF_FORMFLAG_TEXT_PASSWORD = (1 << 13)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 82
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 83
 try:
     FPDF_FORMFLAG_CHOICE_COMBO = (1 << 17)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 83
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 84
 try:
     FPDF_FORMFLAG_CHOICE_EDIT = (1 << 18)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_annot.h: 84
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 85
 try:
     FPDF_FORMFLAG_CHOICE_MULTI_SELECT = (1 << 21)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 15
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 15
 try:
     PDF_LINEARIZATION_UNKNOWN = (-1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 16
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 16
 try:
     PDF_NOT_LINEARIZED = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 17
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 17
 try:
     PDF_LINEARIZED = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 19
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 19
 try:
     PDF_DATA_ERROR = (-1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 20
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 20
 try:
     PDF_DATA_NOTAVAIL = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 21
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 21
 try:
     PDF_DATA_AVAIL = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 23
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 23
 try:
     PDF_FORM_ERROR = (-1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 24
 try:
     PDF_FORM_NOTAVAIL = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 25
 try:
     PDF_FORM_AVAIL = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_dataavail.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 26
 try:
     PDF_FORM_NOTEXIST = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 15
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 15
 def FPDF_ARGB(a, r, g, b):
     return (c_uint32 (ord_if_char((((((c_uint32 (ord_if_char(b))).value & 255) | (((c_uint32 (ord_if_char(g))).value & 255) << 8)) | (((c_uint32 (ord_if_char(r))).value & 255) << 16)) | (((c_uint32 (ord_if_char(a))).value & 255) << 24))))).value
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 18
 def FPDF_GetBValue(argb):
     return (c_uint8 (ord_if_char(argb))).value
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 19
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 19
 def FPDF_GetGValue(argb):
     return (c_uint8 (ord_if_char(((c_uint16 (ord_if_char(argb))).value >> 8)))).value
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 20
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 20
 def FPDF_GetRValue(argb):
     return (c_uint8 (ord_if_char((argb >> 16)))).value
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 21
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 21
 def FPDF_GetAValue(argb):
     return (c_uint8 (ord_if_char((argb >> 24)))).value
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 24
 try:
     FPDF_COLORSPACE_UNKNOWN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 25
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 25
 try:
     FPDF_COLORSPACE_DEVICEGRAY = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 26
 try:
     FPDF_COLORSPACE_DEVICERGB = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 27
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 27
 try:
     FPDF_COLORSPACE_DEVICECMYK = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 28
 try:
     FPDF_COLORSPACE_CALGRAY = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 29
 try:
     FPDF_COLORSPACE_CALRGB = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 30
 try:
     FPDF_COLORSPACE_LAB = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 31
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 31
 try:
     FPDF_COLORSPACE_ICCBASED = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 32
 try:
     FPDF_COLORSPACE_SEPARATION = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 33
 try:
     FPDF_COLORSPACE_DEVICEN = 9
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 34
 try:
     FPDF_COLORSPACE_INDEXED = 10
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 35
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 35
 try:
     FPDF_COLORSPACE_PATTERN = 11
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 38
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 38
 try:
     FPDF_PAGEOBJ_UNKNOWN = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 39
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 39
 try:
     FPDF_PAGEOBJ_TEXT = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 40
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 40
 try:
     FPDF_PAGEOBJ_PATH = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 41
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 41
 try:
     FPDF_PAGEOBJ_IMAGE = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 42
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 42
 try:
     FPDF_PAGEOBJ_SHADING = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 43
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 43
 try:
     FPDF_PAGEOBJ_FORM = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 46
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 46
 try:
     FPDF_SEGMENT_UNKNOWN = (-1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 47
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 47
 try:
     FPDF_SEGMENT_LINETO = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 48
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 48
 try:
     FPDF_SEGMENT_BEZIERTO = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 49
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 49
 try:
     FPDF_SEGMENT_MOVETO = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 51
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 51
 try:
     FPDF_FILLMODE_NONE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 52
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 52
 try:
     FPDF_FILLMODE_ALTERNATE = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 53
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 53
 try:
     FPDF_FILLMODE_WINDING = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 55
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 55
 try:
     FPDF_FONT_TYPE1 = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 56
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 56
 try:
     FPDF_FONT_TRUETYPE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 58
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 58
 try:
     FPDF_LINECAP_BUTT = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 59
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 59
 try:
     FPDF_LINECAP_ROUND = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 60
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 60
 try:
     FPDF_LINECAP_PROJECTING_SQUARE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 62
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 62
 try:
     FPDF_LINEJOIN_MITER = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 63
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 63
 try:
     FPDF_LINEJOIN_ROUND = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 64
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 64
 try:
     FPDF_LINEJOIN_BEVEL = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 67
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 67
 try:
     FPDF_PRINTMODE_EMF = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 68
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 68
 try:
     FPDF_PRINTMODE_TEXTONLY = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 69
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 69
 try:
     FPDF_PRINTMODE_POSTSCRIPT2 = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 70
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 70
 try:
     FPDF_PRINTMODE_POSTSCRIPT3 = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 71
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 71
 try:
     FPDF_PRINTMODE_POSTSCRIPT2_PASSTHROUGH = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 72
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 72
 try:
     FPDF_PRINTMODE_POSTSCRIPT3_PASSTHROUGH = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_edit.h: 73
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 73
 try:
     FPDF_PRINTMODE_EMF_IMAGE_MASKS = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 20
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 20
 try:
     FPDF_UNSP_DOC_XFAFORM = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 22
 try:
     FPDF_UNSP_DOC_PORTABLECOLLECTION = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 24
 try:
     FPDF_UNSP_DOC_ATTACHMENT = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 26
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 26
 try:
     FPDF_UNSP_DOC_SECURITY = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 28
 try:
     FPDF_UNSP_DOC_SHAREDREVIEW = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 30
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 30
 try:
     FPDF_UNSP_DOC_SHAREDFORM_ACROBAT = 6
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 32
 try:
     FPDF_UNSP_DOC_SHAREDFORM_FILESYSTEM = 7
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 34
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 34
 try:
     FPDF_UNSP_DOC_SHAREDFORM_EMAIL = 8
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 36
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 36
 try:
     FPDF_UNSP_ANNOT_3DANNOT = 11
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 38
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 38
 try:
     FPDF_UNSP_ANNOT_MOVIE = 12
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 40
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 40
 try:
     FPDF_UNSP_ANNOT_SOUND = 13
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 42
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 42
 try:
     FPDF_UNSP_ANNOT_SCREEN_MEDIA = 14
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 44
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 44
 try:
     FPDF_UNSP_ANNOT_SCREEN_RICHMEDIA = 15
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 46
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 46
 try:
     FPDF_UNSP_ANNOT_ATTACHMENT = 16
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 48
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 48
 try:
     FPDF_UNSP_ANNOT_SIG = 17
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 92
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 92
 try:
     PAGEMODE_UNKNOWN = (-1)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 94
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 94
 try:
     PAGEMODE_USENONE = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 96
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 96
 try:
     PAGEMODE_USEOUTLINES = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 98
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 98
 try:
     PAGEMODE_USETHUMBS = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 100
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 100
 try:
     PAGEMODE_FULLSCREEN = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 102
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 102
 try:
     PAGEMODE_USEOC = 4
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_ext.h: 104
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 104
 try:
     PAGEMODE_USEATTACHMENTS = 5
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 14
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 14
 try:
     FLATTEN_FAIL = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 16
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 16
 try:
     FLATTEN_SUCCESS = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 18
 try:
     FLATTEN_NOTHINGTODO = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 21
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 21
 try:
     FLAT_NORMALDISPLAY = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_flatten.h: 23
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 23
 try:
     FLAT_PRINT = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 15
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 15
 try:
     FPDF_RENDER_READY = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 16
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 16
 try:
     FPDF_RENDER_TOBECONTINUED = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 17
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 17
 try:
     FPDF_RENDER_DONE = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_progressive.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 18
 try:
     FPDF_RENDER_FAILED = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_save.h: 45
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 45
 try:
     FPDF_INCREMENTAL = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_save.h: 46
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 46
 try:
     FPDF_NO_INCREMENTAL = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_save.h: 47
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 47
 try:
     FPDF_REMOVE_SECURITY = 3
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 15
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 15
 try:
     FXFONT_ANSI_CHARSET = 0
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 16
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 16
 try:
     FXFONT_DEFAULT_CHARSET = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 17
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 17
 try:
     FXFONT_SYMBOL_CHARSET = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 18
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 18
 try:
     FXFONT_SHIFTJIS_CHARSET = 128
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 19
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 19
 try:
     FXFONT_HANGEUL_CHARSET = 129
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 20
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 20
 try:
     FXFONT_GB2312_CHARSET = 134
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 21
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 21
 try:
     FXFONT_CHINESEBIG5_CHARSET = 136
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 22
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 22
 try:
     FXFONT_ARABIC_CHARSET = 178
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 23
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 23
 try:
     FXFONT_CYRILLIC_CHARSET = 204
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 24
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 24
 try:
     FXFONT_EASTERNEUROPEAN_CHARSET = 238
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 27
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 27
 try:
     FXFONT_FF_FIXEDPITCH = (1 << 0)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 28
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 28
 try:
     FXFONT_FF_ROMAN = (1 << 4)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 29
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 29
 try:
     FXFONT_FF_SCRIPT = (4 << 4)
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 32
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 32
 try:
     FXFONT_FW_NORMAL = 400
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 33
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 33
 try:
     FXFONT_FW_BOLD = 700
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_text.h: 434
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 434
 try:
     FPDF_MATCHCASE = 1
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_text.h: 436
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 436
 try:
     FPDF_MATCHWHOLEWORD = 2
 except:
     pass
 
-# /home/yhu/pdfium/include/fpdf_text.h: 438
+# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 438
 try:
     FPDF_CONSECUTIVE = 4
 except:
     pass
 
-fpdf_action_t__ = struct_fpdf_action_t__# /home/yhu/pdfium/include/fpdfview.h: 54
+fpdf_action_t__ = struct_fpdf_action_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 54
 
-fpdf_annotation_t__ = struct_fpdf_annotation_t__# /home/yhu/pdfium/include/fpdfview.h: 55
+fpdf_annotation_t__ = struct_fpdf_annotation_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 55
 
-fpdf_attachment_t__ = struct_fpdf_attachment_t__# /home/yhu/pdfium/include/fpdfview.h: 56
+fpdf_attachment_t__ = struct_fpdf_attachment_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 56
 
-fpdf_bitmap_t__ = struct_fpdf_bitmap_t__# /home/yhu/pdfium/include/fpdfview.h: 57
+fpdf_bitmap_t__ = struct_fpdf_bitmap_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 57
 
-fpdf_bookmark_t__ = struct_fpdf_bookmark_t__# /home/yhu/pdfium/include/fpdfview.h: 58
+fpdf_bookmark_t__ = struct_fpdf_bookmark_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 58
 
-fpdf_clippath_t__ = struct_fpdf_clippath_t__# /home/yhu/pdfium/include/fpdfview.h: 59
+fpdf_clippath_t__ = struct_fpdf_clippath_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 59
 
-fpdf_dest_t__ = struct_fpdf_dest_t__# /home/yhu/pdfium/include/fpdfview.h: 60
+fpdf_dest_t__ = struct_fpdf_dest_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 60
 
-fpdf_document_t__ = struct_fpdf_document_t__# /home/yhu/pdfium/include/fpdfview.h: 61
+fpdf_document_t__ = struct_fpdf_document_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 61
 
-fpdf_font_t__ = struct_fpdf_font_t__# /home/yhu/pdfium/include/fpdfview.h: 62
+fpdf_font_t__ = struct_fpdf_font_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 62
 
-fpdf_form_handle_t__ = struct_fpdf_form_handle_t__# /home/yhu/pdfium/include/fpdfview.h: 63
+fpdf_form_handle_t__ = struct_fpdf_form_handle_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 63
 
-fpdf_javascript_action_t = struct_fpdf_javascript_action_t# /home/yhu/pdfium/include/fpdfview.h: 64
+fpdf_javascript_action_t = struct_fpdf_javascript_action_t# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 64
 
-fpdf_link_t__ = struct_fpdf_link_t__# /home/yhu/pdfium/include/fpdfview.h: 65
+fpdf_link_t__ = struct_fpdf_link_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 65
 
-fpdf_page_t__ = struct_fpdf_page_t__# /home/yhu/pdfium/include/fpdfview.h: 66
+fpdf_page_t__ = struct_fpdf_page_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 66
 
-fpdf_pagelink_t__ = struct_fpdf_pagelink_t__# /home/yhu/pdfium/include/fpdfview.h: 67
+fpdf_pagelink_t__ = struct_fpdf_pagelink_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 67
 
-fpdf_pageobject_t__ = struct_fpdf_pageobject_t__# /home/yhu/pdfium/include/fpdfview.h: 68
+fpdf_pageobject_t__ = struct_fpdf_pageobject_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 68
 
-fpdf_pageobjectmark_t__ = struct_fpdf_pageobjectmark_t__# /home/yhu/pdfium/include/fpdfview.h: 69
+fpdf_pageobjectmark_t__ = struct_fpdf_pageobjectmark_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 69
 
-fpdf_pagerange_t__ = struct_fpdf_pagerange_t__# /home/yhu/pdfium/include/fpdfview.h: 70
+fpdf_pagerange_t__ = struct_fpdf_pagerange_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 70
 
-fpdf_pathsegment_t = struct_fpdf_pathsegment_t# /home/yhu/pdfium/include/fpdfview.h: 71
+fpdf_pathsegment_t = struct_fpdf_pathsegment_t# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 71
 
-fpdf_schhandle_t__ = struct_fpdf_schhandle_t__# /home/yhu/pdfium/include/fpdfview.h: 73
+fpdf_schhandle_t__ = struct_fpdf_schhandle_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 73
 
-fpdf_signature_t__ = struct_fpdf_signature_t__# /home/yhu/pdfium/include/fpdfview.h: 74
+fpdf_signature_t__ = struct_fpdf_signature_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 74
 
-fpdf_structelement_t__ = struct_fpdf_structelement_t__# /home/yhu/pdfium/include/fpdfview.h: 75
+fpdf_structelement_t__ = struct_fpdf_structelement_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 75
 
-fpdf_structtree_t__ = struct_fpdf_structtree_t__# /home/yhu/pdfium/include/fpdfview.h: 76
+fpdf_structtree_t__ = struct_fpdf_structtree_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 76
 
-fpdf_textpage_t__ = struct_fpdf_textpage_t__# /home/yhu/pdfium/include/fpdfview.h: 77
+fpdf_textpage_t__ = struct_fpdf_textpage_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 77
 
-fpdf_widget_t__ = struct_fpdf_widget_t__# /home/yhu/pdfium/include/fpdfview.h: 78
+fpdf_widget_t__ = struct_fpdf_widget_t__# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 78
 
-FPDF_BSTR_ = struct_FPDF_BSTR_# /home/yhu/pdfium/include/fpdfview.h: 111
+FPDF_BSTR_ = struct_FPDF_BSTR_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 111
 
-_FS_MATRIX_ = struct__FS_MATRIX_# /home/yhu/pdfium/include/fpdfview.h: 137
+_FS_MATRIX_ = struct__FS_MATRIX_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 137
 
-_FS_RECTF_ = struct__FS_RECTF_# /home/yhu/pdfium/include/fpdfview.h: 140
+_FS_RECTF_ = struct__FS_RECTF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 140
 
-FS_SIZEF_ = struct_FS_SIZEF_# /home/yhu/pdfium/include/fpdfview.h: 155
+FS_SIZEF_ = struct_FS_SIZEF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 155
 
-FS_POINTF_ = struct_FS_POINTF_# /home/yhu/pdfium/include/fpdfview.h: 164
+FS_POINTF_ = struct_FS_POINTF_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 164
 
-FPDF_LIBRARY_CONFIG_ = struct_FPDF_LIBRARY_CONFIG_# /home/yhu/pdfium/include/fpdfview.h: 244
+FPDF_LIBRARY_CONFIG_ = struct_FPDF_LIBRARY_CONFIG_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 244
 
-FPDF_FILEHANDLER_ = struct_FPDF_FILEHANDLER_# /home/yhu/pdfium/include/fpdfview.h: 525
+FPDF_FILEHANDLER_ = struct_FPDF_FILEHANDLER_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 526
 
-FPDF_COLORSCHEME_ = struct_FPDF_COLORSCHEME_# /home/yhu/pdfium/include/fpdfview.h: 779
+FPDF_COLORSCHEME_ = struct_FPDF_COLORSCHEME_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 799
 
-_FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/yhu/pdfium/include/fpdf_doc.h: 55
+_FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 57
 
-_IPDF_JsPlatform = struct__IPDF_JsPlatform# /home/yhu/pdfium/include/fpdf_formfill.h: 52
+_IPDF_JsPlatform = struct__IPDF_JsPlatform# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 52
 
-_FPDF_SYSTEMTIME = struct__FPDF_SYSTEMTIME# /home/yhu/pdfium/include/fpdf_formfill.h: 353
+_FPDF_SYSTEMTIME = struct__FPDF_SYSTEMTIME# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 353
 
-_FPDF_FORMFILLINFO = struct__FPDF_FORMFILLINFO# /home/yhu/pdfium/include/fpdf_formfill.h: 375
+_FPDF_FORMFILLINFO = struct__FPDF_FORMFILLINFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 375
 
-_FX_FILEAVAIL = struct__FX_FILEAVAIL# /home/yhu/pdfium/include/fpdf_dataavail.h: 33
+_FX_FILEAVAIL = struct__FX_FILEAVAIL# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 33
 
-_FX_DOWNLOADHINTS = struct__FX_DOWNLOADHINTS# /home/yhu/pdfium/include/fpdf_dataavail.h: 72
+_FX_DOWNLOADHINTS = struct__FX_DOWNLOADHINTS# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 72
 
-FPDF_IMAGEOBJ_METADATA = struct_FPDF_IMAGEOBJ_METADATA# /home/yhu/pdfium/include/fpdf_edit.h: 91
+FPDF_IMAGEOBJ_METADATA = struct_FPDF_IMAGEOBJ_METADATA# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 91
 
-_UNSUPPORT_INFO = struct__UNSUPPORT_INFO# /home/yhu/pdfium/include/fpdf_ext.h: 51
+_UNSUPPORT_INFO = struct__UNSUPPORT_INFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 51
 
-_IFSDK_PAUSE = struct__IFSDK_PAUSE# /home/yhu/pdfium/include/fpdf_progressive.h: 25
+_IFSDK_PAUSE = struct__IFSDK_PAUSE# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 25
 
-FPDF_FILEWRITE_ = struct_FPDF_FILEWRITE_# /home/yhu/pdfium/include/fpdf_save.h: 19
+FPDF_FILEWRITE_ = struct_FPDF_FILEWRITE_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 19
 
-_FPDF_SYSFONTINFO = struct__FPDF_SYSFONTINFO# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 44
+_FPDF_SYSFONTINFO = struct__FPDF_SYSFONTINFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 44
 
-FPDF_CharsetFontMap_ = struct_FPDF_CharsetFontMap_# /home/yhu/pdfium/include/fpdf_sysfontinfo.h: 232
+FPDF_CharsetFontMap_ = struct_FPDF_CharsetFontMap_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 232
 
 # No inserted files
 
