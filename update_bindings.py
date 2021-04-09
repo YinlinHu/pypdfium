@@ -11,16 +11,6 @@ import os
 import shutil
 from urllib import request
 
-"""
-TODO
-install/update ctypesgen
-download latest binaries DONE
-extract required files DONE
-call ctypesgen on extracted linux tar
-commit
-build wheel
-"""
-
 # determine current directory for relative paths
 thisdirectory = os.path.dirname(os.path.realpath(__file__)) + '/'
 
@@ -32,17 +22,25 @@ latest_tag = subprocess.run(["git ls-remote https://github.com/bblanchon/pdfium-
 latest_tag = latest_tag.stdout.decode('UTF-8')[:-1].split('/')[1]
 print(latest_tag)
 
+# update version file
+with open(thisdirectory+'pypdfium/pdfium_version.txt', 'w') as f:
+    f.write('chromium/'+latest_tag)
+
+# craft release url
 base_url = "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium%2F" + latest_tag + '/'
 print(base_url)
 
+# files to download
 filenames = {
     'linux' : 'pdfium-linux.tgz',
     'darwin' : 'pdfium-darwin-x64.tgz',
     'win32' : 'pdfium-windows-x64.zip',
 }
 
+# initialise dict to fill in the paths of the downloaded files
 files = dict()
 
+# download tarballs & zipfile and update the paths dictionary
 for platform, file in filenames.items():
     download_url = base_url + file
     target_path = thisdirectory+file
@@ -53,6 +51,8 @@ for platform, file in filenames.items():
 print(files)
 
 
+# functions to extract single files without their parent directories
+
 def tar_flatextract(member):
     for info in archive.getmembers():
         if info.name.endswith(member):
@@ -60,7 +60,6 @@ def tar_flatextract(member):
                 continue
             info.name = os.path.basename(info.name)
             archive.extract(info, './pypdfium')
-
 
 def zip_flatextract(member):
     for info in archive.infolist():
@@ -71,23 +70,35 @@ def zip_flatextract(member):
             archive.extract(info, './pypdfium')
 
 
+# extract the archives
+
 for platform, file in files.items():
     
+    # open the archive
     if file.endswith('.tgz'):
         archive = tarfile.open(file, 'r')
     elif file.endswith('.zip'):
         archive = zipfile.ZipFile(file, 'r')
     
+    # Linux binary extraction
+    # special because we will be using the Linux archive for ctypesgen
     if platform == 'linux':
         archive.extractall('./linux_tar')
         shutil.copyfile('./linux_tar/lib/libpdfium.so', './pypdfium/libpdfium')
+    # macOS and Windows binary extraction
     elif platform == 'darwin':
         tar_flatextract('lib/libpdfium.dylib')
     elif platform == 'win32':
         zip_flatextract('x64/bin/pdfium.dll')
     
+    # close the archive and delete it
     archive.close()
     os.remove(file)
 
-subprocess.run([f"ctypesgen -lpdfium -L {thisdirectory}/linux_tar/lib {thisdirectory}/linux_tar/include/*.h -o pypdfium/pypdfium.py"], shell=True)
+
+# finally, call ctypesgen
+subprocess.run([f"ctypesgen -lpdfium -L {thisdirectory}linux_tar/lib {thisdirectory}linux_tar/include/*.h -o pypdfium/pypdfium.py"], shell=True)
+
+
+# delete the extracted Linux pdfium binary + headers
 shutil.rmtree(thisdirectory+'linux_tar/')
