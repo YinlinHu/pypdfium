@@ -65,3 +65,12 @@ if __name__ == "__main__":
 * [API documentation](https://developers.foxitsoftware.com/resources/pdf-sdk/c_api_reference_pdfium/group___f_p_d_f_i_u_m.html)
 
 * A [PDF manager](https://github.com/YinlinHu/kuafu) based on PyPDFium and PyQt5
+
+
+## TODO
+
+* Building platform-specific wheels that only contain a single compiled library
+
+* Windows 32-bit support
+
+* macOS ARM support
