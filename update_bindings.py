@@ -12,6 +12,7 @@ import tarfile
 import zipfile
 import subprocess
 import os
+import glob
 import shutil
 from urllib import request
 
@@ -118,8 +119,17 @@ subprocess.run([wheel_command], shell=True)
 
 
 # install wheel locally
-wheel = os.listdir(f'{thisdirectory}dist/')[0]
+
+# get all files in the dist/ directory
+builddir_files = glob.glob(f'{thisdirectory}dist/*')
+
+# take the latest one
+wheel = max(builddir_files, key=os.path.getctime)
 print(wheel)
-install_command = f'python3 -m pip install -U {thisdirectory}dist/' + wheel
+
+# craft install command
+install_command = f'python3 -m pip install -U ' + wheel
 print(install_command)
+
+# run it
 subprocess.run(install_command, shell=True)
