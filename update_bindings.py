@@ -88,7 +88,8 @@ for platform, file in files.items():
     # special because we will be using the Linux archive for ctypesgen
     if platform == 'linux':
         archive.extractall('./linux_tar')
-        shutil.copyfile('./linux_tar/lib/libpdfium.so', './pypdfium/libpdfium')
+        shutil.copyfile('./linux_tar/lib/libpdfium.so', './pypdfium/pdfium')
+    
     # macOS and Windows binary extraction
     elif platform == 'darwin':
         tar_flatextract('lib/libpdfium.dylib')
