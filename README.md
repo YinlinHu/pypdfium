@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
 ## Notes
 
-* Verified to run on 64bit Windows and Linux, and hoped to work on macOS
+* Verified to run on 64bit Windows and Linux, and hoped to work on macOS Intel
 
 * PDFium binaries are downloaded and extracted automatically from https://github.com/bblanchon/pdfium-binaries using `update_bindings.py`
 
