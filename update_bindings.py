@@ -118,7 +118,7 @@ subprocess.run([wheel_command], shell=True)
 
 
 # install wheel locally
-wheel = os.listdir(f'{thisdirectory}/dist/')[0]
+wheel = os.listdir(f'{thisdirectory}dist/')[0]
 print(wheel)
 install_command = f'python3 -m pip install -U {thisdirectory}dist/' + wheel
 print(install_command)
