@@ -109,3 +109,17 @@ subprocess.run([ctypesgen_command], shell=True)
 
 # delete the extracted Linux pdfium binary + headers
 shutil.rmtree(thisdirectory+'linux_tar/')
+
+
+# build the wheel
+wheel_command = 'python3 setup.py bdist_wheel'
+print(wheel_command)
+subprocess.run([wheel_command], shell=True)
+
+
+# install wheel locally
+wheel = os.listdir(f'{thisdirectory}/dist/')[0]
+print(wheel)
+install_command = f'python3 -m pip install -U {thisdirectory}dist/' + wheel
+print(install_command)
+subprocess.run(install_command, shell=True)
