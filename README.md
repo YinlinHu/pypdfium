@@ -71,6 +71,6 @@ if __name__ == "__main__":
 
 * Building platform-specific wheels that only contain a single compiled library
 
-* Windows 32-bit support
+* Windows 32bit support
 
 * macOS ARM support
