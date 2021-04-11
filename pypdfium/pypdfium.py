@@ -1122,13 +1122,10 @@ FPDF_ANNOT_APPEARANCEMODE = c_int# /home/manuel/projects/pypdfium/linux_tar/incl
 FPDF_OBJECT_TYPE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 177
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 214
-for _lib in _libs.values():
-    if not _lib.has("FPDF_InitLibrary", "cdecl"):
-        continue
-    FPDF_InitLibrary = _lib.get("FPDF_InitLibrary", "cdecl")
+if _libs["pdfium"].has("FPDF_InitLibrary", "cdecl"):
+    FPDF_InitLibrary = _libs["pdfium"].get("FPDF_InitLibrary", "cdecl")
     FPDF_InitLibrary.argtypes = []
     FPDF_InitLibrary.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 244
 class struct_FPDF_LIBRARY_CONFIG_(Structure):
@@ -1152,58 +1149,40 @@ struct_FPDF_LIBRARY_CONFIG_._fields_ = [
 FPDF_LIBRARY_CONFIG = struct_FPDF_LIBRARY_CONFIG_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 244
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 256
-for _lib in _libs.values():
-    if not _lib.has("FPDF_InitLibraryWithConfig", "cdecl"):
-        continue
-    FPDF_InitLibraryWithConfig = _lib.get("FPDF_InitLibraryWithConfig", "cdecl")
+if _libs["pdfium"].has("FPDF_InitLibraryWithConfig", "cdecl"):
+    FPDF_InitLibraryWithConfig = _libs["pdfium"].get("FPDF_InitLibraryWithConfig", "cdecl")
     FPDF_InitLibraryWithConfig.argtypes = [POINTER(FPDF_LIBRARY_CONFIG)]
     FPDF_InitLibraryWithConfig.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 269
-for _lib in _libs.values():
-    if not _lib.has("FPDF_DestroyLibrary", "cdecl"):
-        continue
-    FPDF_DestroyLibrary = _lib.get("FPDF_DestroyLibrary", "cdecl")
+if _libs["pdfium"].has("FPDF_DestroyLibrary", "cdecl"):
+    FPDF_DestroyLibrary = _libs["pdfium"].get("FPDF_DestroyLibrary", "cdecl")
     FPDF_DestroyLibrary.argtypes = []
     FPDF_DestroyLibrary.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 282
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SetSandBoxPolicy", "cdecl"):
-        continue
-    FPDF_SetSandBoxPolicy = _lib.get("FPDF_SetSandBoxPolicy", "cdecl")
+if _libs["pdfium"].has("FPDF_SetSandBoxPolicy", "cdecl"):
+    FPDF_SetSandBoxPolicy = _libs["pdfium"].get("FPDF_SetSandBoxPolicy", "cdecl")
     FPDF_SetSandBoxPolicy.argtypes = [FPDF_DWORD, FPDF_BOOL]
     FPDF_SetSandBoxPolicy.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 357
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadDocument", "cdecl"):
-        continue
-    FPDF_LoadDocument = _lib.get("FPDF_LoadDocument", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadDocument", "cdecl"):
+    FPDF_LoadDocument = _libs["pdfium"].get("FPDF_LoadDocument", "cdecl")
     FPDF_LoadDocument.argtypes = [FPDF_STRING, FPDF_BYTESTRING]
     FPDF_LoadDocument.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 381
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadMemDocument", "cdecl"):
-        continue
-    FPDF_LoadMemDocument = _lib.get("FPDF_LoadMemDocument", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadMemDocument", "cdecl"):
+    FPDF_LoadMemDocument = _libs["pdfium"].get("FPDF_LoadMemDocument", "cdecl")
     FPDF_LoadMemDocument.argtypes = [POINTER(None), c_int, FPDF_BYTESTRING]
     FPDF_LoadMemDocument.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 406
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadMemDocument64", "cdecl"):
-        continue
-    FPDF_LoadMemDocument64 = _lib.get("FPDF_LoadMemDocument64", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadMemDocument64", "cdecl"):
+    FPDF_LoadMemDocument64 = _libs["pdfium"].get("FPDF_LoadMemDocument64", "cdecl")
     FPDF_LoadMemDocument64.argtypes = [POINTER(None), c_size_t, FPDF_BYTESTRING]
     FPDF_LoadMemDocument64.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 430
 class struct_anon_3(Structure):
@@ -1248,148 +1227,100 @@ struct_FPDF_FILEHANDLER_._fields_ = [
 FPDF_FILEHANDLER = struct_FPDF_FILEHANDLER_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 526
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 549
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadCustomDocument", "cdecl"):
-        continue
-    FPDF_LoadCustomDocument = _lib.get("FPDF_LoadCustomDocument", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadCustomDocument", "cdecl"):
+    FPDF_LoadCustomDocument = _libs["pdfium"].get("FPDF_LoadCustomDocument", "cdecl")
     FPDF_LoadCustomDocument.argtypes = [POINTER(FPDF_FILEACCESS), FPDF_BYTESTRING]
     FPDF_LoadCustomDocument.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 562
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetFileVersion", "cdecl"):
-        continue
-    FPDF_GetFileVersion = _lib.get("FPDF_GetFileVersion", "cdecl")
+if _libs["pdfium"].has("FPDF_GetFileVersion", "cdecl"):
+    FPDF_GetFileVersion = _libs["pdfium"].get("FPDF_GetFileVersion", "cdecl")
     FPDF_GetFileVersion.argtypes = [FPDF_DOCUMENT, POINTER(c_int)]
     FPDF_GetFileVersion.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 586
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetLastError", "cdecl"):
-        continue
-    FPDF_GetLastError = _lib.get("FPDF_GetLastError", "cdecl")
+if _libs["pdfium"].has("FPDF_GetLastError", "cdecl"):
+    FPDF_GetLastError = _libs["pdfium"].get("FPDF_GetLastError", "cdecl")
     FPDF_GetLastError.argtypes = []
     FPDF_GetLastError.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 601
-for _lib in _libs.values():
-    if not _lib.has("FPDF_DocumentHasValidCrossReferenceTable", "cdecl"):
-        continue
-    FPDF_DocumentHasValidCrossReferenceTable = _lib.get("FPDF_DocumentHasValidCrossReferenceTable", "cdecl")
+if _libs["pdfium"].has("FPDF_DocumentHasValidCrossReferenceTable", "cdecl"):
+    FPDF_DocumentHasValidCrossReferenceTable = _libs["pdfium"].get("FPDF_DocumentHasValidCrossReferenceTable", "cdecl")
     FPDF_DocumentHasValidCrossReferenceTable.argtypes = [FPDF_DOCUMENT]
     FPDF_DocumentHasValidCrossReferenceTable.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 618
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetTrailerEnds", "cdecl"):
-        continue
-    FPDF_GetTrailerEnds = _lib.get("FPDF_GetTrailerEnds", "cdecl")
+if _libs["pdfium"].has("FPDF_GetTrailerEnds", "cdecl"):
+    FPDF_GetTrailerEnds = _libs["pdfium"].get("FPDF_GetTrailerEnds", "cdecl")
     FPDF_GetTrailerEnds.argtypes = [FPDF_DOCUMENT, POINTER(c_uint), c_ulong]
     FPDF_GetTrailerEnds.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 631
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetDocPermissions", "cdecl"):
-        continue
-    FPDF_GetDocPermissions = _lib.get("FPDF_GetDocPermissions", "cdecl")
+if _libs["pdfium"].has("FPDF_GetDocPermissions", "cdecl"):
+    FPDF_GetDocPermissions = _libs["pdfium"].get("FPDF_GetDocPermissions", "cdecl")
     FPDF_GetDocPermissions.argtypes = [FPDF_DOCUMENT]
     FPDF_GetDocPermissions.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 642
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetSecurityHandlerRevision", "cdecl"):
-        continue
-    FPDF_GetSecurityHandlerRevision = _lib.get("FPDF_GetSecurityHandlerRevision", "cdecl")
+if _libs["pdfium"].has("FPDF_GetSecurityHandlerRevision", "cdecl"):
+    FPDF_GetSecurityHandlerRevision = _libs["pdfium"].get("FPDF_GetSecurityHandlerRevision", "cdecl")
     FPDF_GetSecurityHandlerRevision.argtypes = [FPDF_DOCUMENT]
     FPDF_GetSecurityHandlerRevision.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 650
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageCount", "cdecl"):
-        continue
-    FPDF_GetPageCount = _lib.get("FPDF_GetPageCount", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageCount", "cdecl"):
+    FPDF_GetPageCount = _libs["pdfium"].get("FPDF_GetPageCount", "cdecl")
     FPDF_GetPageCount.argtypes = [FPDF_DOCUMENT]
     FPDF_GetPageCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 662
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadPage", "cdecl"):
-        continue
-    FPDF_LoadPage = _lib.get("FPDF_LoadPage", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadPage", "cdecl"):
+    FPDF_LoadPage = _libs["pdfium"].get("FPDF_LoadPage", "cdecl")
     FPDF_LoadPage.argtypes = [FPDF_DOCUMENT, c_int]
     FPDF_LoadPage.restype = FPDF_PAGE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 673
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageWidthF", "cdecl"):
-        continue
-    FPDF_GetPageWidthF = _lib.get("FPDF_GetPageWidthF", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageWidthF", "cdecl"):
+    FPDF_GetPageWidthF = _libs["pdfium"].get("FPDF_GetPageWidthF", "cdecl")
     FPDF_GetPageWidthF.argtypes = [FPDF_PAGE]
     FPDF_GetPageWidthF.restype = c_float
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 685
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageWidth", "cdecl"):
-        continue
-    FPDF_GetPageWidth = _lib.get("FPDF_GetPageWidth", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageWidth", "cdecl"):
+    FPDF_GetPageWidth = _libs["pdfium"].get("FPDF_GetPageWidth", "cdecl")
     FPDF_GetPageWidth.argtypes = [FPDF_PAGE]
     FPDF_GetPageWidth.restype = c_double
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 695
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageHeightF", "cdecl"):
-        continue
-    FPDF_GetPageHeightF = _lib.get("FPDF_GetPageHeightF", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageHeightF", "cdecl"):
+    FPDF_GetPageHeightF = _libs["pdfium"].get("FPDF_GetPageHeightF", "cdecl")
     FPDF_GetPageHeightF.argtypes = [FPDF_PAGE]
     FPDF_GetPageHeightF.restype = c_float
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 707
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageHeight", "cdecl"):
-        continue
-    FPDF_GetPageHeight = _lib.get("FPDF_GetPageHeight", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageHeight", "cdecl"):
+    FPDF_GetPageHeight = _libs["pdfium"].get("FPDF_GetPageHeight", "cdecl")
     FPDF_GetPageHeight.argtypes = [FPDF_PAGE]
     FPDF_GetPageHeight.restype = c_double
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 719
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageBoundingBox", "cdecl"):
-        continue
-    FPDF_GetPageBoundingBox = _lib.get("FPDF_GetPageBoundingBox", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageBoundingBox", "cdecl"):
+    FPDF_GetPageBoundingBox = _libs["pdfium"].get("FPDF_GetPageBoundingBox", "cdecl")
     FPDF_GetPageBoundingBox.argtypes = [FPDF_PAGE, POINTER(FS_RECTF)]
     FPDF_GetPageBoundingBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 733
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageSizeByIndexF", "cdecl"):
-        continue
-    FPDF_GetPageSizeByIndexF = _lib.get("FPDF_GetPageSizeByIndexF", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageSizeByIndexF", "cdecl"):
+    FPDF_GetPageSizeByIndexF = _libs["pdfium"].get("FPDF_GetPageSizeByIndexF", "cdecl")
     FPDF_GetPageSizeByIndexF.argtypes = [FPDF_DOCUMENT, c_int, POINTER(FS_SIZEF)]
     FPDF_GetPageSizeByIndexF.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 751
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageSizeByIndex", "cdecl"):
-        continue
-    FPDF_GetPageSizeByIndex = _lib.get("FPDF_GetPageSizeByIndex", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageSizeByIndex", "cdecl"):
+    FPDF_GetPageSizeByIndex = _libs["pdfium"].get("FPDF_GetPageSizeByIndex", "cdecl")
     FPDF_GetPageSizeByIndex.argtypes = [FPDF_DOCUMENT, c_int, POINTER(c_double), POINTER(c_double)]
     FPDF_GetPageSizeByIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 799
 class struct_FPDF_COLORSCHEME_(Structure):
@@ -1411,257 +1342,173 @@ struct_FPDF_COLORSCHEME_._fields_ = [
 FPDF_COLORSCHEME = struct_FPDF_COLORSCHEME_# /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 799
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 859
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPageBitmap", "cdecl"):
-        continue
-    FPDF_RenderPageBitmap = _lib.get("FPDF_RenderPageBitmap", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPageBitmap", "cdecl"):
+    FPDF_RenderPageBitmap = _libs["pdfium"].get("FPDF_RenderPageBitmap", "cdecl")
     FPDF_RenderPageBitmap.argtypes = [FPDF_BITMAP, FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_int]
     FPDF_RenderPageBitmap.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 887
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPageBitmapWithMatrix", "cdecl"):
-        continue
-    FPDF_RenderPageBitmapWithMatrix = _lib.get("FPDF_RenderPageBitmapWithMatrix", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPageBitmapWithMatrix", "cdecl"):
+    FPDF_RenderPageBitmapWithMatrix = _libs["pdfium"].get("FPDF_RenderPageBitmapWithMatrix", "cdecl")
     FPDF_RenderPageBitmapWithMatrix.argtypes = [FPDF_BITMAP, FPDF_PAGE, POINTER(FS_MATRIX), POINTER(FS_RECTF), c_int]
     FPDF_RenderPageBitmapWithMatrix.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 905
-for _lib in _libs.values():
-    if not _lib.has("FPDF_ClosePage", "cdecl"):
-        continue
-    FPDF_ClosePage = _lib.get("FPDF_ClosePage", "cdecl")
+if _libs["pdfium"].has("FPDF_ClosePage", "cdecl"):
+    FPDF_ClosePage = _libs["pdfium"].get("FPDF_ClosePage", "cdecl")
     FPDF_ClosePage.argtypes = [FPDF_PAGE]
     FPDF_ClosePage.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 913
-for _lib in _libs.values():
-    if not _lib.has("FPDF_CloseDocument", "cdecl"):
-        continue
-    FPDF_CloseDocument = _lib.get("FPDF_CloseDocument", "cdecl")
+if _libs["pdfium"].has("FPDF_CloseDocument", "cdecl"):
+    FPDF_CloseDocument = _libs["pdfium"].get("FPDF_CloseDocument", "cdecl")
     FPDF_CloseDocument.argtypes = [FPDF_DOCUMENT]
     FPDF_CloseDocument.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 956
-for _lib in _libs.values():
-    if not _lib.has("FPDF_DeviceToPage", "cdecl"):
-        continue
-    FPDF_DeviceToPage = _lib.get("FPDF_DeviceToPage", "cdecl")
+if _libs["pdfium"].has("FPDF_DeviceToPage", "cdecl"):
+    FPDF_DeviceToPage = _libs["pdfium"].get("FPDF_DeviceToPage", "cdecl")
     FPDF_DeviceToPage.argtypes = [FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_int, c_int, POINTER(c_double), POINTER(c_double)]
     FPDF_DeviceToPage.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 993
-for _lib in _libs.values():
-    if not _lib.has("FPDF_PageToDevice", "cdecl"):
-        continue
-    FPDF_PageToDevice = _lib.get("FPDF_PageToDevice", "cdecl")
+if _libs["pdfium"].has("FPDF_PageToDevice", "cdecl"):
+    FPDF_PageToDevice = _libs["pdfium"].get("FPDF_PageToDevice", "cdecl")
     FPDF_PageToDevice.argtypes = [FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_double, c_double, POINTER(c_int), POINTER(c_int)]
     FPDF_PageToDevice.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1034
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_Create", "cdecl"):
-        continue
-    FPDFBitmap_Create = _lib.get("FPDFBitmap_Create", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_Create", "cdecl"):
+    FPDFBitmap_Create = _libs["pdfium"].get("FPDFBitmap_Create", "cdecl")
     FPDFBitmap_Create.argtypes = [c_int, c_int, c_int]
     FPDFBitmap_Create.restype = FPDF_BITMAP
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1075
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_CreateEx", "cdecl"):
-        continue
-    FPDFBitmap_CreateEx = _lib.get("FPDFBitmap_CreateEx", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_CreateEx", "cdecl"):
+    FPDFBitmap_CreateEx = _libs["pdfium"].get("FPDFBitmap_CreateEx", "cdecl")
     FPDFBitmap_CreateEx.argtypes = [c_int, c_int, c_int, POINTER(None), c_int]
     FPDFBitmap_CreateEx.restype = FPDF_BITMAP
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1091
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_GetFormat", "cdecl"):
-        continue
-    FPDFBitmap_GetFormat = _lib.get("FPDFBitmap_GetFormat", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_GetFormat", "cdecl"):
+    FPDFBitmap_GetFormat = _libs["pdfium"].get("FPDFBitmap_GetFormat", "cdecl")
     FPDFBitmap_GetFormat.argtypes = [FPDF_BITMAP]
     FPDFBitmap_GetFormat.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1117
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_FillRect", "cdecl"):
-        continue
-    FPDFBitmap_FillRect = _lib.get("FPDFBitmap_FillRect", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_FillRect", "cdecl"):
+    FPDFBitmap_FillRect = _libs["pdfium"].get("FPDFBitmap_FillRect", "cdecl")
     FPDFBitmap_FillRect.argtypes = [FPDF_BITMAP, c_int, c_int, c_int, c_int, FPDF_DWORD]
     FPDFBitmap_FillRect.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1140
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_GetBuffer", "cdecl"):
-        continue
-    FPDFBitmap_GetBuffer = _lib.get("FPDFBitmap_GetBuffer", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_GetBuffer", "cdecl"):
+    FPDFBitmap_GetBuffer = _libs["pdfium"].get("FPDFBitmap_GetBuffer", "cdecl")
     FPDFBitmap_GetBuffer.argtypes = [FPDF_BITMAP]
     FPDFBitmap_GetBuffer.restype = POINTER(c_ubyte)
     FPDFBitmap_GetBuffer.errcheck = lambda v,*a : cast(v, c_void_p)
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1149
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_GetWidth", "cdecl"):
-        continue
-    FPDFBitmap_GetWidth = _lib.get("FPDFBitmap_GetWidth", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_GetWidth", "cdecl"):
+    FPDFBitmap_GetWidth = _libs["pdfium"].get("FPDFBitmap_GetWidth", "cdecl")
     FPDFBitmap_GetWidth.argtypes = [FPDF_BITMAP]
     FPDFBitmap_GetWidth.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1158
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_GetHeight", "cdecl"):
-        continue
-    FPDFBitmap_GetHeight = _lib.get("FPDFBitmap_GetHeight", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_GetHeight", "cdecl"):
+    FPDFBitmap_GetHeight = _libs["pdfium"].get("FPDFBitmap_GetHeight", "cdecl")
     FPDFBitmap_GetHeight.argtypes = [FPDF_BITMAP]
     FPDFBitmap_GetHeight.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1169
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_GetStride", "cdecl"):
-        continue
-    FPDFBitmap_GetStride = _lib.get("FPDFBitmap_GetStride", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_GetStride", "cdecl"):
+    FPDFBitmap_GetStride = _libs["pdfium"].get("FPDFBitmap_GetStride", "cdecl")
     FPDFBitmap_GetStride.argtypes = [FPDF_BITMAP]
     FPDFBitmap_GetStride.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1181
-for _lib in _libs.values():
-    if not _lib.has("FPDFBitmap_Destroy", "cdecl"):
-        continue
-    FPDFBitmap_Destroy = _lib.get("FPDFBitmap_Destroy", "cdecl")
+if _libs["pdfium"].has("FPDFBitmap_Destroy", "cdecl"):
+    FPDFBitmap_Destroy = _libs["pdfium"].get("FPDFBitmap_Destroy", "cdecl")
     FPDFBitmap_Destroy.argtypes = [FPDF_BITMAP]
     FPDFBitmap_Destroy.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1190
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetPrintScaling", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetPrintScaling = _lib.get("FPDF_VIEWERREF_GetPrintScaling", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetPrintScaling", "cdecl"):
+    FPDF_VIEWERREF_GetPrintScaling = _libs["pdfium"].get("FPDF_VIEWERREF_GetPrintScaling", "cdecl")
     FPDF_VIEWERREF_GetPrintScaling.argtypes = [FPDF_DOCUMENT]
     FPDF_VIEWERREF_GetPrintScaling.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1199
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetNumCopies", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetNumCopies = _lib.get("FPDF_VIEWERREF_GetNumCopies", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetNumCopies", "cdecl"):
+    FPDF_VIEWERREF_GetNumCopies = _libs["pdfium"].get("FPDF_VIEWERREF_GetNumCopies", "cdecl")
     FPDF_VIEWERREF_GetNumCopies.argtypes = [FPDF_DOCUMENT]
     FPDF_VIEWERREF_GetNumCopies.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1208
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetPrintPageRange", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetPrintPageRange = _lib.get("FPDF_VIEWERREF_GetPrintPageRange", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetPrintPageRange", "cdecl"):
+    FPDF_VIEWERREF_GetPrintPageRange = _libs["pdfium"].get("FPDF_VIEWERREF_GetPrintPageRange", "cdecl")
     FPDF_VIEWERREF_GetPrintPageRange.argtypes = [FPDF_DOCUMENT]
     FPDF_VIEWERREF_GetPrintPageRange.restype = FPDF_PAGERANGE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1218
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetPrintPageRangeCount = _lib.get("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl"):
+    FPDF_VIEWERREF_GetPrintPageRangeCount = _libs["pdfium"].get("FPDF_VIEWERREF_GetPrintPageRangeCount", "cdecl")
     FPDF_VIEWERREF_GetPrintPageRangeCount.argtypes = [FPDF_PAGERANGE]
     FPDF_VIEWERREF_GetPrintPageRangeCount.restype = c_size_t
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1230
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetPrintPageRangeElement = _lib.get("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl"):
+    FPDF_VIEWERREF_GetPrintPageRangeElement = _libs["pdfium"].get("FPDF_VIEWERREF_GetPrintPageRangeElement", "cdecl")
     FPDF_VIEWERREF_GetPrintPageRangeElement.argtypes = [FPDF_PAGERANGE, c_size_t]
     FPDF_VIEWERREF_GetPrintPageRangeElement.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1240
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetDuplex", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetDuplex = _lib.get("FPDF_VIEWERREF_GetDuplex", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetDuplex", "cdecl"):
+    FPDF_VIEWERREF_GetDuplex = _libs["pdfium"].get("FPDF_VIEWERREF_GetDuplex", "cdecl")
     FPDF_VIEWERREF_GetDuplex.argtypes = [FPDF_DOCUMENT]
     FPDF_VIEWERREF_GetDuplex.restype = FPDF_DUPLEXTYPE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1258
-for _lib in _libs.values():
-    if not _lib.has("FPDF_VIEWERREF_GetName", "cdecl"):
-        continue
-    FPDF_VIEWERREF_GetName = _lib.get("FPDF_VIEWERREF_GetName", "cdecl")
+if _libs["pdfium"].has("FPDF_VIEWERREF_GetName", "cdecl"):
+    FPDF_VIEWERREF_GetName = _libs["pdfium"].get("FPDF_VIEWERREF_GetName", "cdecl")
     FPDF_VIEWERREF_GetName.argtypes = [FPDF_DOCUMENT, FPDF_BYTESTRING, String, c_ulong]
     FPDF_VIEWERREF_GetName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1270
-for _lib in _libs.values():
-    if not _lib.has("FPDF_CountNamedDests", "cdecl"):
-        continue
-    FPDF_CountNamedDests = _lib.get("FPDF_CountNamedDests", "cdecl")
+if _libs["pdfium"].has("FPDF_CountNamedDests", "cdecl"):
+    FPDF_CountNamedDests = _libs["pdfium"].get("FPDF_CountNamedDests", "cdecl")
     FPDF_CountNamedDests.argtypes = [FPDF_DOCUMENT]
     FPDF_CountNamedDests.restype = FPDF_DWORD
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1280
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetNamedDestByName", "cdecl"):
-        continue
-    FPDF_GetNamedDestByName = _lib.get("FPDF_GetNamedDestByName", "cdecl")
+if _libs["pdfium"].has("FPDF_GetNamedDestByName", "cdecl"):
+    FPDF_GetNamedDestByName = _libs["pdfium"].get("FPDF_GetNamedDestByName", "cdecl")
     FPDF_GetNamedDestByName.argtypes = [FPDF_DOCUMENT, FPDF_BYTESTRING]
     FPDF_GetNamedDestByName.restype = FPDF_DEST
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1303
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetNamedDest", "cdecl"):
-        continue
-    FPDF_GetNamedDest = _lib.get("FPDF_GetNamedDest", "cdecl")
+if _libs["pdfium"].has("FPDF_GetNamedDest", "cdecl"):
+    FPDF_GetNamedDest = _libs["pdfium"].get("FPDF_GetNamedDest", "cdecl")
     FPDF_GetNamedDest.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), POINTER(c_long)]
     FPDF_GetNamedDest.restype = FPDF_DEST
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1315
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetXFAPacketCount", "cdecl"):
-        continue
-    FPDF_GetXFAPacketCount = _lib.get("FPDF_GetXFAPacketCount", "cdecl")
+if _libs["pdfium"].has("FPDF_GetXFAPacketCount", "cdecl"):
+    FPDF_GetXFAPacketCount = _libs["pdfium"].get("FPDF_GetXFAPacketCount", "cdecl")
     FPDF_GetXFAPacketCount.argtypes = [FPDF_DOCUMENT]
     FPDF_GetXFAPacketCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1333
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetXFAPacketName", "cdecl"):
-        continue
-    FPDF_GetXFAPacketName = _lib.get("FPDF_GetXFAPacketName", "cdecl")
+if _libs["pdfium"].has("FPDF_GetXFAPacketName", "cdecl"):
+    FPDF_GetXFAPacketName = _libs["pdfium"].get("FPDF_GetXFAPacketName", "cdecl")
     FPDF_GetXFAPacketName.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), c_ulong]
     FPDF_GetXFAPacketName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 1360
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetXFAPacketContent", "cdecl"):
-        continue
-    FPDF_GetXFAPacketContent = _lib.get("FPDF_GetXFAPacketContent", "cdecl")
+if _libs["pdfium"].has("FPDF_GetXFAPacketContent", "cdecl"):
+    FPDF_GetXFAPacketContent = _libs["pdfium"].get("FPDF_GetXFAPacketContent", "cdecl")
     FPDF_GetXFAPacketContent.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDF_GetXFAPacketContent.restype = FPDF_BOOL
-    break
 
 enum_anon_4 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 46
 
@@ -1699,238 +1546,160 @@ struct__FS_QUADPOINTSF._fields_ = [
 FS_QUADPOINTSF = struct__FS_QUADPOINTSF# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 57
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 68
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_GetFirstChild", "cdecl"):
-        continue
-    FPDFBookmark_GetFirstChild = _lib.get("FPDFBookmark_GetFirstChild", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_GetFirstChild", "cdecl"):
+    FPDFBookmark_GetFirstChild = _libs["pdfium"].get("FPDFBookmark_GetFirstChild", "cdecl")
     FPDFBookmark_GetFirstChild.argtypes = [FPDF_DOCUMENT, FPDF_BOOKMARK]
     FPDFBookmark_GetFirstChild.restype = FPDF_BOOKMARK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 78
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_GetNextSibling", "cdecl"):
-        continue
-    FPDFBookmark_GetNextSibling = _lib.get("FPDFBookmark_GetNextSibling", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_GetNextSibling", "cdecl"):
+    FPDFBookmark_GetNextSibling = _libs["pdfium"].get("FPDFBookmark_GetNextSibling", "cdecl")
     FPDFBookmark_GetNextSibling.argtypes = [FPDF_DOCUMENT, FPDF_BOOKMARK]
     FPDFBookmark_GetNextSibling.restype = FPDF_BOOKMARK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 94
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_GetTitle", "cdecl"):
-        continue
-    FPDFBookmark_GetTitle = _lib.get("FPDFBookmark_GetTitle", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_GetTitle", "cdecl"):
+    FPDFBookmark_GetTitle = _libs["pdfium"].get("FPDFBookmark_GetTitle", "cdecl")
     FPDFBookmark_GetTitle.argtypes = [FPDF_BOOKMARK, POINTER(None), c_ulong]
     FPDFBookmark_GetTitle.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 108
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_Find", "cdecl"):
-        continue
-    FPDFBookmark_Find = _lib.get("FPDFBookmark_Find", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_Find", "cdecl"):
+    FPDFBookmark_Find = _libs["pdfium"].get("FPDFBookmark_Find", "cdecl")
     FPDFBookmark_Find.argtypes = [FPDF_DOCUMENT, FPDF_WIDESTRING]
     FPDFBookmark_Find.restype = FPDF_BOOKMARK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 118
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_GetDest", "cdecl"):
-        continue
-    FPDFBookmark_GetDest = _lib.get("FPDFBookmark_GetDest", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_GetDest", "cdecl"):
+    FPDFBookmark_GetDest = _libs["pdfium"].get("FPDFBookmark_GetDest", "cdecl")
     FPDFBookmark_GetDest.argtypes = [FPDF_DOCUMENT, FPDF_BOOKMARK]
     FPDFBookmark_GetDest.restype = FPDF_DEST
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 128
-for _lib in _libs.values():
-    if not _lib.has("FPDFBookmark_GetAction", "cdecl"):
-        continue
-    FPDFBookmark_GetAction = _lib.get("FPDFBookmark_GetAction", "cdecl")
+if _libs["pdfium"].has("FPDFBookmark_GetAction", "cdecl"):
+    FPDFBookmark_GetAction = _libs["pdfium"].get("FPDFBookmark_GetAction", "cdecl")
     FPDFBookmark_GetAction.argtypes = [FPDF_BOOKMARK]
     FPDFBookmark_GetAction.restype = FPDF_ACTION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 140
-for _lib in _libs.values():
-    if not _lib.has("FPDFAction_GetType", "cdecl"):
-        continue
-    FPDFAction_GetType = _lib.get("FPDFAction_GetType", "cdecl")
+if _libs["pdfium"].has("FPDFAction_GetType", "cdecl"):
+    FPDFAction_GetType = _libs["pdfium"].get("FPDFAction_GetType", "cdecl")
     FPDFAction_GetType.argtypes = [FPDF_ACTION]
     FPDFAction_GetType.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 154
-for _lib in _libs.values():
-    if not _lib.has("FPDFAction_GetDest", "cdecl"):
-        continue
-    FPDFAction_GetDest = _lib.get("FPDFAction_GetDest", "cdecl")
+if _libs["pdfium"].has("FPDFAction_GetDest", "cdecl"):
+    FPDFAction_GetDest = _libs["pdfium"].get("FPDFAction_GetDest", "cdecl")
     FPDFAction_GetDest.argtypes = [FPDF_DOCUMENT, FPDF_ACTION]
     FPDFAction_GetDest.restype = FPDF_DEST
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 172
-for _lib in _libs.values():
-    if not _lib.has("FPDFAction_GetFilePath", "cdecl"):
-        continue
-    FPDFAction_GetFilePath = _lib.get("FPDFAction_GetFilePath", "cdecl")
+if _libs["pdfium"].has("FPDFAction_GetFilePath", "cdecl"):
+    FPDFAction_GetFilePath = _libs["pdfium"].get("FPDFAction_GetFilePath", "cdecl")
     FPDFAction_GetFilePath.argtypes = [FPDF_ACTION, POINTER(None), c_ulong]
     FPDFAction_GetFilePath.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 188
-for _lib in _libs.values():
-    if not _lib.has("FPDFAction_GetURIPath", "cdecl"):
-        continue
-    FPDFAction_GetURIPath = _lib.get("FPDFAction_GetURIPath", "cdecl")
+if _libs["pdfium"].has("FPDFAction_GetURIPath", "cdecl"):
+    FPDFAction_GetURIPath = _libs["pdfium"].get("FPDFAction_GetURIPath", "cdecl")
     FPDFAction_GetURIPath.argtypes = [FPDF_DOCUMENT, FPDF_ACTION, POINTER(None), c_ulong]
     FPDFAction_GetURIPath.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 199
-for _lib in _libs.values():
-    if not _lib.has("FPDFDest_GetDestPageIndex", "cdecl"):
-        continue
-    FPDFDest_GetDestPageIndex = _lib.get("FPDFDest_GetDestPageIndex", "cdecl")
+if _libs["pdfium"].has("FPDFDest_GetDestPageIndex", "cdecl"):
+    FPDFDest_GetDestPageIndex = _libs["pdfium"].get("FPDFDest_GetDestPageIndex", "cdecl")
     FPDFDest_GetDestPageIndex.argtypes = [FPDF_DOCUMENT, FPDF_DEST]
     FPDFDest_GetDestPageIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 212
-for _lib in _libs.values():
-    if not _lib.has("FPDFDest_GetView", "cdecl"):
-        continue
-    FPDFDest_GetView = _lib.get("FPDFDest_GetView", "cdecl")
+if _libs["pdfium"].has("FPDFDest_GetView", "cdecl"):
+    FPDFDest_GetView = _libs["pdfium"].get("FPDFDest_GetView", "cdecl")
     FPDFDest_GetView.argtypes = [FPDF_DEST, POINTER(c_ulong), POINTER(FS_FLOAT)]
     FPDFDest_GetView.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 229
-for _lib in _libs.values():
-    if not _lib.has("FPDFDest_GetLocationInPage", "cdecl"):
-        continue
-    FPDFDest_GetLocationInPage = _lib.get("FPDFDest_GetLocationInPage", "cdecl")
+if _libs["pdfium"].has("FPDFDest_GetLocationInPage", "cdecl"):
+    FPDFDest_GetLocationInPage = _libs["pdfium"].get("FPDFDest_GetLocationInPage", "cdecl")
     FPDFDest_GetLocationInPage.argtypes = [FPDF_DEST, POINTER(FPDF_BOOL), POINTER(FPDF_BOOL), POINTER(FPDF_BOOL), POINTER(FS_FLOAT), POINTER(FS_FLOAT), POINTER(FS_FLOAT)]
     FPDFDest_GetLocationInPage.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 247
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetLinkAtPoint", "cdecl"):
-        continue
-    FPDFLink_GetLinkAtPoint = _lib.get("FPDFLink_GetLinkAtPoint", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetLinkAtPoint", "cdecl"):
+    FPDFLink_GetLinkAtPoint = _libs["pdfium"].get("FPDFLink_GetLinkAtPoint", "cdecl")
     FPDFLink_GetLinkAtPoint.argtypes = [FPDF_PAGE, c_double, c_double]
     FPDFLink_GetLinkAtPoint.restype = FPDF_LINK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 262
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetLinkZOrderAtPoint", "cdecl"):
-        continue
-    FPDFLink_GetLinkZOrderAtPoint = _lib.get("FPDFLink_GetLinkZOrderAtPoint", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetLinkZOrderAtPoint", "cdecl"):
+    FPDFLink_GetLinkZOrderAtPoint = _libs["pdfium"].get("FPDFLink_GetLinkZOrderAtPoint", "cdecl")
     FPDFLink_GetLinkZOrderAtPoint.argtypes = [FPDF_PAGE, c_double, c_double]
     FPDFLink_GetLinkZOrderAtPoint.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 274
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetDest", "cdecl"):
-        continue
-    FPDFLink_GetDest = _lib.get("FPDFLink_GetDest", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetDest", "cdecl"):
+    FPDFLink_GetDest = _libs["pdfium"].get("FPDFLink_GetDest", "cdecl")
     FPDFLink_GetDest.argtypes = [FPDF_DOCUMENT, FPDF_LINK]
     FPDFLink_GetDest.restype = FPDF_DEST
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 282
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetAction", "cdecl"):
-        continue
-    FPDFLink_GetAction = _lib.get("FPDFLink_GetAction", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetAction", "cdecl"):
+    FPDFLink_GetAction = _libs["pdfium"].get("FPDFLink_GetAction", "cdecl")
     FPDFLink_GetAction.argtypes = [FPDF_LINK]
     FPDFLink_GetAction.restype = FPDF_ACTION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 292
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_Enumerate", "cdecl"):
-        continue
-    FPDFLink_Enumerate = _lib.get("FPDFLink_Enumerate", "cdecl")
+if _libs["pdfium"].has("FPDFLink_Enumerate", "cdecl"):
+    FPDFLink_Enumerate = _libs["pdfium"].get("FPDFLink_Enumerate", "cdecl")
     FPDFLink_Enumerate.argtypes = [FPDF_PAGE, POINTER(c_int), POINTER(FPDF_LINK)]
     FPDFLink_Enumerate.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 305
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetAnnot", "cdecl"):
-        continue
-    FPDFLink_GetAnnot = _lib.get("FPDFLink_GetAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetAnnot", "cdecl"):
+    FPDFLink_GetAnnot = _libs["pdfium"].get("FPDFLink_GetAnnot", "cdecl")
     FPDFLink_GetAnnot.argtypes = [FPDF_PAGE, FPDF_LINK]
     FPDFLink_GetAnnot.restype = FPDF_ANNOTATION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 313
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetAnnotRect", "cdecl"):
-        continue
-    FPDFLink_GetAnnotRect = _lib.get("FPDFLink_GetAnnotRect", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetAnnotRect", "cdecl"):
+    FPDFLink_GetAnnotRect = _libs["pdfium"].get("FPDFLink_GetAnnotRect", "cdecl")
     FPDFLink_GetAnnotRect.argtypes = [FPDF_LINK, POINTER(FS_RECTF)]
     FPDFLink_GetAnnotRect.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 321
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_CountQuadPoints", "cdecl"):
-        continue
-    FPDFLink_CountQuadPoints = _lib.get("FPDFLink_CountQuadPoints", "cdecl")
+if _libs["pdfium"].has("FPDFLink_CountQuadPoints", "cdecl"):
+    FPDFLink_CountQuadPoints = _libs["pdfium"].get("FPDFLink_CountQuadPoints", "cdecl")
     FPDFLink_CountQuadPoints.argtypes = [FPDF_LINK]
     FPDFLink_CountQuadPoints.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 331
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetQuadPoints", "cdecl"):
-        continue
-    FPDFLink_GetQuadPoints = _lib.get("FPDFLink_GetQuadPoints", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetQuadPoints", "cdecl"):
+    FPDFLink_GetQuadPoints = _libs["pdfium"].get("FPDFLink_GetQuadPoints", "cdecl")
     FPDFLink_GetQuadPoints.argtypes = [FPDF_LINK, c_int, POINTER(FS_QUADPOINTSF)]
     FPDFLink_GetQuadPoints.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 344
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageAAction", "cdecl"):
-        continue
-    FPDF_GetPageAAction = _lib.get("FPDF_GetPageAAction", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageAAction", "cdecl"):
+    FPDF_GetPageAAction = _libs["pdfium"].get("FPDF_GetPageAAction", "cdecl")
     FPDF_GetPageAAction.argtypes = [FPDF_PAGE, c_int]
     FPDF_GetPageAAction.restype = FPDF_ACTION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 362
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetFileIdentifier", "cdecl"):
-        continue
-    FPDF_GetFileIdentifier = _lib.get("FPDF_GetFileIdentifier", "cdecl")
+if _libs["pdfium"].has("FPDF_GetFileIdentifier", "cdecl"):
+    FPDF_GetFileIdentifier = _libs["pdfium"].get("FPDF_GetFileIdentifier", "cdecl")
     FPDF_GetFileIdentifier.argtypes = [FPDF_DOCUMENT, FPDF_FILEIDTYPE, POINTER(None), c_ulong]
     FPDF_GetFileIdentifier.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 388
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetMetaText", "cdecl"):
-        continue
-    FPDF_GetMetaText = _lib.get("FPDF_GetMetaText", "cdecl")
+if _libs["pdfium"].has("FPDF_GetMetaText", "cdecl"):
+    FPDF_GetMetaText = _libs["pdfium"].get("FPDF_GetMetaText", "cdecl")
     FPDF_GetMetaText.argtypes = [FPDF_DOCUMENT, FPDF_BYTESTRING, POINTER(None), c_ulong]
     FPDF_GetMetaText.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_doc.h: 406
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetPageLabel", "cdecl"):
-        continue
-    FPDF_GetPageLabel = _lib.get("FPDF_GetPageLabel", "cdecl")
+if _libs["pdfium"].has("FPDF_GetPageLabel", "cdecl"):
+    FPDF_GetPageLabel = _libs["pdfium"].get("FPDF_GetPageLabel", "cdecl")
     FPDF_GetPageLabel.argtypes = [FPDF_DOCUMENT, c_int, POINTER(None), c_ulong]
     FPDF_GetPageLabel.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 52
 class struct__IPDF_JsPlatform(Structure):
@@ -2080,364 +1849,244 @@ struct__FPDF_FORMFILLINFO._fields_ = [
 FPDF_FORMFILLINFO = struct__FPDF_FORMFILLINFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1136
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1150
-for _lib in _libs.values():
-    if not _lib.has("FPDFDOC_InitFormFillEnvironment", "cdecl"):
-        continue
-    FPDFDOC_InitFormFillEnvironment = _lib.get("FPDFDOC_InitFormFillEnvironment", "cdecl")
+if _libs["pdfium"].has("FPDFDOC_InitFormFillEnvironment", "cdecl"):
+    FPDFDOC_InitFormFillEnvironment = _libs["pdfium"].get("FPDFDOC_InitFormFillEnvironment", "cdecl")
     FPDFDOC_InitFormFillEnvironment.argtypes = [FPDF_DOCUMENT, POINTER(FPDF_FORMFILLINFO)]
     FPDFDOC_InitFormFillEnvironment.restype = FPDF_FORMHANDLE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1165
-for _lib in _libs.values():
-    if not _lib.has("FPDFDOC_ExitFormFillEnvironment", "cdecl"):
-        continue
-    FPDFDOC_ExitFormFillEnvironment = _lib.get("FPDFDOC_ExitFormFillEnvironment", "cdecl")
+if _libs["pdfium"].has("FPDFDOC_ExitFormFillEnvironment", "cdecl"):
+    FPDFDOC_ExitFormFillEnvironment = _libs["pdfium"].get("FPDFDOC_ExitFormFillEnvironment", "cdecl")
     FPDFDOC_ExitFormFillEnvironment.argtypes = [FPDF_FORMHANDLE]
     FPDFDOC_ExitFormFillEnvironment.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1178
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnAfterLoadPage", "cdecl"):
-        continue
-    FORM_OnAfterLoadPage = _lib.get("FORM_OnAfterLoadPage", "cdecl")
+if _libs["pdfium"].has("FORM_OnAfterLoadPage", "cdecl"):
+    FORM_OnAfterLoadPage = _libs["pdfium"].get("FORM_OnAfterLoadPage", "cdecl")
     FORM_OnAfterLoadPage.argtypes = [FPDF_PAGE, FPDF_FORMHANDLE]
     FORM_OnAfterLoadPage.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1192
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnBeforeClosePage", "cdecl"):
-        continue
-    FORM_OnBeforeClosePage = _lib.get("FORM_OnBeforeClosePage", "cdecl")
+if _libs["pdfium"].has("FORM_OnBeforeClosePage", "cdecl"):
+    FORM_OnBeforeClosePage = _libs["pdfium"].get("FORM_OnBeforeClosePage", "cdecl")
     FORM_OnBeforeClosePage.argtypes = [FPDF_PAGE, FPDF_FORMHANDLE]
     FORM_OnBeforeClosePage.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1210
-for _lib in _libs.values():
-    if not _lib.has("FORM_DoDocumentJSAction", "cdecl"):
-        continue
-    FORM_DoDocumentJSAction = _lib.get("FORM_DoDocumentJSAction", "cdecl")
+if _libs["pdfium"].has("FORM_DoDocumentJSAction", "cdecl"):
+    FORM_DoDocumentJSAction = _libs["pdfium"].get("FORM_DoDocumentJSAction", "cdecl")
     FORM_DoDocumentJSAction.argtypes = [FPDF_FORMHANDLE]
     FORM_DoDocumentJSAction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1226
-for _lib in _libs.values():
-    if not _lib.has("FORM_DoDocumentOpenAction", "cdecl"):
-        continue
-    FORM_DoDocumentOpenAction = _lib.get("FORM_DoDocumentOpenAction", "cdecl")
+if _libs["pdfium"].has("FORM_DoDocumentOpenAction", "cdecl"):
+    FORM_DoDocumentOpenAction = _libs["pdfium"].get("FORM_DoDocumentOpenAction", "cdecl")
     FORM_DoDocumentOpenAction.argtypes = [FPDF_FORMHANDLE]
     FORM_DoDocumentOpenAction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1255
-for _lib in _libs.values():
-    if not _lib.has("FORM_DoDocumentAAction", "cdecl"):
-        continue
-    FORM_DoDocumentAAction = _lib.get("FORM_DoDocumentAAction", "cdecl")
+if _libs["pdfium"].has("FORM_DoDocumentAAction", "cdecl"):
+    FORM_DoDocumentAAction = _libs["pdfium"].get("FORM_DoDocumentAAction", "cdecl")
     FORM_DoDocumentAAction.argtypes = [FPDF_FORMHANDLE, c_int]
     FORM_DoDocumentAAction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1280
-for _lib in _libs.values():
-    if not _lib.has("FORM_DoPageAAction", "cdecl"):
-        continue
-    FORM_DoPageAAction = _lib.get("FORM_DoPageAAction", "cdecl")
+if _libs["pdfium"].has("FORM_DoPageAAction", "cdecl"):
+    FORM_DoPageAAction = _libs["pdfium"].get("FORM_DoPageAAction", "cdecl")
     FORM_DoPageAAction.argtypes = [FPDF_PAGE, FPDF_FORMHANDLE, c_int]
     FORM_DoPageAAction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1299
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnMouseMove", "cdecl"):
-        continue
-    FORM_OnMouseMove = _lib.get("FORM_OnMouseMove", "cdecl")
+if _libs["pdfium"].has("FORM_OnMouseMove", "cdecl"):
+    FORM_OnMouseMove = _libs["pdfium"].get("FORM_OnMouseMove", "cdecl")
     FORM_OnMouseMove.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnMouseMove.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1330
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnMouseWheel", "cdecl"):
-        continue
-    FORM_OnMouseWheel = _lib.get("FORM_OnMouseWheel", "cdecl")
+if _libs["pdfium"].has("FORM_OnMouseWheel", "cdecl"):
+    FORM_OnMouseWheel = _libs["pdfium"].get("FORM_OnMouseWheel", "cdecl")
     FORM_OnMouseWheel.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, POINTER(FS_POINTF), c_int, c_int]
     FORM_OnMouseWheel.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1355
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnFocus", "cdecl"):
-        continue
-    FORM_OnFocus = _lib.get("FORM_OnFocus", "cdecl")
+if _libs["pdfium"].has("FORM_OnFocus", "cdecl"):
+    FORM_OnFocus = _libs["pdfium"].get("FORM_OnFocus", "cdecl")
     FORM_OnFocus.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnFocus.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1377
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnLButtonDown", "cdecl"):
-        continue
-    FORM_OnLButtonDown = _lib.get("FORM_OnLButtonDown", "cdecl")
+if _libs["pdfium"].has("FORM_OnLButtonDown", "cdecl"):
+    FORM_OnLButtonDown = _libs["pdfium"].get("FORM_OnLButtonDown", "cdecl")
     FORM_OnLButtonDown.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnLButtonDown.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1390
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnRButtonDown", "cdecl"):
-        continue
-    FORM_OnRButtonDown = _lib.get("FORM_OnRButtonDown", "cdecl")
+if _libs["pdfium"].has("FORM_OnRButtonDown", "cdecl"):
+    FORM_OnRButtonDown = _libs["pdfium"].get("FORM_OnRButtonDown", "cdecl")
     FORM_OnRButtonDown.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnRButtonDown.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1409
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnLButtonUp", "cdecl"):
-        continue
-    FORM_OnLButtonUp = _lib.get("FORM_OnLButtonUp", "cdecl")
+if _libs["pdfium"].has("FORM_OnLButtonUp", "cdecl"):
+    FORM_OnLButtonUp = _libs["pdfium"].get("FORM_OnLButtonUp", "cdecl")
     FORM_OnLButtonUp.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnLButtonUp.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1422
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnRButtonUp", "cdecl"):
-        continue
-    FORM_OnRButtonUp = _lib.get("FORM_OnRButtonUp", "cdecl")
+if _libs["pdfium"].has("FORM_OnRButtonUp", "cdecl"):
+    FORM_OnRButtonUp = _libs["pdfium"].get("FORM_OnRButtonUp", "cdecl")
     FORM_OnRButtonUp.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnRButtonUp.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1445
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnLButtonDoubleClick", "cdecl"):
-        continue
-    FORM_OnLButtonDoubleClick = _lib.get("FORM_OnLButtonDoubleClick", "cdecl")
+if _libs["pdfium"].has("FORM_OnLButtonDoubleClick", "cdecl"):
+    FORM_OnLButtonDoubleClick = _libs["pdfium"].get("FORM_OnLButtonDoubleClick", "cdecl")
     FORM_OnLButtonDoubleClick.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_double, c_double]
     FORM_OnLButtonDoubleClick.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1464
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnKeyDown", "cdecl"):
-        continue
-    FORM_OnKeyDown = _lib.get("FORM_OnKeyDown", "cdecl")
+if _libs["pdfium"].has("FORM_OnKeyDown", "cdecl"):
+    FORM_OnKeyDown = _libs["pdfium"].get("FORM_OnKeyDown", "cdecl")
     FORM_OnKeyDown.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_int]
     FORM_OnKeyDown.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1482
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnKeyUp", "cdecl"):
-        continue
-    FORM_OnKeyUp = _lib.get("FORM_OnKeyUp", "cdecl")
+if _libs["pdfium"].has("FORM_OnKeyUp", "cdecl"):
+    FORM_OnKeyUp = _libs["pdfium"].get("FORM_OnKeyUp", "cdecl")
     FORM_OnKeyUp.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_int]
     FORM_OnKeyUp.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1501
-for _lib in _libs.values():
-    if not _lib.has("FORM_OnChar", "cdecl"):
-        continue
-    FORM_OnChar = _lib.get("FORM_OnChar", "cdecl")
+if _libs["pdfium"].has("FORM_OnChar", "cdecl"):
+    FORM_OnChar = _libs["pdfium"].get("FORM_OnChar", "cdecl")
     FORM_OnChar.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, c_int]
     FORM_OnChar.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1524
-for _lib in _libs.values():
-    if not _lib.has("FORM_GetFocusedText", "cdecl"):
-        continue
-    FORM_GetFocusedText = _lib.get("FORM_GetFocusedText", "cdecl")
+if _libs["pdfium"].has("FORM_GetFocusedText", "cdecl"):
+    FORM_GetFocusedText = _libs["pdfium"].get("FORM_GetFocusedText", "cdecl")
     FORM_GetFocusedText.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, POINTER(None), c_ulong]
     FORM_GetFocusedText.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1547
-for _lib in _libs.values():
-    if not _lib.has("FORM_GetSelectedText", "cdecl"):
-        continue
-    FORM_GetSelectedText = _lib.get("FORM_GetSelectedText", "cdecl")
+if _libs["pdfium"].has("FORM_GetSelectedText", "cdecl"):
+    FORM_GetSelectedText = _libs["pdfium"].get("FORM_GetSelectedText", "cdecl")
     FORM_GetSelectedText.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, POINTER(None), c_ulong]
     FORM_GetSelectedText.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1567
-for _lib in _libs.values():
-    if not _lib.has("FORM_ReplaceSelection", "cdecl"):
-        continue
-    FORM_ReplaceSelection = _lib.get("FORM_ReplaceSelection", "cdecl")
+if _libs["pdfium"].has("FORM_ReplaceSelection", "cdecl"):
+    FORM_ReplaceSelection = _libs["pdfium"].get("FORM_ReplaceSelection", "cdecl")
     FORM_ReplaceSelection.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, FPDF_WIDESTRING]
     FORM_ReplaceSelection.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1584
-for _lib in _libs.values():
-    if not _lib.has("FORM_SelectAllText", "cdecl"):
-        continue
-    FORM_SelectAllText = _lib.get("FORM_SelectAllText", "cdecl")
+if _libs["pdfium"].has("FORM_SelectAllText", "cdecl"):
+    FORM_SelectAllText = _libs["pdfium"].get("FORM_SelectAllText", "cdecl")
     FORM_SelectAllText.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE]
     FORM_SelectAllText.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1597
-for _lib in _libs.values():
-    if not _lib.has("FORM_CanUndo", "cdecl"):
-        continue
-    FORM_CanUndo = _lib.get("FORM_CanUndo", "cdecl")
+if _libs["pdfium"].has("FORM_CanUndo", "cdecl"):
+    FORM_CanUndo = _libs["pdfium"].get("FORM_CanUndo", "cdecl")
     FORM_CanUndo.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE]
     FORM_CanUndo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1611
-for _lib in _libs.values():
-    if not _lib.has("FORM_CanRedo", "cdecl"):
-        continue
-    FORM_CanRedo = _lib.get("FORM_CanRedo", "cdecl")
+if _libs["pdfium"].has("FORM_CanRedo", "cdecl"):
+    FORM_CanRedo = _libs["pdfium"].get("FORM_CanRedo", "cdecl")
     FORM_CanRedo.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE]
     FORM_CanRedo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1624
-for _lib in _libs.values():
-    if not _lib.has("FORM_Undo", "cdecl"):
-        continue
-    FORM_Undo = _lib.get("FORM_Undo", "cdecl")
+if _libs["pdfium"].has("FORM_Undo", "cdecl"):
+    FORM_Undo = _libs["pdfium"].get("FORM_Undo", "cdecl")
     FORM_Undo.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE]
     FORM_Undo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1637
-for _lib in _libs.values():
-    if not _lib.has("FORM_Redo", "cdecl"):
-        continue
-    FORM_Redo = _lib.get("FORM_Redo", "cdecl")
+if _libs["pdfium"].has("FORM_Redo", "cdecl"):
+    FORM_Redo = _libs["pdfium"].get("FORM_Redo", "cdecl")
     FORM_Redo.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE]
     FORM_Redo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1652
-for _lib in _libs.values():
-    if not _lib.has("FORM_ForceToKillFocus", "cdecl"):
-        continue
-    FORM_ForceToKillFocus = _lib.get("FORM_ForceToKillFocus", "cdecl")
+if _libs["pdfium"].has("FORM_ForceToKillFocus", "cdecl"):
+    FORM_ForceToKillFocus = _libs["pdfium"].get("FORM_ForceToKillFocus", "cdecl")
     FORM_ForceToKillFocus.argtypes = [FPDF_FORMHANDLE]
     FORM_ForceToKillFocus.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1677
-for _lib in _libs.values():
-    if not _lib.has("FORM_GetFocusedAnnot", "cdecl"):
-        continue
-    FORM_GetFocusedAnnot = _lib.get("FORM_GetFocusedAnnot", "cdecl")
+if _libs["pdfium"].has("FORM_GetFocusedAnnot", "cdecl"):
+    FORM_GetFocusedAnnot = _libs["pdfium"].get("FORM_GetFocusedAnnot", "cdecl")
     FORM_GetFocusedAnnot.argtypes = [FPDF_FORMHANDLE, POINTER(c_int), POINTER(FPDF_ANNOTATION)]
     FORM_GetFocusedAnnot.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1696
-for _lib in _libs.values():
-    if not _lib.has("FORM_SetFocusedAnnot", "cdecl"):
-        continue
-    FORM_SetFocusedAnnot = _lib.get("FORM_SetFocusedAnnot", "cdecl")
+if _libs["pdfium"].has("FORM_SetFocusedAnnot", "cdecl"):
+    FORM_SetFocusedAnnot = _libs["pdfium"].get("FORM_SetFocusedAnnot", "cdecl")
     FORM_SetFocusedAnnot.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FORM_SetFocusedAnnot.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1752
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_HasFormFieldAtPoint", "cdecl"):
-        continue
-    FPDFPage_HasFormFieldAtPoint = _lib.get("FPDFPage_HasFormFieldAtPoint", "cdecl")
+if _libs["pdfium"].has("FPDFPage_HasFormFieldAtPoint", "cdecl"):
+    FPDFPage_HasFormFieldAtPoint = _libs["pdfium"].get("FPDFPage_HasFormFieldAtPoint", "cdecl")
     FPDFPage_HasFormFieldAtPoint.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_double, c_double]
     FPDFPage_HasFormFieldAtPoint.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1771
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_FormFieldZOrderAtPoint", "cdecl"):
-        continue
-    FPDFPage_FormFieldZOrderAtPoint = _lib.get("FPDFPage_FormFieldZOrderAtPoint", "cdecl")
+if _libs["pdfium"].has("FPDFPage_FormFieldZOrderAtPoint", "cdecl"):
+    FPDFPage_FormFieldZOrderAtPoint = _libs["pdfium"].get("FPDFPage_FormFieldZOrderAtPoint", "cdecl")
     FPDFPage_FormFieldZOrderAtPoint.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_double, c_double]
     FPDFPage_FormFieldZOrderAtPoint.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1799
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SetFormFieldHighlightColor", "cdecl"):
-        continue
-    FPDF_SetFormFieldHighlightColor = _lib.get("FPDF_SetFormFieldHighlightColor", "cdecl")
+if _libs["pdfium"].has("FPDF_SetFormFieldHighlightColor", "cdecl"):
+    FPDF_SetFormFieldHighlightColor = _libs["pdfium"].get("FPDF_SetFormFieldHighlightColor", "cdecl")
     FPDF_SetFormFieldHighlightColor.argtypes = [FPDF_FORMHANDLE, c_int, c_ulong]
     FPDF_SetFormFieldHighlightColor.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1818
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SetFormFieldHighlightAlpha", "cdecl"):
-        continue
-    FPDF_SetFormFieldHighlightAlpha = _lib.get("FPDF_SetFormFieldHighlightAlpha", "cdecl")
+if _libs["pdfium"].has("FPDF_SetFormFieldHighlightAlpha", "cdecl"):
+    FPDF_SetFormFieldHighlightAlpha = _libs["pdfium"].get("FPDF_SetFormFieldHighlightAlpha", "cdecl")
     FPDF_SetFormFieldHighlightAlpha.argtypes = [FPDF_FORMHANDLE, c_ubyte]
     FPDF_SetFormFieldHighlightAlpha.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1833
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RemoveFormFieldHighlight", "cdecl"):
-        continue
-    FPDF_RemoveFormFieldHighlight = _lib.get("FPDF_RemoveFormFieldHighlight", "cdecl")
+if _libs["pdfium"].has("FPDF_RemoveFormFieldHighlight", "cdecl"):
+    FPDF_RemoveFormFieldHighlight = _libs["pdfium"].get("FPDF_RemoveFormFieldHighlight", "cdecl")
     FPDF_RemoveFormFieldHighlight.argtypes = [FPDF_FORMHANDLE]
     FPDF_RemoveFormFieldHighlight.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1872
-for _lib in _libs.values():
-    if not _lib.has("FPDF_FFLDraw", "cdecl"):
-        continue
-    FPDF_FFLDraw = _lib.get("FPDF_FFLDraw", "cdecl")
+if _libs["pdfium"].has("FPDF_FFLDraw", "cdecl"):
+    FPDF_FFLDraw = _libs["pdfium"].get("FPDF_FFLDraw", "cdecl")
     FPDF_FFLDraw.argtypes = [FPDF_FORMHANDLE, FPDF_BITMAP, FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_int]
     FPDF_FFLDraw.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1905
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetFormType", "cdecl"):
-        continue
-    FPDF_GetFormType = _lib.get("FPDF_GetFormType", "cdecl")
+if _libs["pdfium"].has("FPDF_GetFormType", "cdecl"):
+    FPDF_GetFormType = _libs["pdfium"].get("FPDF_GetFormType", "cdecl")
     FPDF_GetFormType.argtypes = [FPDF_DOCUMENT]
     FPDF_GetFormType.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1931
-for _lib in _libs.values():
-    if not _lib.has("FORM_SetIndexSelected", "cdecl"):
-        continue
-    FORM_SetIndexSelected = _lib.get("FORM_SetIndexSelected", "cdecl")
+if _libs["pdfium"].has("FORM_SetIndexSelected", "cdecl"):
+    FORM_SetIndexSelected = _libs["pdfium"].get("FORM_SetIndexSelected", "cdecl")
     FORM_SetIndexSelected.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int, FPDF_BOOL]
     FORM_SetIndexSelected.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1956
-for _lib in _libs.values():
-    if not _lib.has("FORM_IsIndexSelected", "cdecl"):
-        continue
-    FORM_IsIndexSelected = _lib.get("FORM_IsIndexSelected", "cdecl")
+if _libs["pdfium"].has("FORM_IsIndexSelected", "cdecl"):
+    FORM_IsIndexSelected = _libs["pdfium"].get("FORM_IsIndexSelected", "cdecl")
     FORM_IsIndexSelected.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, c_int]
     FORM_IsIndexSelected.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_formfill.h: 1968
-for _lib in _libs.values():
-    if not _lib.has("FPDF_LoadXFA", "cdecl"):
-        continue
-    FPDF_LoadXFA = _lib.get("FPDF_LoadXFA", "cdecl")
+if _libs["pdfium"].has("FPDF_LoadXFA", "cdecl"):
+    FPDF_LoadXFA = _libs["pdfium"].get("FPDF_LoadXFA", "cdecl")
     FPDF_LoadXFA.argtypes = [FPDF_DOCUMENT]
     FPDF_LoadXFA.restype = FPDF_BOOL
-    break
 
 enum_FPDFANNOT_COLORTYPE = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
@@ -2448,625 +2097,418 @@ FPDFANNOT_COLORTYPE_InteriorColor = (FPDFANNOT_COLORTYPE_Color + 1)# /home/manue
 FPDFANNOT_COLORTYPE = enum_FPDFANNOT_COLORTYPE# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 90
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 101
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_IsSupportedSubtype", "cdecl"):
-        continue
-    FPDFAnnot_IsSupportedSubtype = _lib.get("FPDFAnnot_IsSupportedSubtype", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_IsSupportedSubtype", "cdecl"):
+    FPDFAnnot_IsSupportedSubtype = _libs["pdfium"].get("FPDFAnnot_IsSupportedSubtype", "cdecl")
     FPDFAnnot_IsSupportedSubtype.argtypes = [FPDF_ANNOTATION_SUBTYPE]
     FPDFAnnot_IsSupportedSubtype.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 114
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_CreateAnnot", "cdecl"):
-        continue
-    FPDFPage_CreateAnnot = _lib.get("FPDFPage_CreateAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFPage_CreateAnnot", "cdecl"):
+    FPDFPage_CreateAnnot = _libs["pdfium"].get("FPDFPage_CreateAnnot", "cdecl")
     FPDFPage_CreateAnnot.argtypes = [FPDF_PAGE, FPDF_ANNOTATION_SUBTYPE]
     FPDFPage_CreateAnnot.restype = FPDF_ANNOTATION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 122
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetAnnotCount", "cdecl"):
-        continue
-    FPDFPage_GetAnnotCount = _lib.get("FPDFPage_GetAnnotCount", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetAnnotCount", "cdecl"):
+    FPDFPage_GetAnnotCount = _libs["pdfium"].get("FPDFPage_GetAnnotCount", "cdecl")
     FPDFPage_GetAnnotCount.argtypes = [FPDF_PAGE]
     FPDFPage_GetAnnotCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 132
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetAnnot", "cdecl"):
-        continue
-    FPDFPage_GetAnnot = _lib.get("FPDFPage_GetAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetAnnot", "cdecl"):
+    FPDFPage_GetAnnot = _libs["pdfium"].get("FPDFPage_GetAnnot", "cdecl")
     FPDFPage_GetAnnot.argtypes = [FPDF_PAGE, c_int]
     FPDFPage_GetAnnot.restype = FPDF_ANNOTATION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 143
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetAnnotIndex", "cdecl"):
-        continue
-    FPDFPage_GetAnnotIndex = _lib.get("FPDFPage_GetAnnotIndex", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetAnnotIndex", "cdecl"):
+    FPDFPage_GetAnnotIndex = _libs["pdfium"].get("FPDFPage_GetAnnotIndex", "cdecl")
     FPDFPage_GetAnnotIndex.argtypes = [FPDF_PAGE, FPDF_ANNOTATION]
     FPDFPage_GetAnnotIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 152
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_CloseAnnot", "cdecl"):
-        continue
-    FPDFPage_CloseAnnot = _lib.get("FPDFPage_CloseAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFPage_CloseAnnot", "cdecl"):
+    FPDFPage_CloseAnnot = _libs["pdfium"].get("FPDFPage_CloseAnnot", "cdecl")
     FPDFPage_CloseAnnot.argtypes = [FPDF_ANNOTATION]
     FPDFPage_CloseAnnot.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 161
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_RemoveAnnot", "cdecl"):
-        continue
-    FPDFPage_RemoveAnnot = _lib.get("FPDFPage_RemoveAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFPage_RemoveAnnot", "cdecl"):
+    FPDFPage_RemoveAnnot = _libs["pdfium"].get("FPDFPage_RemoveAnnot", "cdecl")
     FPDFPage_RemoveAnnot.argtypes = [FPDF_PAGE, c_int]
     FPDFPage_RemoveAnnot.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 171
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetSubtype", "cdecl"):
-        continue
-    FPDFAnnot_GetSubtype = _lib.get("FPDFAnnot_GetSubtype", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetSubtype", "cdecl"):
+    FPDFAnnot_GetSubtype = _libs["pdfium"].get("FPDFAnnot_GetSubtype", "cdecl")
     FPDFAnnot_GetSubtype.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_GetSubtype.restype = FPDF_ANNOTATION_SUBTYPE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 182
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_IsObjectSupportedSubtype", "cdecl"):
-        continue
-    FPDFAnnot_IsObjectSupportedSubtype = _lib.get("FPDFAnnot_IsObjectSupportedSubtype", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_IsObjectSupportedSubtype", "cdecl"):
+    FPDFAnnot_IsObjectSupportedSubtype = _libs["pdfium"].get("FPDFAnnot_IsObjectSupportedSubtype", "cdecl")
     FPDFAnnot_IsObjectSupportedSubtype.argtypes = [FPDF_ANNOTATION_SUBTYPE]
     FPDFAnnot_IsObjectSupportedSubtype.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 196
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_UpdateObject", "cdecl"):
-        continue
-    FPDFAnnot_UpdateObject = _lib.get("FPDFAnnot_UpdateObject", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_UpdateObject", "cdecl"):
+    FPDFAnnot_UpdateObject = _libs["pdfium"].get("FPDFAnnot_UpdateObject", "cdecl")
     FPDFAnnot_UpdateObject.argtypes = [FPDF_ANNOTATION, FPDF_PAGEOBJECT]
     FPDFAnnot_UpdateObject.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 211
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_AddInkStroke", "cdecl"):
-        continue
-    FPDFAnnot_AddInkStroke = _lib.get("FPDFAnnot_AddInkStroke", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_AddInkStroke", "cdecl"):
+    FPDFAnnot_AddInkStroke = _libs["pdfium"].get("FPDFAnnot_AddInkStroke", "cdecl")
     FPDFAnnot_AddInkStroke.argtypes = [FPDF_ANNOTATION, POINTER(FS_POINTF), c_size_t]
     FPDFAnnot_AddInkStroke.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 224
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_RemoveInkList", "cdecl"):
-        continue
-    FPDFAnnot_RemoveInkList = _lib.get("FPDFAnnot_RemoveInkList", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_RemoveInkList", "cdecl"):
+    FPDFAnnot_RemoveInkList = _libs["pdfium"].get("FPDFAnnot_RemoveInkList", "cdecl")
     FPDFAnnot_RemoveInkList.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_RemoveInkList.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 238
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_AppendObject", "cdecl"):
-        continue
-    FPDFAnnot_AppendObject = _lib.get("FPDFAnnot_AppendObject", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_AppendObject", "cdecl"):
+    FPDFAnnot_AppendObject = _libs["pdfium"].get("FPDFAnnot_AppendObject", "cdecl")
     FPDFAnnot_AppendObject.argtypes = [FPDF_ANNOTATION, FPDF_PAGEOBJECT]
     FPDFAnnot_AppendObject.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 247
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetObjectCount", "cdecl"):
-        continue
-    FPDFAnnot_GetObjectCount = _lib.get("FPDFAnnot_GetObjectCount", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetObjectCount", "cdecl"):
+    FPDFAnnot_GetObjectCount = _libs["pdfium"].get("FPDFAnnot_GetObjectCount", "cdecl")
     FPDFAnnot_GetObjectCount.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_GetObjectCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 257
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetObject", "cdecl"):
-        continue
-    FPDFAnnot_GetObject = _lib.get("FPDFAnnot_GetObject", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetObject", "cdecl"):
+    FPDFAnnot_GetObject = _libs["pdfium"].get("FPDFAnnot_GetObject", "cdecl")
     FPDFAnnot_GetObject.argtypes = [FPDF_ANNOTATION, c_int]
     FPDFAnnot_GetObject.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 267
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_RemoveObject", "cdecl"):
-        continue
-    FPDFAnnot_RemoveObject = _lib.get("FPDFAnnot_RemoveObject", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_RemoveObject", "cdecl"):
+    FPDFAnnot_RemoveObject = _libs["pdfium"].get("FPDFAnnot_RemoveObject", "cdecl")
     FPDFAnnot_RemoveObject.argtypes = [FPDF_ANNOTATION, c_int]
     FPDFAnnot_RemoveObject.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 280
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetColor", "cdecl"):
-        continue
-    FPDFAnnot_SetColor = _lib.get("FPDFAnnot_SetColor", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetColor", "cdecl"):
+    FPDFAnnot_SetColor = _libs["pdfium"].get("FPDFAnnot_SetColor", "cdecl")
     FPDFAnnot_SetColor.argtypes = [FPDF_ANNOTATION, FPDFANNOT_COLORTYPE, c_uint, c_uint, c_uint, c_uint]
     FPDFAnnot_SetColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 299
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetColor", "cdecl"):
-        continue
-    FPDFAnnot_GetColor = _lib.get("FPDFAnnot_GetColor", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetColor", "cdecl"):
+    FPDFAnnot_GetColor = _libs["pdfium"].get("FPDFAnnot_GetColor", "cdecl")
     FPDFAnnot_GetColor.argtypes = [FPDF_ANNOTATION, FPDFANNOT_COLORTYPE, POINTER(c_uint), POINTER(c_uint), POINTER(c_uint), POINTER(c_uint)]
     FPDFAnnot_GetColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 319
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_HasAttachmentPoints", "cdecl"):
-        continue
-    FPDFAnnot_HasAttachmentPoints = _lib.get("FPDFAnnot_HasAttachmentPoints", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_HasAttachmentPoints", "cdecl"):
+    FPDFAnnot_HasAttachmentPoints = _libs["pdfium"].get("FPDFAnnot_HasAttachmentPoints", "cdecl")
     FPDFAnnot_HasAttachmentPoints.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_HasAttachmentPoints.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 335
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetAttachmentPoints", "cdecl"):
-        continue
-    FPDFAnnot_SetAttachmentPoints = _lib.get("FPDFAnnot_SetAttachmentPoints", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetAttachmentPoints", "cdecl"):
+    FPDFAnnot_SetAttachmentPoints = _libs["pdfium"].get("FPDFAnnot_SetAttachmentPoints", "cdecl")
     FPDFAnnot_SetAttachmentPoints.argtypes = [FPDF_ANNOTATION, c_size_t, POINTER(FS_QUADPOINTSF)]
     FPDFAnnot_SetAttachmentPoints.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 350
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_AppendAttachmentPoints", "cdecl"):
-        continue
-    FPDFAnnot_AppendAttachmentPoints = _lib.get("FPDFAnnot_AppendAttachmentPoints", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_AppendAttachmentPoints", "cdecl"):
+    FPDFAnnot_AppendAttachmentPoints = _libs["pdfium"].get("FPDFAnnot_AppendAttachmentPoints", "cdecl")
     FPDFAnnot_AppendAttachmentPoints.argtypes = [FPDF_ANNOTATION, POINTER(FS_QUADPOINTSF)]
     FPDFAnnot_AppendAttachmentPoints.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 360
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_CountAttachmentPoints", "cdecl"):
-        continue
-    FPDFAnnot_CountAttachmentPoints = _lib.get("FPDFAnnot_CountAttachmentPoints", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_CountAttachmentPoints", "cdecl"):
+    FPDFAnnot_CountAttachmentPoints = _libs["pdfium"].get("FPDFAnnot_CountAttachmentPoints", "cdecl")
     FPDFAnnot_CountAttachmentPoints.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_CountAttachmentPoints.restype = c_size_t
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 371
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetAttachmentPoints", "cdecl"):
-        continue
-    FPDFAnnot_GetAttachmentPoints = _lib.get("FPDFAnnot_GetAttachmentPoints", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetAttachmentPoints", "cdecl"):
+    FPDFAnnot_GetAttachmentPoints = _libs["pdfium"].get("FPDFAnnot_GetAttachmentPoints", "cdecl")
     FPDFAnnot_GetAttachmentPoints.argtypes = [FPDF_ANNOTATION, c_size_t, POINTER(FS_QUADPOINTSF)]
     FPDFAnnot_GetAttachmentPoints.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 385
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetRect", "cdecl"):
-        continue
-    FPDFAnnot_SetRect = _lib.get("FPDFAnnot_SetRect", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetRect", "cdecl"):
+    FPDFAnnot_SetRect = _libs["pdfium"].get("FPDFAnnot_SetRect", "cdecl")
     FPDFAnnot_SetRect.argtypes = [FPDF_ANNOTATION, POINTER(FS_RECTF)]
     FPDFAnnot_SetRect.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 395
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetRect", "cdecl"):
-        continue
-    FPDFAnnot_GetRect = _lib.get("FPDFAnnot_GetRect", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetRect", "cdecl"):
+    FPDFAnnot_GetRect = _libs["pdfium"].get("FPDFAnnot_GetRect", "cdecl")
     FPDFAnnot_GetRect.argtypes = [FPDF_ANNOTATION, POINTER(FS_RECTF)]
     FPDFAnnot_GetRect.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 410
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetVertices", "cdecl"):
-        continue
-    FPDFAnnot_GetVertices = _lib.get("FPDFAnnot_GetVertices", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetVertices", "cdecl"):
+    FPDFAnnot_GetVertices = _libs["pdfium"].get("FPDFAnnot_GetVertices", "cdecl")
     FPDFAnnot_GetVertices.argtypes = [FPDF_ANNOTATION, POINTER(FS_POINTF), c_ulong]
     FPDFAnnot_GetVertices.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 422
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetInkListCount", "cdecl"):
-        continue
-    FPDFAnnot_GetInkListCount = _lib.get("FPDFAnnot_GetInkListCount", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetInkListCount", "cdecl"):
+    FPDFAnnot_GetInkListCount = _libs["pdfium"].get("FPDFAnnot_GetInkListCount", "cdecl")
     FPDFAnnot_GetInkListCount.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_GetInkListCount.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 437
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetInkListPath", "cdecl"):
-        continue
-    FPDFAnnot_GetInkListPath = _lib.get("FPDFAnnot_GetInkListPath", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetInkListPath", "cdecl"):
+    FPDFAnnot_GetInkListPath = _libs["pdfium"].get("FPDFAnnot_GetInkListPath", "cdecl")
     FPDFAnnot_GetInkListPath.argtypes = [FPDF_ANNOTATION, c_ulong, POINTER(FS_POINTF), c_ulong]
     FPDFAnnot_GetInkListPath.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 451
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetLine", "cdecl"):
-        continue
-    FPDFAnnot_GetLine = _lib.get("FPDFAnnot_GetLine", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetLine", "cdecl"):
+    FPDFAnnot_GetLine = _libs["pdfium"].get("FPDFAnnot_GetLine", "cdecl")
     FPDFAnnot_GetLine.argtypes = [FPDF_ANNOTATION, POINTER(FS_POINTF), POINTER(FS_POINTF)]
     FPDFAnnot_GetLine.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 466
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetBorder", "cdecl"):
-        continue
-    FPDFAnnot_GetBorder = _lib.get("FPDFAnnot_GetBorder", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetBorder", "cdecl"):
+    FPDFAnnot_GetBorder = _libs["pdfium"].get("FPDFAnnot_GetBorder", "cdecl")
     FPDFAnnot_GetBorder.argtypes = [FPDF_ANNOTATION, POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFAnnot_GetBorder.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 478
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_HasKey", "cdecl"):
-        continue
-    FPDFAnnot_HasKey = _lib.get("FPDFAnnot_HasKey", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_HasKey", "cdecl"):
+    FPDFAnnot_HasKey = _libs["pdfium"].get("FPDFAnnot_HasKey", "cdecl")
     FPDFAnnot_HasKey.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING]
     FPDFAnnot_HasKey.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 489
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetValueType", "cdecl"):
-        continue
-    FPDFAnnot_GetValueType = _lib.get("FPDFAnnot_GetValueType", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetValueType", "cdecl"):
+    FPDFAnnot_GetValueType = _libs["pdfium"].get("FPDFAnnot_GetValueType", "cdecl")
     FPDFAnnot_GetValueType.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING]
     FPDFAnnot_GetValueType.restype = FPDF_OBJECT_TYPE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 502
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetStringValue", "cdecl"):
-        continue
-    FPDFAnnot_SetStringValue = _lib.get("FPDFAnnot_SetStringValue", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetStringValue", "cdecl"):
+    FPDFAnnot_SetStringValue = _libs["pdfium"].get("FPDFAnnot_SetStringValue", "cdecl")
     FPDFAnnot_SetStringValue.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING, FPDF_WIDESTRING]
     FPDFAnnot_SetStringValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 522
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetStringValue", "cdecl"):
-        continue
-    FPDFAnnot_GetStringValue = _lib.get("FPDFAnnot_GetStringValue", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetStringValue", "cdecl"):
+    FPDFAnnot_GetStringValue = _libs["pdfium"].get("FPDFAnnot_GetStringValue", "cdecl")
     FPDFAnnot_GetStringValue.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetStringValue.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 539
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetNumberValue", "cdecl"):
-        continue
-    FPDFAnnot_GetNumberValue = _lib.get("FPDFAnnot_GetNumberValue", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetNumberValue", "cdecl"):
+    FPDFAnnot_GetNumberValue = _libs["pdfium"].get("FPDFAnnot_GetNumberValue", "cdecl")
     FPDFAnnot_GetNumberValue.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING, POINTER(c_float)]
     FPDFAnnot_GetNumberValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 556
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetAP", "cdecl"):
-        continue
-    FPDFAnnot_SetAP = _lib.get("FPDFAnnot_SetAP", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetAP", "cdecl"):
+    FPDFAnnot_SetAP = _libs["pdfium"].get("FPDFAnnot_SetAP", "cdecl")
     FPDFAnnot_SetAP.argtypes = [FPDF_ANNOTATION, FPDF_ANNOT_APPEARANCEMODE, FPDF_WIDESTRING]
     FPDFAnnot_SetAP.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 578
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetAP", "cdecl"):
-        continue
-    FPDFAnnot_GetAP = _lib.get("FPDFAnnot_GetAP", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetAP", "cdecl"):
+    FPDFAnnot_GetAP = _libs["pdfium"].get("FPDFAnnot_GetAP", "cdecl")
     FPDFAnnot_GetAP.argtypes = [FPDF_ANNOTATION, FPDF_ANNOT_APPEARANCEMODE, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetAP.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 594
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetLinkedAnnot", "cdecl"):
-        continue
-    FPDFAnnot_GetLinkedAnnot = _lib.get("FPDFAnnot_GetLinkedAnnot", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetLinkedAnnot", "cdecl"):
+    FPDFAnnot_GetLinkedAnnot = _libs["pdfium"].get("FPDFAnnot_GetLinkedAnnot", "cdecl")
     FPDFAnnot_GetLinkedAnnot.argtypes = [FPDF_ANNOTATION, FPDF_BYTESTRING]
     FPDFAnnot_GetLinkedAnnot.restype = FPDF_ANNOTATION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 602
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFlags", "cdecl"):
-        continue
-    FPDFAnnot_GetFlags = _lib.get("FPDFAnnot_GetFlags", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFlags", "cdecl"):
+    FPDFAnnot_GetFlags = _libs["pdfium"].get("FPDFAnnot_GetFlags", "cdecl")
     FPDFAnnot_GetFlags.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_GetFlags.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 611
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetFlags", "cdecl"):
-        continue
-    FPDFAnnot_SetFlags = _lib.get("FPDFAnnot_SetFlags", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetFlags", "cdecl"):
+    FPDFAnnot_SetFlags = _libs["pdfium"].get("FPDFAnnot_SetFlags", "cdecl")
     FPDFAnnot_SetFlags.argtypes = [FPDF_ANNOTATION, c_int]
     FPDFAnnot_SetFlags.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 623
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldFlags", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldFlags = _lib.get("FPDFAnnot_GetFormFieldFlags", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldFlags", "cdecl"):
+    FPDFAnnot_GetFormFieldFlags = _libs["pdfium"].get("FPDFAnnot_GetFormFieldFlags", "cdecl")
     FPDFAnnot_GetFormFieldFlags.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_GetFormFieldFlags.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 640
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldAtPoint", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldAtPoint = _lib.get("FPDFAnnot_GetFormFieldAtPoint", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldAtPoint", "cdecl"):
+    FPDFAnnot_GetFormFieldAtPoint = _libs["pdfium"].get("FPDFAnnot_GetFormFieldAtPoint", "cdecl")
     FPDFAnnot_GetFormFieldAtPoint.argtypes = [FPDF_FORMHANDLE, FPDF_PAGE, POINTER(FS_POINTF)]
     FPDFAnnot_GetFormFieldAtPoint.restype = FPDF_ANNOTATION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 658
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldName", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldName = _lib.get("FPDFAnnot_GetFormFieldName", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldName", "cdecl"):
+    FPDFAnnot_GetFormFieldName = _libs["pdfium"].get("FPDFAnnot_GetFormFieldName", "cdecl")
     FPDFAnnot_GetFormFieldName.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetFormFieldName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 674
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldType", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldType = _lib.get("FPDFAnnot_GetFormFieldType", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldType", "cdecl"):
+    FPDFAnnot_GetFormFieldType = _libs["pdfium"].get("FPDFAnnot_GetFormFieldType", "cdecl")
     FPDFAnnot_GetFormFieldType.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_GetFormFieldType.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 690
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldValue", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldValue = _lib.get("FPDFAnnot_GetFormFieldValue", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldValue", "cdecl"):
+    FPDFAnnot_GetFormFieldValue = _libs["pdfium"].get("FPDFAnnot_GetFormFieldValue", "cdecl")
     FPDFAnnot_GetFormFieldValue.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetFormFieldValue.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 705
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetOptionCount", "cdecl"):
-        continue
-    FPDFAnnot_GetOptionCount = _lib.get("FPDFAnnot_GetOptionCount", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetOptionCount", "cdecl"):
+    FPDFAnnot_GetOptionCount = _libs["pdfium"].get("FPDFAnnot_GetOptionCount", "cdecl")
     FPDFAnnot_GetOptionCount.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_GetOptionCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 727
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetOptionLabel", "cdecl"):
-        continue
-    FPDFAnnot_GetOptionLabel = _lib.get("FPDFAnnot_GetOptionLabel", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetOptionLabel", "cdecl"):
+    FPDFAnnot_GetOptionLabel = _libs["pdfium"].get("FPDFAnnot_GetOptionLabel", "cdecl")
     FPDFAnnot_GetOptionLabel.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, c_int, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetOptionLabel.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 745
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_IsOptionSelected", "cdecl"):
-        continue
-    FPDFAnnot_IsOptionSelected = _lib.get("FPDFAnnot_IsOptionSelected", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_IsOptionSelected", "cdecl"):
+    FPDFAnnot_IsOptionSelected = _libs["pdfium"].get("FPDFAnnot_IsOptionSelected", "cdecl")
     FPDFAnnot_IsOptionSelected.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, c_int]
     FPDFAnnot_IsOptionSelected.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 762
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFontSize", "cdecl"):
-        continue
-    FPDFAnnot_GetFontSize = _lib.get("FPDFAnnot_GetFontSize", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFontSize", "cdecl"):
+    FPDFAnnot_GetFontSize = _libs["pdfium"].get("FPDFAnnot_GetFontSize", "cdecl")
     FPDFAnnot_GetFontSize.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, POINTER(c_float)]
     FPDFAnnot_GetFontSize.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 775
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_IsChecked", "cdecl"):
-        continue
-    FPDFAnnot_IsChecked = _lib.get("FPDFAnnot_IsChecked", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_IsChecked", "cdecl"):
+    FPDFAnnot_IsChecked = _libs["pdfium"].get("FPDFAnnot_IsChecked", "cdecl")
     FPDFAnnot_IsChecked.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_IsChecked.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 790
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_SetFocusableSubtypes", "cdecl"):
-        continue
-    FPDFAnnot_SetFocusableSubtypes = _lib.get("FPDFAnnot_SetFocusableSubtypes", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_SetFocusableSubtypes", "cdecl"):
+    FPDFAnnot_SetFocusableSubtypes = _libs["pdfium"].get("FPDFAnnot_SetFocusableSubtypes", "cdecl")
     FPDFAnnot_SetFocusableSubtypes.argtypes = [FPDF_FORMHANDLE, POINTER(FPDF_ANNOTATION_SUBTYPE), c_size_t]
     FPDFAnnot_SetFocusableSubtypes.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 803
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFocusableSubtypesCount", "cdecl"):
-        continue
-    FPDFAnnot_GetFocusableSubtypesCount = _lib.get("FPDFAnnot_GetFocusableSubtypesCount", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFocusableSubtypesCount", "cdecl"):
+    FPDFAnnot_GetFocusableSubtypesCount = _libs["pdfium"].get("FPDFAnnot_GetFocusableSubtypesCount", "cdecl")
     FPDFAnnot_GetFocusableSubtypesCount.argtypes = [FPDF_FORMHANDLE]
     FPDFAnnot_GetFocusableSubtypesCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 819
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFocusableSubtypes", "cdecl"):
-        continue
-    FPDFAnnot_GetFocusableSubtypes = _lib.get("FPDFAnnot_GetFocusableSubtypes", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFocusableSubtypes", "cdecl"):
+    FPDFAnnot_GetFocusableSubtypes = _libs["pdfium"].get("FPDFAnnot_GetFocusableSubtypes", "cdecl")
     FPDFAnnot_GetFocusableSubtypes.argtypes = [FPDF_FORMHANDLE, POINTER(FPDF_ANNOTATION_SUBTYPE), c_size_t]
     FPDFAnnot_GetFocusableSubtypes.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 830
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetLink", "cdecl"):
-        continue
-    FPDFAnnot_GetLink = _lib.get("FPDFAnnot_GetLink", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetLink", "cdecl"):
+    FPDFAnnot_GetLink = _libs["pdfium"].get("FPDFAnnot_GetLink", "cdecl")
     FPDFAnnot_GetLink.argtypes = [FPDF_ANNOTATION]
     FPDFAnnot_GetLink.restype = FPDF_LINK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 844
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormControlCount", "cdecl"):
-        continue
-    FPDFAnnot_GetFormControlCount = _lib.get("FPDFAnnot_GetFormControlCount", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormControlCount", "cdecl"):
+    FPDFAnnot_GetFormControlCount = _libs["pdfium"].get("FPDFAnnot_GetFormControlCount", "cdecl")
     FPDFAnnot_GetFormControlCount.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_GetFormControlCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 858
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormControlIndex", "cdecl"):
-        continue
-    FPDFAnnot_GetFormControlIndex = _lib.get("FPDFAnnot_GetFormControlIndex", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormControlIndex", "cdecl"):
+    FPDFAnnot_GetFormControlIndex = _libs["pdfium"].get("FPDFAnnot_GetFormControlIndex", "cdecl")
     FPDFAnnot_GetFormControlIndex.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION]
     FPDFAnnot_GetFormControlIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_annot.h: 875
-for _lib in _libs.values():
-    if not _lib.has("FPDFAnnot_GetFormFieldExportValue", "cdecl"):
-        continue
-    FPDFAnnot_GetFormFieldExportValue = _lib.get("FPDFAnnot_GetFormFieldExportValue", "cdecl")
+if _libs["pdfium"].has("FPDFAnnot_GetFormFieldExportValue", "cdecl"):
+    FPDFAnnot_GetFormFieldExportValue = _libs["pdfium"].get("FPDFAnnot_GetFormFieldExportValue", "cdecl")
     FPDFAnnot_GetFormFieldExportValue.argtypes = [FPDF_FORMHANDLE, FPDF_ANNOTATION, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAnnot_GetFormFieldExportValue.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 22
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_GetAttachmentCount", "cdecl"):
-        continue
-    FPDFDoc_GetAttachmentCount = _lib.get("FPDFDoc_GetAttachmentCount", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_GetAttachmentCount", "cdecl"):
+    FPDFDoc_GetAttachmentCount = _libs["pdfium"].get("FPDFDoc_GetAttachmentCount", "cdecl")
     FPDFDoc_GetAttachmentCount.argtypes = [FPDF_DOCUMENT]
     FPDFDoc_GetAttachmentCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 35
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_AddAttachment", "cdecl"):
-        continue
-    FPDFDoc_AddAttachment = _lib.get("FPDFDoc_AddAttachment", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_AddAttachment", "cdecl"):
+    FPDFDoc_AddAttachment = _libs["pdfium"].get("FPDFDoc_AddAttachment", "cdecl")
     FPDFDoc_AddAttachment.argtypes = [FPDF_DOCUMENT, FPDF_WIDESTRING]
     FPDFDoc_AddAttachment.restype = FPDF_ATTACHMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 46
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_GetAttachment", "cdecl"):
-        continue
-    FPDFDoc_GetAttachment = _lib.get("FPDFDoc_GetAttachment", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_GetAttachment", "cdecl"):
+    FPDFDoc_GetAttachment = _libs["pdfium"].get("FPDFDoc_GetAttachment", "cdecl")
     FPDFDoc_GetAttachment.argtypes = [FPDF_DOCUMENT, c_int]
     FPDFDoc_GetAttachment.restype = FPDF_ATTACHMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 59
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_DeleteAttachment", "cdecl"):
-        continue
-    FPDFDoc_DeleteAttachment = _lib.get("FPDFDoc_DeleteAttachment", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_DeleteAttachment", "cdecl"):
+    FPDFDoc_DeleteAttachment = _libs["pdfium"].get("FPDFDoc_DeleteAttachment", "cdecl")
     FPDFDoc_DeleteAttachment.argtypes = [FPDF_DOCUMENT, c_int]
     FPDFDoc_DeleteAttachment.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 72
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_GetName", "cdecl"):
-        continue
-    FPDFAttachment_GetName = _lib.get("FPDFAttachment_GetName", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_GetName", "cdecl"):
+    FPDFAttachment_GetName = _libs["pdfium"].get("FPDFAttachment_GetName", "cdecl")
     FPDFAttachment_GetName.argtypes = [FPDF_ATTACHMENT, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAttachment_GetName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 84
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_HasKey", "cdecl"):
-        continue
-    FPDFAttachment_HasKey = _lib.get("FPDFAttachment_HasKey", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_HasKey", "cdecl"):
+    FPDFAttachment_HasKey = _libs["pdfium"].get("FPDFAttachment_HasKey", "cdecl")
     FPDFAttachment_HasKey.argtypes = [FPDF_ATTACHMENT, FPDF_BYTESTRING]
     FPDFAttachment_HasKey.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 95
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_GetValueType", "cdecl"):
-        continue
-    FPDFAttachment_GetValueType = _lib.get("FPDFAttachment_GetValueType", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_GetValueType", "cdecl"):
+    FPDFAttachment_GetValueType = _libs["pdfium"].get("FPDFAttachment_GetValueType", "cdecl")
     FPDFAttachment_GetValueType.argtypes = [FPDF_ATTACHMENT, FPDF_BYTESTRING]
     FPDFAttachment_GetValueType.restype = FPDF_OBJECT_TYPE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 108
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_SetStringValue", "cdecl"):
-        continue
-    FPDFAttachment_SetStringValue = _lib.get("FPDFAttachment_SetStringValue", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_SetStringValue", "cdecl"):
+    FPDFAttachment_SetStringValue = _libs["pdfium"].get("FPDFAttachment_SetStringValue", "cdecl")
     FPDFAttachment_SetStringValue.argtypes = [FPDF_ATTACHMENT, FPDF_BYTESTRING, FPDF_WIDESTRING]
     FPDFAttachment_SetStringValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 129
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_GetStringValue", "cdecl"):
-        continue
-    FPDFAttachment_GetStringValue = _lib.get("FPDFAttachment_GetStringValue", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_GetStringValue", "cdecl"):
+    FPDFAttachment_GetStringValue = _libs["pdfium"].get("FPDFAttachment_GetStringValue", "cdecl")
     FPDFAttachment_GetStringValue.argtypes = [FPDF_ATTACHMENT, FPDF_BYTESTRING, POINTER(FPDF_WCHAR), c_ulong]
     FPDFAttachment_GetStringValue.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 146
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_SetFile", "cdecl"):
-        continue
-    FPDFAttachment_SetFile = _lib.get("FPDFAttachment_SetFile", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_SetFile", "cdecl"):
+    FPDFAttachment_SetFile = _libs["pdfium"].get("FPDFAttachment_SetFile", "cdecl")
     FPDFAttachment_SetFile.argtypes = [FPDF_ATTACHMENT, FPDF_DOCUMENT, POINTER(None), c_ulong]
     FPDFAttachment_SetFile.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_attachment.h: 170
-for _lib in _libs.values():
-    if not _lib.has("FPDFAttachment_GetFile", "cdecl"):
-        continue
-    FPDFAttachment_GetFile = _lib.get("FPDFAttachment_GetFile", "cdecl")
+if _libs["pdfium"].has("FPDFAttachment_GetFile", "cdecl"):
+    FPDFAttachment_GetFile = _libs["pdfium"].get("FPDFAttachment_GetFile", "cdecl")
     FPDFAttachment_GetFile.argtypes = [FPDF_ATTACHMENT, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDFAttachment_GetFile.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_catalog.h: 28
-for _lib in _libs.values():
-    if not _lib.has("FPDFCatalog_IsTagged", "cdecl"):
-        continue
-    FPDFCatalog_IsTagged = _lib.get("FPDFCatalog_IsTagged", "cdecl")
+if _libs["pdfium"].has("FPDFCatalog_IsTagged", "cdecl"):
+    FPDFCatalog_IsTagged = _libs["pdfium"].get("FPDFCatalog_IsTagged", "cdecl")
     FPDFCatalog_IsTagged.argtypes = [FPDF_DOCUMENT]
     FPDFCatalog_IsTagged.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 33
 class struct__FX_FILEAVAIL(Structure):
@@ -3086,22 +2528,16 @@ FX_FILEAVAIL = struct__FX_FILEAVAIL# /home/manuel/projects/pypdfium/linux_tar/in
 FPDF_AVAIL = POINTER(None)# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 53
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 63
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_Create", "cdecl"):
-        continue
-    FPDFAvail_Create = _lib.get("FPDFAvail_Create", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_Create", "cdecl"):
+    FPDFAvail_Create = _libs["pdfium"].get("FPDFAvail_Create", "cdecl")
     FPDFAvail_Create.argtypes = [POINTER(FX_FILEAVAIL), POINTER(FPDF_FILEACCESS)]
     FPDFAvail_Create.restype = FPDF_AVAIL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 69
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_Destroy", "cdecl"):
-        continue
-    FPDFAvail_Destroy = _lib.get("FPDFAvail_Destroy", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_Destroy", "cdecl"):
+    FPDFAvail_Destroy = _libs["pdfium"].get("FPDFAvail_Destroy", "cdecl")
     FPDFAvail_Destroy.argtypes = [FPDF_AVAIL]
     FPDFAvail_Destroy.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 72
 class struct__FX_DOWNLOADHINTS(Structure):
@@ -3119,58 +2555,40 @@ struct__FX_DOWNLOADHINTS._fields_ = [
 FX_DOWNLOADHINTS = struct__FX_DOWNLOADHINTS# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 91
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 110
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_IsDocAvail", "cdecl"):
-        continue
-    FPDFAvail_IsDocAvail = _lib.get("FPDFAvail_IsDocAvail", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_IsDocAvail", "cdecl"):
+    FPDFAvail_IsDocAvail = _libs["pdfium"].get("FPDFAvail_IsDocAvail", "cdecl")
     FPDFAvail_IsDocAvail.argtypes = [FPDF_AVAIL, POINTER(FX_DOWNLOADHINTS)]
     FPDFAvail_IsDocAvail.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 125
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_GetDocument", "cdecl"):
-        continue
-    FPDFAvail_GetDocument = _lib.get("FPDFAvail_GetDocument", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_GetDocument", "cdecl"):
+    FPDFAvail_GetDocument = _libs["pdfium"].get("FPDFAvail_GetDocument", "cdecl")
     FPDFAvail_GetDocument.argtypes = [FPDF_AVAIL, FPDF_BYTESTRING]
     FPDFAvail_GetDocument.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 136
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_GetFirstPageNum", "cdecl"):
-        continue
-    FPDFAvail_GetFirstPageNum = _lib.get("FPDFAvail_GetFirstPageNum", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_GetFirstPageNum", "cdecl"):
+    FPDFAvail_GetFirstPageNum = _libs["pdfium"].get("FPDFAvail_GetFirstPageNum", "cdecl")
     FPDFAvail_GetFirstPageNum.argtypes = [FPDF_DOCUMENT]
     FPDFAvail_GetFirstPageNum.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 158
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_IsPageAvail", "cdecl"):
-        continue
-    FPDFAvail_IsPageAvail = _lib.get("FPDFAvail_IsPageAvail", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_IsPageAvail", "cdecl"):
+    FPDFAvail_IsPageAvail = _libs["pdfium"].get("FPDFAvail_IsPageAvail", "cdecl")
     FPDFAvail_IsPageAvail.argtypes = [FPDF_AVAIL, c_int, POINTER(FX_DOWNLOADHINTS)]
     FPDFAvail_IsPageAvail.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 183
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_IsFormAvail", "cdecl"):
-        continue
-    FPDFAvail_IsFormAvail = _lib.get("FPDFAvail_IsFormAvail", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_IsFormAvail", "cdecl"):
+    FPDFAvail_IsFormAvail = _libs["pdfium"].get("FPDFAvail_IsFormAvail", "cdecl")
     FPDFAvail_IsFormAvail.argtypes = [FPDF_AVAIL, POINTER(FX_DOWNLOADHINTS)]
     FPDFAvail_IsFormAvail.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_dataavail.h: 199
-for _lib in _libs.values():
-    if not _lib.has("FPDFAvail_IsLinearized", "cdecl"):
-        continue
-    FPDFAvail_IsLinearized = _lib.get("FPDFAvail_IsLinearized", "cdecl")
+if _libs["pdfium"].has("FPDFAvail_IsLinearized", "cdecl"):
+    FPDFAvail_IsLinearized = _libs["pdfium"].get("FPDFAvail_IsLinearized", "cdecl")
     FPDFAvail_IsLinearized.argtypes = [FPDF_AVAIL]
     FPDFAvail_IsLinearized.restype = c_int
-    break
 
 __time_t = c_long# /usr/include/x86_64-linux-gnu/bits/types.h: 160
 
@@ -3200,778 +2618,520 @@ struct_FPDF_IMAGEOBJ_METADATA._fields_ = [
 FPDF_IMAGEOBJ_METADATA = struct_FPDF_IMAGEOBJ_METADATA# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 91
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 100
-for _lib in _libs.values():
-    if not _lib.has("FPDF_CreateNewDocument", "cdecl"):
-        continue
-    FPDF_CreateNewDocument = _lib.get("FPDF_CreateNewDocument", "cdecl")
+if _libs["pdfium"].has("FPDF_CreateNewDocument", "cdecl"):
+    FPDF_CreateNewDocument = _libs["pdfium"].get("FPDF_CreateNewDocument", "cdecl")
     FPDF_CreateNewDocument.argtypes = []
     FPDF_CreateNewDocument.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 115
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_New", "cdecl"):
-        continue
-    FPDFPage_New = _lib.get("FPDFPage_New", "cdecl")
+if _libs["pdfium"].has("FPDFPage_New", "cdecl"):
+    FPDFPage_New = _libs["pdfium"].get("FPDFPage_New", "cdecl")
     FPDFPage_New.argtypes = [FPDF_DOCUMENT, c_int, c_double, c_double]
     FPDFPage_New.restype = FPDF_PAGE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 124
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_Delete", "cdecl"):
-        continue
-    FPDFPage_Delete = _lib.get("FPDFPage_Delete", "cdecl")
+if _libs["pdfium"].has("FPDFPage_Delete", "cdecl"):
+    FPDFPage_Delete = _libs["pdfium"].get("FPDFPage_Delete", "cdecl")
     FPDFPage_Delete.argtypes = [FPDF_DOCUMENT, c_int]
     FPDFPage_Delete.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 136
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetRotation", "cdecl"):
-        continue
-    FPDFPage_GetRotation = _lib.get("FPDFPage_GetRotation", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetRotation", "cdecl"):
+    FPDFPage_GetRotation = _libs["pdfium"].get("FPDFPage_GetRotation", "cdecl")
     FPDFPage_GetRotation.argtypes = [FPDF_PAGE]
     FPDFPage_GetRotation.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 146
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetRotation", "cdecl"):
-        continue
-    FPDFPage_SetRotation = _lib.get("FPDFPage_SetRotation", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetRotation", "cdecl"):
+    FPDFPage_SetRotation = _libs["pdfium"].get("FPDFPage_SetRotation", "cdecl")
     FPDFPage_SetRotation.argtypes = [FPDF_PAGE, c_int]
     FPDFPage_SetRotation.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 153
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_InsertObject", "cdecl"):
-        continue
-    FPDFPage_InsertObject = _lib.get("FPDFPage_InsertObject", "cdecl")
+if _libs["pdfium"].has("FPDFPage_InsertObject", "cdecl"):
+    FPDFPage_InsertObject = _libs["pdfium"].get("FPDFPage_InsertObject", "cdecl")
     FPDFPage_InsertObject.argtypes = [FPDF_PAGE, FPDF_PAGEOBJECT]
     FPDFPage_InsertObject.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 167
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_RemoveObject", "cdecl"):
-        continue
-    FPDFPage_RemoveObject = _lib.get("FPDFPage_RemoveObject", "cdecl")
+if _libs["pdfium"].has("FPDFPage_RemoveObject", "cdecl"):
+    FPDFPage_RemoveObject = _libs["pdfium"].get("FPDFPage_RemoveObject", "cdecl")
     FPDFPage_RemoveObject.argtypes = [FPDF_PAGE, FPDF_PAGEOBJECT]
     FPDFPage_RemoveObject.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 174
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_CountObjects", "cdecl"):
-        continue
-    FPDFPage_CountObjects = _lib.get("FPDFPage_CountObjects", "cdecl")
+if _libs["pdfium"].has("FPDFPage_CountObjects", "cdecl"):
+    FPDFPage_CountObjects = _libs["pdfium"].get("FPDFPage_CountObjects", "cdecl")
     FPDFPage_CountObjects.argtypes = [FPDF_PAGE]
     FPDFPage_CountObjects.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 182
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetObject", "cdecl"):
-        continue
-    FPDFPage_GetObject = _lib.get("FPDFPage_GetObject", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetObject", "cdecl"):
+    FPDFPage_GetObject = _libs["pdfium"].get("FPDFPage_GetObject", "cdecl")
     FPDFPage_GetObject.argtypes = [FPDF_PAGE, c_int]
     FPDFPage_GetObject.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 190
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_HasTransparency", "cdecl"):
-        continue
-    FPDFPage_HasTransparency = _lib.get("FPDFPage_HasTransparency", "cdecl")
+if _libs["pdfium"].has("FPDFPage_HasTransparency", "cdecl"):
+    FPDFPage_HasTransparency = _libs["pdfium"].get("FPDFPage_HasTransparency", "cdecl")
     FPDFPage_HasTransparency.argtypes = [FPDF_PAGE]
     FPDFPage_HasTransparency.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 200
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GenerateContent", "cdecl"):
-        continue
-    FPDFPage_GenerateContent = _lib.get("FPDFPage_GenerateContent", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GenerateContent", "cdecl"):
+    FPDFPage_GenerateContent = _libs["pdfium"].get("FPDFPage_GenerateContent", "cdecl")
     FPDFPage_GenerateContent.argtypes = [FPDF_PAGE]
     FPDFPage_GenerateContent.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 209
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_Destroy", "cdecl"):
-        continue
-    FPDFPageObj_Destroy = _lib.get("FPDFPageObj_Destroy", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_Destroy", "cdecl"):
+    FPDFPageObj_Destroy = _libs["pdfium"].get("FPDFPageObj_Destroy", "cdecl")
     FPDFPageObj_Destroy.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_Destroy.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 217
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_HasTransparency", "cdecl"):
-        continue
-    FPDFPageObj_HasTransparency = _lib.get("FPDFPageObj_HasTransparency", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_HasTransparency", "cdecl"):
+    FPDFPageObj_HasTransparency = _libs["pdfium"].get("FPDFPageObj_HasTransparency", "cdecl")
     FPDFPageObj_HasTransparency.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_HasTransparency.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 225
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetType", "cdecl"):
-        continue
-    FPDFPageObj_GetType = _lib.get("FPDFPageObj_GetType", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetType", "cdecl"):
+    FPDFPageObj_GetType = _libs["pdfium"].get("FPDFPageObj_GetType", "cdecl")
     FPDFPageObj_GetType.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_GetType.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 242
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_Transform", "cdecl"):
-        continue
-    FPDFPageObj_Transform = _lib.get("FPDFPageObj_Transform", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_Transform", "cdecl"):
+    FPDFPageObj_Transform = _libs["pdfium"].get("FPDFPageObj_Transform", "cdecl")
     FPDFPageObj_Transform.argtypes = [FPDF_PAGEOBJECT, c_double, c_double, c_double, c_double, c_double, c_double]
     FPDFPageObj_Transform.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 264
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_TransformAnnots", "cdecl"):
-        continue
-    FPDFPage_TransformAnnots = _lib.get("FPDFPage_TransformAnnots", "cdecl")
+if _libs["pdfium"].has("FPDFPage_TransformAnnots", "cdecl"):
+    FPDFPage_TransformAnnots = _libs["pdfium"].get("FPDFPage_TransformAnnots", "cdecl")
     FPDFPage_TransformAnnots.argtypes = [FPDF_PAGE, c_double, c_double, c_double, c_double, c_double, c_double]
     FPDFPage_TransformAnnots.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 278
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_NewImageObj", "cdecl"):
-        continue
-    FPDFPageObj_NewImageObj = _lib.get("FPDFPageObj_NewImageObj", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_NewImageObj", "cdecl"):
+    FPDFPageObj_NewImageObj = _libs["pdfium"].get("FPDFPageObj_NewImageObj", "cdecl")
     FPDFPageObj_NewImageObj.argtypes = [FPDF_DOCUMENT]
     FPDFPageObj_NewImageObj.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 288
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_CountMarks", "cdecl"):
-        continue
-    FPDFPageObj_CountMarks = _lib.get("FPDFPageObj_CountMarks", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_CountMarks", "cdecl"):
+    FPDFPageObj_CountMarks = _libs["pdfium"].get("FPDFPageObj_CountMarks", "cdecl")
     FPDFPageObj_CountMarks.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_CountMarks.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 301
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetMark", "cdecl"):
-        continue
-    FPDFPageObj_GetMark = _lib.get("FPDFPageObj_GetMark", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetMark", "cdecl"):
+    FPDFPageObj_GetMark = _libs["pdfium"].get("FPDFPageObj_GetMark", "cdecl")
     FPDFPageObj_GetMark.argtypes = [FPDF_PAGEOBJECT, c_ulong]
     FPDFPageObj_GetMark.restype = FPDF_PAGEOBJECTMARK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 314
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_AddMark", "cdecl"):
-        continue
-    FPDFPageObj_AddMark = _lib.get("FPDFPageObj_AddMark", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_AddMark", "cdecl"):
+    FPDFPageObj_AddMark = _libs["pdfium"].get("FPDFPageObj_AddMark", "cdecl")
     FPDFPageObj_AddMark.argtypes = [FPDF_PAGEOBJECT, FPDF_BYTESTRING]
     FPDFPageObj_AddMark.restype = FPDF_PAGEOBJECTMARK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 325
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_RemoveMark", "cdecl"):
-        continue
-    FPDFPageObj_RemoveMark = _lib.get("FPDFPageObj_RemoveMark", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_RemoveMark", "cdecl"):
+    FPDFPageObj_RemoveMark = _libs["pdfium"].get("FPDFPageObj_RemoveMark", "cdecl")
     FPDFPageObj_RemoveMark.argtypes = [FPDF_PAGEOBJECT, FPDF_PAGEOBJECTMARK]
     FPDFPageObj_RemoveMark.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 341
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetName", "cdecl"):
-        continue
-    FPDFPageObjMark_GetName = _lib.get("FPDFPageObjMark_GetName", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetName", "cdecl"):
+    FPDFPageObjMark_GetName = _libs["pdfium"].get("FPDFPageObjMark_GetName", "cdecl")
     FPDFPageObjMark_GetName.argtypes = [FPDF_PAGEOBJECTMARK, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDFPageObjMark_GetName.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 354
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_CountParams", "cdecl"):
-        continue
-    FPDFPageObjMark_CountParams = _lib.get("FPDFPageObjMark_CountParams", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_CountParams", "cdecl"):
+    FPDFPageObjMark_CountParams = _libs["pdfium"].get("FPDFPageObjMark_CountParams", "cdecl")
     FPDFPageObjMark_CountParams.argtypes = [FPDF_PAGEOBJECTMARK]
     FPDFPageObjMark_CountParams.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 371
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetParamKey", "cdecl"):
-        continue
-    FPDFPageObjMark_GetParamKey = _lib.get("FPDFPageObjMark_GetParamKey", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetParamKey", "cdecl"):
+    FPDFPageObjMark_GetParamKey = _libs["pdfium"].get("FPDFPageObjMark_GetParamKey", "cdecl")
     FPDFPageObjMark_GetParamKey.argtypes = [FPDF_PAGEOBJECTMARK, c_ulong, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDFPageObjMark_GetParamKey.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 385
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetParamValueType", "cdecl"):
-        continue
-    FPDFPageObjMark_GetParamValueType = _lib.get("FPDFPageObjMark_GetParamValueType", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetParamValueType", "cdecl"):
+    FPDFPageObjMark_GetParamValueType = _libs["pdfium"].get("FPDFPageObjMark_GetParamValueType", "cdecl")
     FPDFPageObjMark_GetParamValueType.argtypes = [FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING]
     FPDFPageObjMark_GetParamValueType.restype = FPDF_OBJECT_TYPE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 400
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetParamIntValue", "cdecl"):
-        continue
-    FPDFPageObjMark_GetParamIntValue = _lib.get("FPDFPageObjMark_GetParamIntValue", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetParamIntValue", "cdecl"):
+    FPDFPageObjMark_GetParamIntValue = _libs["pdfium"].get("FPDFPageObjMark_GetParamIntValue", "cdecl")
     FPDFPageObjMark_GetParamIntValue.argtypes = [FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, POINTER(c_int)]
     FPDFPageObjMark_GetParamIntValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 420
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetParamStringValue", "cdecl"):
-        continue
-    FPDFPageObjMark_GetParamStringValue = _lib.get("FPDFPageObjMark_GetParamStringValue", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetParamStringValue", "cdecl"):
+    FPDFPageObjMark_GetParamStringValue = _libs["pdfium"].get("FPDFPageObjMark_GetParamStringValue", "cdecl")
     FPDFPageObjMark_GetParamStringValue.argtypes = [FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDFPageObjMark_GetParamStringValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 441
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_GetParamBlobValue", "cdecl"):
-        continue
-    FPDFPageObjMark_GetParamBlobValue = _lib.get("FPDFPageObjMark_GetParamBlobValue", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_GetParamBlobValue", "cdecl"):
+    FPDFPageObjMark_GetParamBlobValue = _libs["pdfium"].get("FPDFPageObjMark_GetParamBlobValue", "cdecl")
     FPDFPageObjMark_GetParamBlobValue.argtypes = [FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, POINTER(None), c_ulong, POINTER(c_ulong)]
     FPDFPageObjMark_GetParamBlobValue.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 460
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_SetIntParam", "cdecl"):
-        continue
-    FPDFPageObjMark_SetIntParam = _lib.get("FPDFPageObjMark_SetIntParam", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_SetIntParam", "cdecl"):
+    FPDFPageObjMark_SetIntParam = _libs["pdfium"].get("FPDFPageObjMark_SetIntParam", "cdecl")
     FPDFPageObjMark_SetIntParam.argtypes = [FPDF_DOCUMENT, FPDF_PAGEOBJECT, FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, c_int]
     FPDFPageObjMark_SetIntParam.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 479
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_SetStringParam", "cdecl"):
-        continue
-    FPDFPageObjMark_SetStringParam = _lib.get("FPDFPageObjMark_SetStringParam", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_SetStringParam", "cdecl"):
+    FPDFPageObjMark_SetStringParam = _libs["pdfium"].get("FPDFPageObjMark_SetStringParam", "cdecl")
     FPDFPageObjMark_SetStringParam.argtypes = [FPDF_DOCUMENT, FPDF_PAGEOBJECT, FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, FPDF_BYTESTRING]
     FPDFPageObjMark_SetStringParam.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 499
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_SetBlobParam", "cdecl"):
-        continue
-    FPDFPageObjMark_SetBlobParam = _lib.get("FPDFPageObjMark_SetBlobParam", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_SetBlobParam", "cdecl"):
+    FPDFPageObjMark_SetBlobParam = _libs["pdfium"].get("FPDFPageObjMark_SetBlobParam", "cdecl")
     FPDFPageObjMark_SetBlobParam.argtypes = [FPDF_DOCUMENT, FPDF_PAGEOBJECT, FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING, POINTER(None), c_ulong]
     FPDFPageObjMark_SetBlobParam.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 515
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObjMark_RemoveParam", "cdecl"):
-        continue
-    FPDFPageObjMark_RemoveParam = _lib.get("FPDFPageObjMark_RemoveParam", "cdecl")
+if _libs["pdfium"].has("FPDFPageObjMark_RemoveParam", "cdecl"):
+    FPDFPageObjMark_RemoveParam = _libs["pdfium"].get("FPDFPageObjMark_RemoveParam", "cdecl")
     FPDFPageObjMark_RemoveParam.argtypes = [FPDF_PAGEOBJECT, FPDF_PAGEOBJECTMARK, FPDF_BYTESTRING]
     FPDFPageObjMark_RemoveParam.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 534
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_LoadJpegFile", "cdecl"):
-        continue
-    FPDFImageObj_LoadJpegFile = _lib.get("FPDFImageObj_LoadJpegFile", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_LoadJpegFile", "cdecl"):
+    FPDFImageObj_LoadJpegFile = _libs["pdfium"].get("FPDFImageObj_LoadJpegFile", "cdecl")
     FPDFImageObj_LoadJpegFile.argtypes = [POINTER(FPDF_PAGE), c_int, FPDF_PAGEOBJECT, POINTER(FPDF_FILEACCESS)]
     FPDFImageObj_LoadJpegFile.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 556
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_LoadJpegFileInline", "cdecl"):
-        continue
-    FPDFImageObj_LoadJpegFileInline = _lib.get("FPDFImageObj_LoadJpegFileInline", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_LoadJpegFileInline", "cdecl"):
+    FPDFImageObj_LoadJpegFileInline = _libs["pdfium"].get("FPDFImageObj_LoadJpegFileInline", "cdecl")
     FPDFImageObj_LoadJpegFileInline.argtypes = [POINTER(FPDF_PAGE), c_int, FPDF_PAGEOBJECT, POINTER(FPDF_FILEACCESS)]
     FPDFImageObj_LoadJpegFileInline.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 579
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetMatrix", "cdecl"):
-        continue
-    FPDFImageObj_GetMatrix = _lib.get("FPDFImageObj_GetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetMatrix", "cdecl"):
+    FPDFImageObj_GetMatrix = _libs["pdfium"].get("FPDFImageObj_GetMatrix", "cdecl")
     FPDFImageObj_GetMatrix.argtypes = [FPDF_PAGEOBJECT, POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double)]
     FPDFImageObj_GetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 604
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_SetMatrix", "cdecl"):
-        continue
-    FPDFImageObj_SetMatrix = _lib.get("FPDFImageObj_SetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_SetMatrix", "cdecl"):
+    FPDFImageObj_SetMatrix = _libs["pdfium"].get("FPDFImageObj_SetMatrix", "cdecl")
     FPDFImageObj_SetMatrix.argtypes = [FPDF_PAGEOBJECT, c_double, c_double, c_double, c_double, c_double, c_double]
     FPDFImageObj_SetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 621
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_SetBitmap", "cdecl"):
-        continue
-    FPDFImageObj_SetBitmap = _lib.get("FPDFImageObj_SetBitmap", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_SetBitmap", "cdecl"):
+    FPDFImageObj_SetBitmap = _libs["pdfium"].get("FPDFImageObj_SetBitmap", "cdecl")
     FPDFImageObj_SetBitmap.argtypes = [POINTER(FPDF_PAGE), c_int, FPDF_PAGEOBJECT, FPDF_BITMAP]
     FPDFImageObj_SetBitmap.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 636
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetBitmap", "cdecl"):
-        continue
-    FPDFImageObj_GetBitmap = _lib.get("FPDFImageObj_GetBitmap", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetBitmap", "cdecl"):
+    FPDFImageObj_GetBitmap = _libs["pdfium"].get("FPDFImageObj_GetBitmap", "cdecl")
     FPDFImageObj_GetBitmap.argtypes = [FPDF_PAGEOBJECT]
     FPDFImageObj_GetBitmap.restype = FPDF_BITMAP
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 652
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetRenderedBitmap", "cdecl"):
-        continue
-    FPDFImageObj_GetRenderedBitmap = _lib.get("FPDFImageObj_GetRenderedBitmap", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetRenderedBitmap", "cdecl"):
+    FPDFImageObj_GetRenderedBitmap = _libs["pdfium"].get("FPDFImageObj_GetRenderedBitmap", "cdecl")
     FPDFImageObj_GetRenderedBitmap.argtypes = [FPDF_DOCUMENT, FPDF_PAGE, FPDF_PAGEOBJECT]
     FPDFImageObj_GetRenderedBitmap.restype = FPDF_BITMAP
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 667
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetImageDataDecoded", "cdecl"):
-        continue
-    FPDFImageObj_GetImageDataDecoded = _lib.get("FPDFImageObj_GetImageDataDecoded", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetImageDataDecoded", "cdecl"):
+    FPDFImageObj_GetImageDataDecoded = _libs["pdfium"].get("FPDFImageObj_GetImageDataDecoded", "cdecl")
     FPDFImageObj_GetImageDataDecoded.argtypes = [FPDF_PAGEOBJECT, POINTER(None), c_ulong]
     FPDFImageObj_GetImageDataDecoded.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 681
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetImageDataRaw", "cdecl"):
-        continue
-    FPDFImageObj_GetImageDataRaw = _lib.get("FPDFImageObj_GetImageDataRaw", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetImageDataRaw", "cdecl"):
+    FPDFImageObj_GetImageDataRaw = _libs["pdfium"].get("FPDFImageObj_GetImageDataRaw", "cdecl")
     FPDFImageObj_GetImageDataRaw.argtypes = [FPDF_PAGEOBJECT, POINTER(None), c_ulong]
     FPDFImageObj_GetImageDataRaw.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 691
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetImageFilterCount", "cdecl"):
-        continue
-    FPDFImageObj_GetImageFilterCount = _lib.get("FPDFImageObj_GetImageFilterCount", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetImageFilterCount", "cdecl"):
+    FPDFImageObj_GetImageFilterCount = _libs["pdfium"].get("FPDFImageObj_GetImageFilterCount", "cdecl")
     FPDFImageObj_GetImageFilterCount.argtypes = [FPDF_PAGEOBJECT]
     FPDFImageObj_GetImageFilterCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 705
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetImageFilter", "cdecl"):
-        continue
-    FPDFImageObj_GetImageFilter = _lib.get("FPDFImageObj_GetImageFilter", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetImageFilter", "cdecl"):
+    FPDFImageObj_GetImageFilter = _libs["pdfium"].get("FPDFImageObj_GetImageFilter", "cdecl")
     FPDFImageObj_GetImageFilter.argtypes = [FPDF_PAGEOBJECT, c_int, POINTER(None), c_ulong]
     FPDFImageObj_GetImageFilter.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 722
-for _lib in _libs.values():
-    if not _lib.has("FPDFImageObj_GetImageMetadata", "cdecl"):
-        continue
-    FPDFImageObj_GetImageMetadata = _lib.get("FPDFImageObj_GetImageMetadata", "cdecl")
+if _libs["pdfium"].has("FPDFImageObj_GetImageMetadata", "cdecl"):
+    FPDFImageObj_GetImageMetadata = _libs["pdfium"].get("FPDFImageObj_GetImageMetadata", "cdecl")
     FPDFImageObj_GetImageMetadata.argtypes = [FPDF_PAGEOBJECT, FPDF_PAGE, POINTER(FPDF_IMAGEOBJ_METADATA)]
     FPDFImageObj_GetImageMetadata.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 732
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_CreateNewPath", "cdecl"):
-        continue
-    FPDFPageObj_CreateNewPath = _lib.get("FPDFPageObj_CreateNewPath", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_CreateNewPath", "cdecl"):
+    FPDFPageObj_CreateNewPath = _libs["pdfium"].get("FPDFPageObj_CreateNewPath", "cdecl")
     FPDFPageObj_CreateNewPath.argtypes = [c_float, c_float]
     FPDFPageObj_CreateNewPath.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 743
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_CreateNewRect", "cdecl"):
-        continue
-    FPDFPageObj_CreateNewRect = _lib.get("FPDFPageObj_CreateNewRect", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_CreateNewRect", "cdecl"):
+    FPDFPageObj_CreateNewRect = _libs["pdfium"].get("FPDFPageObj_CreateNewRect", "cdecl")
     FPDFPageObj_CreateNewRect.argtypes = [c_float, c_float, c_float, c_float]
     FPDFPageObj_CreateNewRect.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 758
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetBounds", "cdecl"):
-        continue
-    FPDFPageObj_GetBounds = _lib.get("FPDFPageObj_GetBounds", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetBounds", "cdecl"):
+    FPDFPageObj_GetBounds = _libs["pdfium"].get("FPDFPageObj_GetBounds", "cdecl")
     FPDFPageObj_GetBounds.argtypes = [FPDF_PAGEOBJECT, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPageObj_GetBounds.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 773
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetBlendMode", "cdecl"):
-        continue
-    FPDFPageObj_SetBlendMode = _lib.get("FPDFPageObj_SetBlendMode", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetBlendMode", "cdecl"):
+    FPDFPageObj_SetBlendMode = _libs["pdfium"].get("FPDFPageObj_SetBlendMode", "cdecl")
     FPDFPageObj_SetBlendMode.argtypes = [FPDF_PAGEOBJECT, FPDF_BYTESTRING]
     FPDFPageObj_SetBlendMode.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 786
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetStrokeColor", "cdecl"):
-        continue
-    FPDFPageObj_SetStrokeColor = _lib.get("FPDFPageObj_SetStrokeColor", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetStrokeColor", "cdecl"):
+    FPDFPageObj_SetStrokeColor = _libs["pdfium"].get("FPDFPageObj_SetStrokeColor", "cdecl")
     FPDFPageObj_SetStrokeColor.argtypes = [FPDF_PAGEOBJECT, c_uint, c_uint, c_uint, c_uint]
     FPDFPageObj_SetStrokeColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 802
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetStrokeColor", "cdecl"):
-        continue
-    FPDFPageObj_GetStrokeColor = _lib.get("FPDFPageObj_GetStrokeColor", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetStrokeColor", "cdecl"):
+    FPDFPageObj_GetStrokeColor = _libs["pdfium"].get("FPDFPageObj_GetStrokeColor", "cdecl")
     FPDFPageObj_GetStrokeColor.argtypes = [FPDF_PAGEOBJECT, POINTER(c_uint), POINTER(c_uint), POINTER(c_uint), POINTER(c_uint)]
     FPDFPageObj_GetStrokeColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 815
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetStrokeWidth", "cdecl"):
-        continue
-    FPDFPageObj_SetStrokeWidth = _lib.get("FPDFPageObj_SetStrokeWidth", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetStrokeWidth", "cdecl"):
+    FPDFPageObj_SetStrokeWidth = _libs["pdfium"].get("FPDFPageObj_SetStrokeWidth", "cdecl")
     FPDFPageObj_SetStrokeWidth.argtypes = [FPDF_PAGEOBJECT, c_float]
     FPDFPageObj_SetStrokeWidth.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 825
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetStrokeWidth", "cdecl"):
-        continue
-    FPDFPageObj_GetStrokeWidth = _lib.get("FPDFPageObj_GetStrokeWidth", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetStrokeWidth", "cdecl"):
+    FPDFPageObj_GetStrokeWidth = _libs["pdfium"].get("FPDFPageObj_GetStrokeWidth", "cdecl")
     FPDFPageObj_GetStrokeWidth.argtypes = [FPDF_PAGEOBJECT, POINTER(c_float)]
     FPDFPageObj_GetStrokeWidth.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 835
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetLineJoin", "cdecl"):
-        continue
-    FPDFPageObj_GetLineJoin = _lib.get("FPDFPageObj_GetLineJoin", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetLineJoin", "cdecl"):
+    FPDFPageObj_GetLineJoin = _libs["pdfium"].get("FPDFPageObj_GetLineJoin", "cdecl")
     FPDFPageObj_GetLineJoin.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_GetLineJoin.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 845
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetLineJoin", "cdecl"):
-        continue
-    FPDFPageObj_SetLineJoin = _lib.get("FPDFPageObj_SetLineJoin", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetLineJoin", "cdecl"):
+    FPDFPageObj_SetLineJoin = _libs["pdfium"].get("FPDFPageObj_SetLineJoin", "cdecl")
     FPDFPageObj_SetLineJoin.argtypes = [FPDF_PAGEOBJECT, c_int]
     FPDFPageObj_SetLineJoin.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 855
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetLineCap", "cdecl"):
-        continue
-    FPDFPageObj_GetLineCap = _lib.get("FPDFPageObj_GetLineCap", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetLineCap", "cdecl"):
+    FPDFPageObj_GetLineCap = _libs["pdfium"].get("FPDFPageObj_GetLineCap", "cdecl")
     FPDFPageObj_GetLineCap.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_GetLineCap.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 865
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetLineCap", "cdecl"):
-        continue
-    FPDFPageObj_SetLineCap = _lib.get("FPDFPageObj_SetLineCap", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetLineCap", "cdecl"):
+    FPDFPageObj_SetLineCap = _libs["pdfium"].get("FPDFPageObj_SetLineCap", "cdecl")
     FPDFPageObj_SetLineCap.argtypes = [FPDF_PAGEOBJECT, c_int]
     FPDFPageObj_SetLineCap.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 877
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_SetFillColor", "cdecl"):
-        continue
-    FPDFPageObj_SetFillColor = _lib.get("FPDFPageObj_SetFillColor", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_SetFillColor", "cdecl"):
+    FPDFPageObj_SetFillColor = _libs["pdfium"].get("FPDFPageObj_SetFillColor", "cdecl")
     FPDFPageObj_SetFillColor.argtypes = [FPDF_PAGEOBJECT, c_uint, c_uint, c_uint, c_uint]
     FPDFPageObj_SetFillColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 893
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetFillColor", "cdecl"):
-        continue
-    FPDFPageObj_GetFillColor = _lib.get("FPDFPageObj_GetFillColor", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetFillColor", "cdecl"):
+    FPDFPageObj_GetFillColor = _libs["pdfium"].get("FPDFPageObj_GetFillColor", "cdecl")
     FPDFPageObj_GetFillColor.argtypes = [FPDF_PAGEOBJECT, POINTER(c_uint), POINTER(c_uint), POINTER(c_uint), POINTER(c_uint)]
     FPDFPageObj_GetFillColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 907
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_CountSegments", "cdecl"):
-        continue
-    FPDFPath_CountSegments = _lib.get("FPDFPath_CountSegments", "cdecl")
+if _libs["pdfium"].has("FPDFPath_CountSegments", "cdecl"):
+    FPDFPath_CountSegments = _libs["pdfium"].get("FPDFPath_CountSegments", "cdecl")
     FPDFPath_CountSegments.argtypes = [FPDF_PAGEOBJECT]
     FPDFPath_CountSegments.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 916
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_GetPathSegment", "cdecl"):
-        continue
-    FPDFPath_GetPathSegment = _lib.get("FPDFPath_GetPathSegment", "cdecl")
+if _libs["pdfium"].has("FPDFPath_GetPathSegment", "cdecl"):
+    FPDFPath_GetPathSegment = _libs["pdfium"].get("FPDFPath_GetPathSegment", "cdecl")
     FPDFPath_GetPathSegment.argtypes = [FPDF_PAGEOBJECT, c_int]
     FPDFPath_GetPathSegment.restype = FPDF_PATHSEGMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 926
-for _lib in _libs.values():
-    if not _lib.has("FPDFPathSegment_GetPoint", "cdecl"):
-        continue
-    FPDFPathSegment_GetPoint = _lib.get("FPDFPathSegment_GetPoint", "cdecl")
+if _libs["pdfium"].has("FPDFPathSegment_GetPoint", "cdecl"):
+    FPDFPathSegment_GetPoint = _libs["pdfium"].get("FPDFPathSegment_GetPoint", "cdecl")
     FPDFPathSegment_GetPoint.argtypes = [FPDF_PATHSEGMENT, POINTER(c_float), POINTER(c_float)]
     FPDFPathSegment_GetPoint.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 934
-for _lib in _libs.values():
-    if not _lib.has("FPDFPathSegment_GetType", "cdecl"):
-        continue
-    FPDFPathSegment_GetType = _lib.get("FPDFPathSegment_GetType", "cdecl")
+if _libs["pdfium"].has("FPDFPathSegment_GetType", "cdecl"):
+    FPDFPathSegment_GetType = _libs["pdfium"].get("FPDFPathSegment_GetType", "cdecl")
     FPDFPathSegment_GetType.argtypes = [FPDF_PATHSEGMENT]
     FPDFPathSegment_GetType.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 942
-for _lib in _libs.values():
-    if not _lib.has("FPDFPathSegment_GetClose", "cdecl"):
-        continue
-    FPDFPathSegment_GetClose = _lib.get("FPDFPathSegment_GetClose", "cdecl")
+if _libs["pdfium"].has("FPDFPathSegment_GetClose", "cdecl"):
+    FPDFPathSegment_GetClose = _libs["pdfium"].get("FPDFPathSegment_GetClose", "cdecl")
     FPDFPathSegment_GetClose.argtypes = [FPDF_PATHSEGMENT]
     FPDFPathSegment_GetClose.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 954
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_MoveTo", "cdecl"):
-        continue
-    FPDFPath_MoveTo = _lib.get("FPDFPath_MoveTo", "cdecl")
+if _libs["pdfium"].has("FPDFPath_MoveTo", "cdecl"):
+    FPDFPath_MoveTo = _libs["pdfium"].get("FPDFPath_MoveTo", "cdecl")
     FPDFPath_MoveTo.argtypes = [FPDF_PAGEOBJECT, c_float, c_float]
     FPDFPath_MoveTo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 967
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_LineTo", "cdecl"):
-        continue
-    FPDFPath_LineTo = _lib.get("FPDFPath_LineTo", "cdecl")
+if _libs["pdfium"].has("FPDFPath_LineTo", "cdecl"):
+    FPDFPath_LineTo = _libs["pdfium"].get("FPDFPath_LineTo", "cdecl")
     FPDFPath_LineTo.argtypes = [FPDF_PAGEOBJECT, c_float, c_float]
     FPDFPath_LineTo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 982
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_BezierTo", "cdecl"):
-        continue
-    FPDFPath_BezierTo = _lib.get("FPDFPath_BezierTo", "cdecl")
+if _libs["pdfium"].has("FPDFPath_BezierTo", "cdecl"):
+    FPDFPath_BezierTo = _libs["pdfium"].get("FPDFPath_BezierTo", "cdecl")
     FPDFPath_BezierTo.argtypes = [FPDF_PAGEOBJECT, c_float, c_float, c_float, c_float, c_float, c_float]
     FPDFPath_BezierTo.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 998
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_Close", "cdecl"):
-        continue
-    FPDFPath_Close = _lib.get("FPDFPath_Close", "cdecl")
+if _libs["pdfium"].has("FPDFPath_Close", "cdecl"):
+    FPDFPath_Close = _libs["pdfium"].get("FPDFPath_Close", "cdecl")
     FPDFPath_Close.argtypes = [FPDF_PAGEOBJECT]
     FPDFPath_Close.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1007
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_SetDrawMode", "cdecl"):
-        continue
-    FPDFPath_SetDrawMode = _lib.get("FPDFPath_SetDrawMode", "cdecl")
+if _libs["pdfium"].has("FPDFPath_SetDrawMode", "cdecl"):
+    FPDFPath_SetDrawMode = _libs["pdfium"].get("FPDFPath_SetDrawMode", "cdecl")
     FPDFPath_SetDrawMode.argtypes = [FPDF_PAGEOBJECT, c_int, FPDF_BOOL]
     FPDFPath_SetDrawMode.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1019
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_GetDrawMode", "cdecl"):
-        continue
-    FPDFPath_GetDrawMode = _lib.get("FPDFPath_GetDrawMode", "cdecl")
+if _libs["pdfium"].has("FPDFPath_GetDrawMode", "cdecl"):
+    FPDFPath_GetDrawMode = _libs["pdfium"].get("FPDFPath_GetDrawMode", "cdecl")
     FPDFPath_GetDrawMode.argtypes = [FPDF_PAGEOBJECT, POINTER(c_int), POINTER(FPDF_BOOL)]
     FPDFPath_GetDrawMode.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1035
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_GetMatrix", "cdecl"):
-        continue
-    FPDFPath_GetMatrix = _lib.get("FPDFPath_GetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFPath_GetMatrix", "cdecl"):
+    FPDFPath_GetMatrix = _libs["pdfium"].get("FPDFPath_GetMatrix", "cdecl")
     FPDFPath_GetMatrix.argtypes = [FPDF_PAGEOBJECT, POINTER(FS_MATRIX)]
     FPDFPath_GetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1050
-for _lib in _libs.values():
-    if not _lib.has("FPDFPath_SetMatrix", "cdecl"):
-        continue
-    FPDFPath_SetMatrix = _lib.get("FPDFPath_SetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFPath_SetMatrix", "cdecl"):
+    FPDFPath_SetMatrix = _libs["pdfium"].get("FPDFPath_SetMatrix", "cdecl")
     FPDFPath_SetMatrix.argtypes = [FPDF_PAGEOBJECT, POINTER(FS_MATRIX)]
     FPDFPath_SetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1061
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_NewTextObj", "cdecl"):
-        continue
-    FPDFPageObj_NewTextObj = _lib.get("FPDFPageObj_NewTextObj", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_NewTextObj", "cdecl"):
+    FPDFPageObj_NewTextObj = _libs["pdfium"].get("FPDFPageObj_NewTextObj", "cdecl")
     FPDFPageObj_NewTextObj.argtypes = [FPDF_DOCUMENT, FPDF_BYTESTRING, c_float]
     FPDFPageObj_NewTextObj.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1072
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_SetText", "cdecl"):
-        continue
-    FPDFText_SetText = _lib.get("FPDFText_SetText", "cdecl")
+if _libs["pdfium"].has("FPDFText_SetText", "cdecl"):
+    FPDFText_SetText = _libs["pdfium"].get("FPDFText_SetText", "cdecl")
     FPDFText_SetText.argtypes = [FPDF_PAGEOBJECT, FPDF_WIDESTRING]
     FPDFText_SetText.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1087
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_LoadFont", "cdecl"):
-        continue
-    FPDFText_LoadFont = _lib.get("FPDFText_LoadFont", "cdecl")
+if _libs["pdfium"].has("FPDFText_LoadFont", "cdecl"):
+    FPDFText_LoadFont = _libs["pdfium"].get("FPDFText_LoadFont", "cdecl")
     FPDFText_LoadFont.argtypes = [FPDF_DOCUMENT, POINTER(c_uint8), c_uint32, c_int, FPDF_BOOL]
     FPDFText_LoadFont.restype = FPDF_FONT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1105
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_LoadStandardFont", "cdecl"):
-        continue
-    FPDFText_LoadStandardFont = _lib.get("FPDFText_LoadStandardFont", "cdecl")
+if _libs["pdfium"].has("FPDFText_LoadStandardFont", "cdecl"):
+    FPDFText_LoadStandardFont = _libs["pdfium"].get("FPDFText_LoadStandardFont", "cdecl")
     FPDFText_LoadStandardFont.argtypes = [FPDF_DOCUMENT, FPDF_BYTESTRING]
     FPDFText_LoadStandardFont.restype = FPDF_FONT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1119
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_GetMatrix", "cdecl"):
-        continue
-    FPDFTextObj_GetMatrix = _lib.get("FPDFTextObj_GetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_GetMatrix", "cdecl"):
+    FPDFTextObj_GetMatrix = _libs["pdfium"].get("FPDFTextObj_GetMatrix", "cdecl")
     FPDFTextObj_GetMatrix.argtypes = [FPDF_PAGEOBJECT, POINTER(FS_MATRIX)]
     FPDFTextObj_GetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1129
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_GetFontSize", "cdecl"):
-        continue
-    FPDFTextObj_GetFontSize = _lib.get("FPDFTextObj_GetFontSize", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_GetFontSize", "cdecl"):
+    FPDFTextObj_GetFontSize = _libs["pdfium"].get("FPDFTextObj_GetFontSize", "cdecl")
     FPDFTextObj_GetFontSize.argtypes = [FPDF_PAGEOBJECT]
     FPDFTextObj_GetFontSize.restype = c_float
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1134
-for _lib in _libs.values():
-    if not _lib.has("FPDFFont_Close", "cdecl"):
-        continue
-    FPDFFont_Close = _lib.get("FPDFFont_Close", "cdecl")
+if _libs["pdfium"].has("FPDFFont_Close", "cdecl"):
+    FPDFFont_Close = _libs["pdfium"].get("FPDFFont_Close", "cdecl")
     FPDFFont_Close.argtypes = [FPDF_FONT]
     FPDFFont_Close.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1144
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_CreateTextObj", "cdecl"):
-        continue
-    FPDFPageObj_CreateTextObj = _lib.get("FPDFPageObj_CreateTextObj", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_CreateTextObj", "cdecl"):
+    FPDFPageObj_CreateTextObj = _libs["pdfium"].get("FPDFPageObj_CreateTextObj", "cdecl")
     FPDFPageObj_CreateTextObj.argtypes = [FPDF_DOCUMENT, FPDF_FONT, c_float]
     FPDFPageObj_CreateTextObj.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1156
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_GetTextRenderMode", "cdecl"):
-        continue
-    FPDFTextObj_GetTextRenderMode = _lib.get("FPDFTextObj_GetTextRenderMode", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_GetTextRenderMode", "cdecl"):
+    FPDFTextObj_GetTextRenderMode = _libs["pdfium"].get("FPDFTextObj_GetTextRenderMode", "cdecl")
     FPDFTextObj_GetTextRenderMode.argtypes = [FPDF_PAGEOBJECT]
     FPDFTextObj_GetTextRenderMode.restype = FPDF_TEXT_RENDERMODE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1167
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_SetTextRenderMode", "cdecl"):
-        continue
-    FPDFTextObj_SetTextRenderMode = _lib.get("FPDFTextObj_SetTextRenderMode", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_SetTextRenderMode", "cdecl"):
+    FPDFTextObj_SetTextRenderMode = _libs["pdfium"].get("FPDFTextObj_SetTextRenderMode", "cdecl")
     FPDFTextObj_SetTextRenderMode.argtypes = [FPDF_PAGEOBJECT, FPDF_TEXT_RENDERMODE]
     FPDFTextObj_SetTextRenderMode.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1184
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_GetFontName", "cdecl"):
-        continue
-    FPDFTextObj_GetFontName = _lib.get("FPDFTextObj_GetFontName", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_GetFontName", "cdecl"):
+    FPDFTextObj_GetFontName = _libs["pdfium"].get("FPDFTextObj_GetFontName", "cdecl")
     FPDFTextObj_GetFontName.argtypes = [FPDF_PAGEOBJECT, POINTER(None), c_ulong]
     FPDFTextObj_GetFontName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1203
-for _lib in _libs.values():
-    if not _lib.has("FPDFTextObj_GetText", "cdecl"):
-        continue
-    FPDFTextObj_GetText = _lib.get("FPDFTextObj_GetText", "cdecl")
+if _libs["pdfium"].has("FPDFTextObj_GetText", "cdecl"):
+    FPDFTextObj_GetText = _libs["pdfium"].get("FPDFTextObj_GetText", "cdecl")
     FPDFTextObj_GetText.argtypes = [FPDF_PAGEOBJECT, FPDF_TEXTPAGE, POINTER(None), c_ulong]
     FPDFTextObj_GetText.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1215
-for _lib in _libs.values():
-    if not _lib.has("FPDFFormObj_CountObjects", "cdecl"):
-        continue
-    FPDFFormObj_CountObjects = _lib.get("FPDFFormObj_CountObjects", "cdecl")
+if _libs["pdfium"].has("FPDFFormObj_CountObjects", "cdecl"):
+    FPDFFormObj_CountObjects = _libs["pdfium"].get("FPDFFormObj_CountObjects", "cdecl")
     FPDFFormObj_CountObjects.argtypes = [FPDF_PAGEOBJECT]
     FPDFFormObj_CountObjects.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1225
-for _lib in _libs.values():
-    if not _lib.has("FPDFFormObj_GetObject", "cdecl"):
-        continue
-    FPDFFormObj_GetObject = _lib.get("FPDFFormObj_GetObject", "cdecl")
+if _libs["pdfium"].has("FPDFFormObj_GetObject", "cdecl"):
+    FPDFFormObj_GetObject = _libs["pdfium"].get("FPDFFormObj_GetObject", "cdecl")
     FPDFFormObj_GetObject.argtypes = [FPDF_PAGEOBJECT, c_ulong]
     FPDFFormObj_GetObject.restype = FPDF_PAGEOBJECT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_edit.h: 1240
-for _lib in _libs.values():
-    if not _lib.has("FPDFFormObj_GetMatrix", "cdecl"):
-        continue
-    FPDFFormObj_GetMatrix = _lib.get("FPDFFormObj_GetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFFormObj_GetMatrix", "cdecl"):
+    FPDFFormObj_GetMatrix = _libs["pdfium"].get("FPDFFormObj_GetMatrix", "cdecl")
     FPDFFormObj_GetMatrix.argtypes = [FPDF_PAGEOBJECT, POINTER(FS_MATRIX)]
     FPDFFormObj_GetMatrix.restype = FPDF_BOOL
-    break
 
 time_t = __time_t# /usr/include/x86_64-linux-gnu/bits/types/time_t.h: 7
 
@@ -4022,49 +3182,34 @@ struct__UNSUPPORT_INFO._fields_ = [
 UNSUPPORT_INFO = struct__UNSUPPORT_INFO# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 62
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 70
-for _lib in _libs.values():
-    if not _lib.has("FSDK_SetUnSpObjProcessHandler", "cdecl"):
-        continue
-    FSDK_SetUnSpObjProcessHandler = _lib.get("FSDK_SetUnSpObjProcessHandler", "cdecl")
+if _libs["pdfium"].has("FSDK_SetUnSpObjProcessHandler", "cdecl"):
+    FSDK_SetUnSpObjProcessHandler = _libs["pdfium"].get("FSDK_SetUnSpObjProcessHandler", "cdecl")
     FSDK_SetUnSpObjProcessHandler.argtypes = [POINTER(UNSUPPORT_INFO)]
     FSDK_SetUnSpObjProcessHandler.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 79
-for _lib in _libs.values():
-    if not _lib.has("FSDK_SetTimeFunction", "cdecl"):
-        continue
-    FSDK_SetTimeFunction = _lib.get("FSDK_SetTimeFunction", "cdecl")
+if _libs["pdfium"].has("FSDK_SetTimeFunction", "cdecl"):
+    FSDK_SetTimeFunction = _libs["pdfium"].get("FSDK_SetTimeFunction", "cdecl")
     FSDK_SetTimeFunction.argtypes = [CFUNCTYPE(UNCHECKED(time_t), )]
     FSDK_SetTimeFunction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 89
-for _lib in _libs.values():
-    if not _lib.has("FSDK_SetLocaltimeFunction", "cdecl"):
-        continue
-    FSDK_SetLocaltimeFunction = _lib.get("FSDK_SetLocaltimeFunction", "cdecl")
+if _libs["pdfium"].has("FSDK_SetLocaltimeFunction", "cdecl"):
+    FSDK_SetLocaltimeFunction = _libs["pdfium"].get("FSDK_SetLocaltimeFunction", "cdecl")
     FSDK_SetLocaltimeFunction.argtypes = [CFUNCTYPE(UNCHECKED(POINTER(struct_tm)), POINTER(time_t))]
     FSDK_SetLocaltimeFunction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ext.h: 113
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_GetPageMode", "cdecl"):
-        continue
-    FPDFDoc_GetPageMode = _lib.get("FPDFDoc_GetPageMode", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_GetPageMode", "cdecl"):
+    FPDFDoc_GetPageMode = _libs["pdfium"].get("FPDFDoc_GetPageMode", "cdecl")
     FPDFDoc_GetPageMode.argtypes = [FPDF_DOCUMENT]
     FPDFDoc_GetPageMode.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_flatten.h: 38
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_Flatten", "cdecl"):
-        continue
-    FPDFPage_Flatten = _lib.get("FPDFPage_Flatten", "cdecl")
+if _libs["pdfium"].has("FPDFPage_Flatten", "cdecl"):
+    FPDFPage_Flatten = _libs["pdfium"].get("FPDFPage_Flatten", "cdecl")
     FPDFPage_Flatten.argtypes = [FPDF_PAGE, c_int]
     FPDFPage_Flatten.restype = c_int
-    break
 
 enum_anon_6 = c_int# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 28
 
@@ -4431,76 +3576,52 @@ FWL_VKEY_Unknown = 0# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwle
 FWL_VKEYCODE = enum_anon_7# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_fwlevent.h: 201
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 22
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_GetJavaScriptActionCount", "cdecl"):
-        continue
-    FPDFDoc_GetJavaScriptActionCount = _lib.get("FPDFDoc_GetJavaScriptActionCount", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_GetJavaScriptActionCount", "cdecl"):
+    FPDFDoc_GetJavaScriptActionCount = _libs["pdfium"].get("FPDFDoc_GetJavaScriptActionCount", "cdecl")
     FPDFDoc_GetJavaScriptActionCount.argtypes = [FPDF_DOCUMENT]
     FPDFDoc_GetJavaScriptActionCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 34
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_GetJavaScriptAction", "cdecl"):
-        continue
-    FPDFDoc_GetJavaScriptAction = _lib.get("FPDFDoc_GetJavaScriptAction", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_GetJavaScriptAction", "cdecl"):
+    FPDFDoc_GetJavaScriptAction = _libs["pdfium"].get("FPDFDoc_GetJavaScriptAction", "cdecl")
     FPDFDoc_GetJavaScriptAction.argtypes = [FPDF_DOCUMENT, c_int]
     FPDFDoc_GetJavaScriptAction.restype = FPDF_JAVASCRIPT_ACTION
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 41
-for _lib in _libs.values():
-    if not _lib.has("FPDFDoc_CloseJavaScriptAction", "cdecl"):
-        continue
-    FPDFDoc_CloseJavaScriptAction = _lib.get("FPDFDoc_CloseJavaScriptAction", "cdecl")
+if _libs["pdfium"].has("FPDFDoc_CloseJavaScriptAction", "cdecl"):
+    FPDFDoc_CloseJavaScriptAction = _libs["pdfium"].get("FPDFDoc_CloseJavaScriptAction", "cdecl")
     FPDFDoc_CloseJavaScriptAction.argtypes = [FPDF_JAVASCRIPT_ACTION]
     FPDFDoc_CloseJavaScriptAction.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 54
-for _lib in _libs.values():
-    if not _lib.has("FPDFJavaScriptAction_GetName", "cdecl"):
-        continue
-    FPDFJavaScriptAction_GetName = _lib.get("FPDFJavaScriptAction_GetName", "cdecl")
+if _libs["pdfium"].has("FPDFJavaScriptAction_GetName", "cdecl"):
+    FPDFJavaScriptAction_GetName = _libs["pdfium"].get("FPDFJavaScriptAction_GetName", "cdecl")
     FPDFJavaScriptAction_GetName.argtypes = [FPDF_JAVASCRIPT_ACTION, POINTER(FPDF_WCHAR), c_ulong]
     FPDFJavaScriptAction_GetName.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_javascript.h: 69
-for _lib in _libs.values():
-    if not _lib.has("FPDFJavaScriptAction_GetScript", "cdecl"):
-        continue
-    FPDFJavaScriptAction_GetScript = _lib.get("FPDFJavaScriptAction_GetScript", "cdecl")
+if _libs["pdfium"].has("FPDFJavaScriptAction_GetScript", "cdecl"):
+    FPDFJavaScriptAction_GetScript = _libs["pdfium"].get("FPDFJavaScriptAction_GetScript", "cdecl")
     FPDFJavaScriptAction_GetScript.argtypes = [FPDF_JAVASCRIPT_ACTION, POINTER(FPDF_WCHAR), c_ulong]
     FPDFJavaScriptAction_GetScript.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 26
-for _lib in _libs.values():
-    if not _lib.has("FPDF_ImportPages", "cdecl"):
-        continue
-    FPDF_ImportPages = _lib.get("FPDF_ImportPages", "cdecl")
+if _libs["pdfium"].has("FPDF_ImportPages", "cdecl"):
+    FPDF_ImportPages = _libs["pdfium"].get("FPDF_ImportPages", "cdecl")
     FPDF_ImportPages.argtypes = [FPDF_DOCUMENT, FPDF_DOCUMENT, FPDF_BYTESTRING, c_int]
     FPDF_ImportPages.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 49
-for _lib in _libs.values():
-    if not _lib.has("FPDF_ImportNPagesToOne", "cdecl"):
-        continue
-    FPDF_ImportNPagesToOne = _lib.get("FPDF_ImportNPagesToOne", "cdecl")
+if _libs["pdfium"].has("FPDF_ImportNPagesToOne", "cdecl"):
+    FPDF_ImportNPagesToOne = _libs["pdfium"].get("FPDF_ImportNPagesToOne", "cdecl")
     FPDF_ImportNPagesToOne.argtypes = [FPDF_DOCUMENT, c_float, c_float, c_size_t, c_size_t]
     FPDF_ImportNPagesToOne.restype = FPDF_DOCUMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_ppo.h: 62
-for _lib in _libs.values():
-    if not _lib.has("FPDF_CopyViewerPreferences", "cdecl"):
-        continue
-    FPDF_CopyViewerPreferences = _lib.get("FPDF_CopyViewerPreferences", "cdecl")
+if _libs["pdfium"].has("FPDF_CopyViewerPreferences", "cdecl"):
+    FPDF_CopyViewerPreferences = _libs["pdfium"].get("FPDF_CopyViewerPreferences", "cdecl")
     FPDF_CopyViewerPreferences.argtypes = [FPDF_DOCUMENT, FPDF_DOCUMENT]
     FPDF_CopyViewerPreferences.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 25
 class struct__IFSDK_PAUSE(Structure):
@@ -4520,40 +3641,28 @@ struct__IFSDK_PAUSE._fields_ = [
 IFSDK_PAUSE = struct__IFSDK_PAUSE# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 47
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 83
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPageBitmapWithColorScheme_Start", "cdecl"):
-        continue
-    FPDF_RenderPageBitmapWithColorScheme_Start = _lib.get("FPDF_RenderPageBitmapWithColorScheme_Start", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPageBitmapWithColorScheme_Start", "cdecl"):
+    FPDF_RenderPageBitmapWithColorScheme_Start = _libs["pdfium"].get("FPDF_RenderPageBitmapWithColorScheme_Start", "cdecl")
     FPDF_RenderPageBitmapWithColorScheme_Start.argtypes = [FPDF_BITMAP, FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_int, POINTER(FPDF_COLORSCHEME), POINTER(IFSDK_PAUSE)]
     FPDF_RenderPageBitmapWithColorScheme_Start.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 121
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPageBitmap_Start", "cdecl"):
-        continue
-    FPDF_RenderPageBitmap_Start = _lib.get("FPDF_RenderPageBitmap_Start", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPageBitmap_Start", "cdecl"):
+    FPDF_RenderPageBitmap_Start = _libs["pdfium"].get("FPDF_RenderPageBitmap_Start", "cdecl")
     FPDF_RenderPageBitmap_Start.argtypes = [FPDF_BITMAP, FPDF_PAGE, c_int, c_int, c_int, c_int, c_int, c_int, POINTER(IFSDK_PAUSE)]
     FPDF_RenderPageBitmap_Start.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 142
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPage_Continue", "cdecl"):
-        continue
-    FPDF_RenderPage_Continue = _lib.get("FPDF_RenderPage_Continue", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPage_Continue", "cdecl"):
+    FPDF_RenderPage_Continue = _libs["pdfium"].get("FPDF_RenderPage_Continue", "cdecl")
     FPDF_RenderPage_Continue.argtypes = [FPDF_PAGE, POINTER(IFSDK_PAUSE)]
     FPDF_RenderPage_Continue.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_progressive.h: 153
-for _lib in _libs.values():
-    if not _lib.has("FPDF_RenderPage_Close", "cdecl"):
-        continue
-    FPDF_RenderPage_Close = _lib.get("FPDF_RenderPage_Close", "cdecl")
+if _libs["pdfium"].has("FPDF_RenderPage_Close", "cdecl"):
+    FPDF_RenderPage_Close = _libs["pdfium"].get("FPDF_RenderPage_Close", "cdecl")
     FPDF_RenderPage_Close.argtypes = [FPDF_PAGE]
     FPDF_RenderPage_Close.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 19
 class struct_FPDF_FILEWRITE_(Structure):
@@ -4571,229 +3680,154 @@ struct_FPDF_FILEWRITE_._fields_ = [
 FPDF_FILEWRITE = struct_FPDF_FILEWRITE_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 42
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 59
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SaveAsCopy", "cdecl"):
-        continue
-    FPDF_SaveAsCopy = _lib.get("FPDF_SaveAsCopy", "cdecl")
+if _libs["pdfium"].has("FPDF_SaveAsCopy", "cdecl"):
+    FPDF_SaveAsCopy = _libs["pdfium"].get("FPDF_SaveAsCopy", "cdecl")
     FPDF_SaveAsCopy.argtypes = [FPDF_DOCUMENT, POINTER(FPDF_FILEWRITE), FPDF_DWORD]
     FPDF_SaveAsCopy.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_save.h: 76
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SaveWithVersion", "cdecl"):
-        continue
-    FPDF_SaveWithVersion = _lib.get("FPDF_SaveWithVersion", "cdecl")
+if _libs["pdfium"].has("FPDF_SaveWithVersion", "cdecl"):
+    FPDF_SaveWithVersion = _libs["pdfium"].get("FPDF_SaveWithVersion", "cdecl")
     FPDF_SaveWithVersion.argtypes = [FPDF_DOCUMENT, POINTER(FPDF_FILEWRITE), FPDF_DWORD, c_int]
     FPDF_SaveWithVersion.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_searchex.h: 24
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetCharIndexFromTextIndex", "cdecl"):
-        continue
-    FPDFText_GetCharIndexFromTextIndex = _lib.get("FPDFText_GetCharIndexFromTextIndex", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetCharIndexFromTextIndex", "cdecl"):
+    FPDFText_GetCharIndexFromTextIndex = _libs["pdfium"].get("FPDFText_GetCharIndexFromTextIndex", "cdecl")
     FPDFText_GetCharIndexFromTextIndex.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetCharIndexFromTextIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_searchex.h: 33
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetTextIndexFromCharIndex", "cdecl"):
-        continue
-    FPDFText_GetTextIndexFromCharIndex = _lib.get("FPDFText_GetTextIndexFromCharIndex", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetTextIndexFromCharIndex", "cdecl"):
+    FPDFText_GetTextIndexFromCharIndex = _libs["pdfium"].get("FPDFText_GetTextIndexFromCharIndex", "cdecl")
     FPDFText_GetTextIndexFromCharIndex.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetTextIndexFromCharIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 22
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetSignatureCount", "cdecl"):
-        continue
-    FPDF_GetSignatureCount = _lib.get("FPDF_GetSignatureCount", "cdecl")
+if _libs["pdfium"].has("FPDF_GetSignatureCount", "cdecl"):
+    FPDF_GetSignatureCount = _libs["pdfium"].get("FPDF_GetSignatureCount", "cdecl")
     FPDF_GetSignatureCount.argtypes = [FPDF_DOCUMENT]
     FPDF_GetSignatureCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 35
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetSignatureObject", "cdecl"):
-        continue
-    FPDF_GetSignatureObject = _lib.get("FPDF_GetSignatureObject", "cdecl")
+if _libs["pdfium"].has("FPDF_GetSignatureObject", "cdecl"):
+    FPDF_GetSignatureObject = _libs["pdfium"].get("FPDF_GetSignatureObject", "cdecl")
     FPDF_GetSignatureObject.argtypes = [FPDF_DOCUMENT, c_int]
     FPDF_GetSignatureObject.restype = FPDF_SIGNATURE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 52
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetContents", "cdecl"):
-        continue
-    FPDFSignatureObj_GetContents = _lib.get("FPDFSignatureObj_GetContents", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetContents", "cdecl"):
+    FPDFSignatureObj_GetContents = _libs["pdfium"].get("FPDFSignatureObj_GetContents", "cdecl")
     FPDFSignatureObj_GetContents.argtypes = [FPDF_SIGNATURE, POINTER(None), c_ulong]
     FPDFSignatureObj_GetContents.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 74
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetByteRange", "cdecl"):
-        continue
-    FPDFSignatureObj_GetByteRange = _lib.get("FPDFSignatureObj_GetByteRange", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetByteRange", "cdecl"):
+    FPDFSignatureObj_GetByteRange = _libs["pdfium"].get("FPDFSignatureObj_GetByteRange", "cdecl")
     FPDFSignatureObj_GetByteRange.argtypes = [FPDF_SIGNATURE, POINTER(c_int), c_ulong]
     FPDFSignatureObj_GetByteRange.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 93
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetSubFilter", "cdecl"):
-        continue
-    FPDFSignatureObj_GetSubFilter = _lib.get("FPDFSignatureObj_GetSubFilter", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetSubFilter", "cdecl"):
+    FPDFSignatureObj_GetSubFilter = _libs["pdfium"].get("FPDFSignatureObj_GetSubFilter", "cdecl")
     FPDFSignatureObj_GetSubFilter.argtypes = [FPDF_SIGNATURE, String, c_ulong]
     FPDFSignatureObj_GetSubFilter.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 112
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetReason", "cdecl"):
-        continue
-    FPDFSignatureObj_GetReason = _lib.get("FPDFSignatureObj_GetReason", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetReason", "cdecl"):
+    FPDFSignatureObj_GetReason = _libs["pdfium"].get("FPDFSignatureObj_GetReason", "cdecl")
     FPDFSignatureObj_GetReason.argtypes = [FPDF_SIGNATURE, POINTER(None), c_ulong]
     FPDFSignatureObj_GetReason.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 136
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetTime", "cdecl"):
-        continue
-    FPDFSignatureObj_GetTime = _lib.get("FPDFSignatureObj_GetTime", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetTime", "cdecl"):
+    FPDFSignatureObj_GetTime = _libs["pdfium"].get("FPDFSignatureObj_GetTime", "cdecl")
     FPDFSignatureObj_GetTime.argtypes = [FPDF_SIGNATURE, String, c_ulong]
     FPDFSignatureObj_GetTime.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_signature.h: 149
-for _lib in _libs.values():
-    if not _lib.has("FPDFSignatureObj_GetDocMDPPermission", "cdecl"):
-        continue
-    FPDFSignatureObj_GetDocMDPPermission = _lib.get("FPDFSignatureObj_GetDocMDPPermission", "cdecl")
+if _libs["pdfium"].has("FPDFSignatureObj_GetDocMDPPermission", "cdecl"):
+    FPDFSignatureObj_GetDocMDPPermission = _libs["pdfium"].get("FPDFSignatureObj_GetDocMDPPermission", "cdecl")
     FPDFSignatureObj_GetDocMDPPermission.argtypes = [FPDF_SIGNATURE]
     FPDFSignatureObj_GetDocMDPPermission.restype = c_uint
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 25
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructTree_GetForPage", "cdecl"):
-        continue
-    FPDF_StructTree_GetForPage = _lib.get("FPDF_StructTree_GetForPage", "cdecl")
+if _libs["pdfium"].has("FPDF_StructTree_GetForPage", "cdecl"):
+    FPDF_StructTree_GetForPage = _libs["pdfium"].get("FPDF_StructTree_GetForPage", "cdecl")
     FPDF_StructTree_GetForPage.argtypes = [FPDF_PAGE]
     FPDF_StructTree_GetForPage.restype = FPDF_STRUCTTREE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 35
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructTree_Close", "cdecl"):
-        continue
-    FPDF_StructTree_Close = _lib.get("FPDF_StructTree_Close", "cdecl")
+if _libs["pdfium"].has("FPDF_StructTree_Close", "cdecl"):
+    FPDF_StructTree_Close = _libs["pdfium"].get("FPDF_StructTree_Close", "cdecl")
     FPDF_StructTree_Close.argtypes = [FPDF_STRUCTTREE]
     FPDF_StructTree_Close.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 45
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructTree_CountChildren", "cdecl"):
-        continue
-    FPDF_StructTree_CountChildren = _lib.get("FPDF_StructTree_CountChildren", "cdecl")
+if _libs["pdfium"].has("FPDF_StructTree_CountChildren", "cdecl"):
+    FPDF_StructTree_CountChildren = _libs["pdfium"].get("FPDF_StructTree_CountChildren", "cdecl")
     FPDF_StructTree_CountChildren.argtypes = [FPDF_STRUCTTREE]
     FPDF_StructTree_CountChildren.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 56
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructTree_GetChildAtIndex", "cdecl"):
-        continue
-    FPDF_StructTree_GetChildAtIndex = _lib.get("FPDF_StructTree_GetChildAtIndex", "cdecl")
+if _libs["pdfium"].has("FPDF_StructTree_GetChildAtIndex", "cdecl"):
+    FPDF_StructTree_GetChildAtIndex = _libs["pdfium"].get("FPDF_StructTree_GetChildAtIndex", "cdecl")
     FPDF_StructTree_GetChildAtIndex.argtypes = [FPDF_STRUCTTREE, c_int]
     FPDF_StructTree_GetChildAtIndex.restype = FPDF_STRUCTELEMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 74
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetAltText", "cdecl"):
-        continue
-    FPDF_StructElement_GetAltText = _lib.get("FPDF_StructElement_GetAltText", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetAltText", "cdecl"):
+    FPDF_StructElement_GetAltText = _libs["pdfium"].get("FPDF_StructElement_GetAltText", "cdecl")
     FPDF_StructElement_GetAltText.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
     FPDF_StructElement_GetAltText.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 95
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetID", "cdecl"):
-        continue
-    FPDF_StructElement_GetID = _lib.get("FPDF_StructElement_GetID", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetID", "cdecl"):
+    FPDF_StructElement_GetID = _libs["pdfium"].get("FPDF_StructElement_GetID", "cdecl")
     FPDF_StructElement_GetID.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
     FPDF_StructElement_GetID.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 116
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetLang", "cdecl"):
-        continue
-    FPDF_StructElement_GetLang = _lib.get("FPDF_StructElement_GetLang", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetLang", "cdecl"):
+    FPDF_StructElement_GetLang = _libs["pdfium"].get("FPDF_StructElement_GetLang", "cdecl")
     FPDF_StructElement_GetLang.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
     FPDF_StructElement_GetLang.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 138
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetStringAttribute", "cdecl"):
-        continue
-    FPDF_StructElement_GetStringAttribute = _lib.get("FPDF_StructElement_GetStringAttribute", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetStringAttribute", "cdecl"):
+    FPDF_StructElement_GetStringAttribute = _libs["pdfium"].get("FPDF_StructElement_GetStringAttribute", "cdecl")
     FPDF_StructElement_GetStringAttribute.argtypes = [FPDF_STRUCTELEMENT, FPDF_BYTESTRING, POINTER(None), c_ulong]
     FPDF_StructElement_GetStringAttribute.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 151
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetMarkedContentID", "cdecl"):
-        continue
-    FPDF_StructElement_GetMarkedContentID = _lib.get("FPDF_StructElement_GetMarkedContentID", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetMarkedContentID", "cdecl"):
+    FPDF_StructElement_GetMarkedContentID = _libs["pdfium"].get("FPDF_StructElement_GetMarkedContentID", "cdecl")
     FPDF_StructElement_GetMarkedContentID.argtypes = [FPDF_STRUCTELEMENT]
     FPDF_StructElement_GetMarkedContentID.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 169
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetType", "cdecl"):
-        continue
-    FPDF_StructElement_GetType = _lib.get("FPDF_StructElement_GetType", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetType", "cdecl"):
+    FPDF_StructElement_GetType = _libs["pdfium"].get("FPDF_StructElement_GetType", "cdecl")
     FPDF_StructElement_GetType.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
     FPDF_StructElement_GetType.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 189
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetTitle", "cdecl"):
-        continue
-    FPDF_StructElement_GetTitle = _lib.get("FPDF_StructElement_GetTitle", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetTitle", "cdecl"):
+    FPDF_StructElement_GetTitle = _libs["pdfium"].get("FPDF_StructElement_GetTitle", "cdecl")
     FPDF_StructElement_GetTitle.argtypes = [FPDF_STRUCTELEMENT, POINTER(None), c_ulong]
     FPDF_StructElement_GetTitle.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 200
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_CountChildren", "cdecl"):
-        continue
-    FPDF_StructElement_CountChildren = _lib.get("FPDF_StructElement_CountChildren", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_CountChildren", "cdecl"):
+    FPDF_StructElement_CountChildren = _libs["pdfium"].get("FPDF_StructElement_CountChildren", "cdecl")
     FPDF_StructElement_CountChildren.argtypes = [FPDF_STRUCTELEMENT]
     FPDF_StructElement_CountChildren.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_structtree.h: 213
-for _lib in _libs.values():
-    if not _lib.has("FPDF_StructElement_GetChildAtIndex", "cdecl"):
-        continue
-    FPDF_StructElement_GetChildAtIndex = _lib.get("FPDF_StructElement_GetChildAtIndex", "cdecl")
+if _libs["pdfium"].has("FPDF_StructElement_GetChildAtIndex", "cdecl"):
+    FPDF_StructElement_GetChildAtIndex = _libs["pdfium"].get("FPDF_StructElement_GetChildAtIndex", "cdecl")
     FPDF_StructElement_GetChildAtIndex.argtypes = [FPDF_STRUCTELEMENT, c_int]
     FPDF_StructElement_GetChildAtIndex.restype = FPDF_STRUCTELEMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 44
 class struct__FPDF_SYSFONTINFO(Structure):
@@ -4840,544 +3874,364 @@ struct_FPDF_CharsetFontMap_._fields_ = [
 FPDF_CharsetFontMap = struct_FPDF_CharsetFontMap_# /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 232
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 244
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetDefaultTTFMap", "cdecl"):
-        continue
-    FPDF_GetDefaultTTFMap = _lib.get("FPDF_GetDefaultTTFMap", "cdecl")
+if _libs["pdfium"].has("FPDF_GetDefaultTTFMap", "cdecl"):
+    FPDF_GetDefaultTTFMap = _libs["pdfium"].get("FPDF_GetDefaultTTFMap", "cdecl")
     FPDF_GetDefaultTTFMap.argtypes = []
     FPDF_GetDefaultTTFMap.restype = POINTER(FPDF_CharsetFontMap)
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 259
-for _lib in _libs.values():
-    if not _lib.has("FPDF_AddInstalledFont", "cdecl"):
-        continue
-    FPDF_AddInstalledFont = _lib.get("FPDF_AddInstalledFont", "cdecl")
+if _libs["pdfium"].has("FPDF_AddInstalledFont", "cdecl"):
+    FPDF_AddInstalledFont = _libs["pdfium"].get("FPDF_AddInstalledFont", "cdecl")
     FPDF_AddInstalledFont.argtypes = [POINTER(None), String, c_int]
     FPDF_AddInstalledFont.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 276
-for _lib in _libs.values():
-    if not _lib.has("FPDF_SetSystemFontInfo", "cdecl"):
-        continue
-    FPDF_SetSystemFontInfo = _lib.get("FPDF_SetSystemFontInfo", "cdecl")
+if _libs["pdfium"].has("FPDF_SetSystemFontInfo", "cdecl"):
+    FPDF_SetSystemFontInfo = _libs["pdfium"].get("FPDF_SetSystemFontInfo", "cdecl")
     FPDF_SetSystemFontInfo.argtypes = [POINTER(FPDF_SYSFONTINFO)]
     FPDF_SetSystemFontInfo.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 293
-for _lib in _libs.values():
-    if not _lib.has("FPDF_GetDefaultSystemFontInfo", "cdecl"):
-        continue
-    FPDF_GetDefaultSystemFontInfo = _lib.get("FPDF_GetDefaultSystemFontInfo", "cdecl")
+if _libs["pdfium"].has("FPDF_GetDefaultSystemFontInfo", "cdecl"):
+    FPDF_GetDefaultSystemFontInfo = _libs["pdfium"].get("FPDF_GetDefaultSystemFontInfo", "cdecl")
     FPDF_GetDefaultSystemFontInfo.argtypes = []
     FPDF_GetDefaultSystemFontInfo.restype = POINTER(FPDF_SYSFONTINFO)
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_sysfontinfo.h: 307
-for _lib in _libs.values():
-    if not _lib.has("FPDF_FreeDefaultSystemFontInfo", "cdecl"):
-        continue
-    FPDF_FreeDefaultSystemFontInfo = _lib.get("FPDF_FreeDefaultSystemFontInfo", "cdecl")
+if _libs["pdfium"].has("FPDF_FreeDefaultSystemFontInfo", "cdecl"):
+    FPDF_FreeDefaultSystemFontInfo = _libs["pdfium"].get("FPDF_FreeDefaultSystemFontInfo", "cdecl")
     FPDF_FreeDefaultSystemFontInfo.argtypes = [POINTER(FPDF_SYSFONTINFO)]
     FPDF_FreeDefaultSystemFontInfo.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 31
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_LoadPage", "cdecl"):
-        continue
-    FPDFText_LoadPage = _lib.get("FPDFText_LoadPage", "cdecl")
+if _libs["pdfium"].has("FPDFText_LoadPage", "cdecl"):
+    FPDFText_LoadPage = _libs["pdfium"].get("FPDFText_LoadPage", "cdecl")
     FPDFText_LoadPage.argtypes = [FPDF_PAGE]
     FPDFText_LoadPage.restype = FPDF_TEXTPAGE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 42
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_ClosePage", "cdecl"):
-        continue
-    FPDFText_ClosePage = _lib.get("FPDFText_ClosePage", "cdecl")
+if _libs["pdfium"].has("FPDFText_ClosePage", "cdecl"):
+    FPDFText_ClosePage = _libs["pdfium"].get("FPDFText_ClosePage", "cdecl")
     FPDFText_ClosePage.argtypes = [FPDF_TEXTPAGE]
     FPDFText_ClosePage.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 60
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_CountChars", "cdecl"):
-        continue
-    FPDFText_CountChars = _lib.get("FPDFText_CountChars", "cdecl")
+if _libs["pdfium"].has("FPDFText_CountChars", "cdecl"):
+    FPDFText_CountChars = _libs["pdfium"].get("FPDFText_CountChars", "cdecl")
     FPDFText_CountChars.argtypes = [FPDF_TEXTPAGE]
     FPDFText_CountChars.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 75
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetUnicode", "cdecl"):
-        continue
-    FPDFText_GetUnicode = _lib.get("FPDFText_GetUnicode", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetUnicode", "cdecl"):
+    FPDFText_GetUnicode = _libs["pdfium"].get("FPDFText_GetUnicode", "cdecl")
     FPDFText_GetUnicode.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetUnicode.restype = c_uint
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 88
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetFontSize", "cdecl"):
-        continue
-    FPDFText_GetFontSize = _lib.get("FPDFText_GetFontSize", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetFontSize", "cdecl"):
+    FPDFText_GetFontSize = _libs["pdfium"].get("FPDFText_GetFontSize", "cdecl")
     FPDFText_GetFontSize.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetFontSize.restype = c_double
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 111
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetFontInfo", "cdecl"):
-        continue
-    FPDFText_GetFontInfo = _lib.get("FPDFText_GetFontInfo", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetFontInfo", "cdecl"):
+    FPDFText_GetFontInfo = _libs["pdfium"].get("FPDFText_GetFontInfo", "cdecl")
     FPDFText_GetFontInfo.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(None), c_ulong, POINTER(c_int)]
     FPDFText_GetFontInfo.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 129
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetFontWeight", "cdecl"):
-        continue
-    FPDFText_GetFontWeight = _lib.get("FPDFText_GetFontWeight", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetFontWeight", "cdecl"):
+    FPDFText_GetFontWeight = _libs["pdfium"].get("FPDFText_GetFontWeight", "cdecl")
     FPDFText_GetFontWeight.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetFontWeight.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 146
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetTextRenderMode", "cdecl"):
-        continue
-    FPDFText_GetTextRenderMode = _lib.get("FPDFText_GetTextRenderMode", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetTextRenderMode", "cdecl"):
+    FPDFText_GetTextRenderMode = _libs["pdfium"].get("FPDFText_GetTextRenderMode", "cdecl")
     FPDFText_GetTextRenderMode.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetTextRenderMode.restype = FPDF_TEXT_RENDERMODE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 168
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetFillColor", "cdecl"):
-        continue
-    FPDFText_GetFillColor = _lib.get("FPDFText_GetFillColor", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetFillColor", "cdecl"):
+    FPDFText_GetFillColor = _libs["pdfium"].get("FPDFText_GetFillColor", "cdecl")
     FPDFText_GetFillColor.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(c_uint), POINTER(c_uint), POINTER(c_uint), POINTER(c_uint)]
     FPDFText_GetFillColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 195
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetStrokeColor", "cdecl"):
-        continue
-    FPDFText_GetStrokeColor = _lib.get("FPDFText_GetStrokeColor", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetStrokeColor", "cdecl"):
+    FPDFText_GetStrokeColor = _libs["pdfium"].get("FPDFText_GetStrokeColor", "cdecl")
     FPDFText_GetStrokeColor.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(c_uint), POINTER(c_uint), POINTER(c_uint), POINTER(c_uint)]
     FPDFText_GetStrokeColor.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 214
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetCharAngle", "cdecl"):
-        continue
-    FPDFText_GetCharAngle = _lib.get("FPDFText_GetCharAngle", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetCharAngle", "cdecl"):
+    FPDFText_GetCharAngle = _libs["pdfium"].get("FPDFText_GetCharAngle", "cdecl")
     FPDFText_GetCharAngle.argtypes = [FPDF_TEXTPAGE, c_int]
     FPDFText_GetCharAngle.restype = c_float
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 238
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetCharBox", "cdecl"):
-        continue
-    FPDFText_GetCharBox = _lib.get("FPDFText_GetCharBox", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetCharBox", "cdecl"):
+    FPDFText_GetCharBox = _libs["pdfium"].get("FPDFText_GetCharBox", "cdecl")
     FPDFText_GetCharBox.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double)]
     FPDFText_GetCharBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 263
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetLooseCharBox", "cdecl"):
-        continue
-    FPDFText_GetLooseCharBox = _lib.get("FPDFText_GetLooseCharBox", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetLooseCharBox", "cdecl"):
+    FPDFText_GetLooseCharBox = _libs["pdfium"].get("FPDFText_GetLooseCharBox", "cdecl")
     FPDFText_GetLooseCharBox.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(FS_RECTF)]
     FPDFText_GetLooseCharBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 279
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetMatrix", "cdecl"):
-        continue
-    FPDFText_GetMatrix = _lib.get("FPDFText_GetMatrix", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetMatrix", "cdecl"):
+    FPDFText_GetMatrix = _libs["pdfium"].get("FPDFText_GetMatrix", "cdecl")
     FPDFText_GetMatrix.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(FS_MATRIX)]
     FPDFText_GetMatrix.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 299
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetCharOrigin", "cdecl"):
-        continue
-    FPDFText_GetCharOrigin = _lib.get("FPDFText_GetCharOrigin", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetCharOrigin", "cdecl"):
+    FPDFText_GetCharOrigin = _libs["pdfium"].get("FPDFText_GetCharOrigin", "cdecl")
     FPDFText_GetCharOrigin.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(c_double), POINTER(c_double)]
     FPDFText_GetCharOrigin.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 322
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetCharIndexAtPos", "cdecl"):
-        continue
-    FPDFText_GetCharIndexAtPos = _lib.get("FPDFText_GetCharIndexAtPos", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetCharIndexAtPos", "cdecl"):
+    FPDFText_GetCharIndexAtPos = _libs["pdfium"].get("FPDFText_GetCharIndexAtPos", "cdecl")
     FPDFText_GetCharIndexAtPos.argtypes = [FPDF_TEXTPAGE, c_double, c_double, c_double, c_double]
     FPDFText_GetCharIndexAtPos.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 345
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetText", "cdecl"):
-        continue
-    FPDFText_GetText = _lib.get("FPDFText_GetText", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetText", "cdecl"):
+    FPDFText_GetText = _libs["pdfium"].get("FPDFText_GetText", "cdecl")
     FPDFText_GetText.argtypes = [FPDF_TEXTPAGE, c_int, c_int, POINTER(c_ushort)]
     FPDFText_GetText.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 366
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_CountRects", "cdecl"):
-        continue
-    FPDFText_CountRects = _lib.get("FPDFText_CountRects", "cdecl")
+if _libs["pdfium"].has("FPDFText_CountRects", "cdecl"):
+    FPDFText_CountRects = _libs["pdfium"].get("FPDFText_CountRects", "cdecl")
     FPDFText_CountRects.argtypes = [FPDF_TEXTPAGE, c_int, c_int]
     FPDFText_CountRects.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 392
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetRect", "cdecl"):
-        continue
-    FPDFText_GetRect = _lib.get("FPDFText_GetRect", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetRect", "cdecl"):
+    FPDFText_GetRect = _libs["pdfium"].get("FPDFText_GetRect", "cdecl")
     FPDFText_GetRect.argtypes = [FPDF_TEXTPAGE, c_int, POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double)]
     FPDFText_GetRect.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 423
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetBoundedText", "cdecl"):
-        continue
-    FPDFText_GetBoundedText = _lib.get("FPDFText_GetBoundedText", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetBoundedText", "cdecl"):
+    FPDFText_GetBoundedText = _libs["pdfium"].get("FPDFText_GetBoundedText", "cdecl")
     FPDFText_GetBoundedText.argtypes = [FPDF_TEXTPAGE, c_double, c_double, c_double, c_double, POINTER(c_ushort), c_int]
     FPDFText_GetBoundedText.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 453
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_FindStart", "cdecl"):
-        continue
-    FPDFText_FindStart = _lib.get("FPDFText_FindStart", "cdecl")
+if _libs["pdfium"].has("FPDFText_FindStart", "cdecl"):
+    FPDFText_FindStart = _libs["pdfium"].get("FPDFText_FindStart", "cdecl")
     FPDFText_FindStart.argtypes = [FPDF_TEXTPAGE, FPDF_WIDESTRING, c_ulong, c_int]
     FPDFText_FindStart.restype = FPDF_SCHHANDLE
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 466
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_FindNext", "cdecl"):
-        continue
-    FPDFText_FindNext = _lib.get("FPDFText_FindNext", "cdecl")
+if _libs["pdfium"].has("FPDFText_FindNext", "cdecl"):
+    FPDFText_FindNext = _libs["pdfium"].get("FPDFText_FindNext", "cdecl")
     FPDFText_FindNext.argtypes = [FPDF_SCHHANDLE]
     FPDFText_FindNext.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 476
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_FindPrev", "cdecl"):
-        continue
-    FPDFText_FindPrev = _lib.get("FPDFText_FindPrev", "cdecl")
+if _libs["pdfium"].has("FPDFText_FindPrev", "cdecl"):
+    FPDFText_FindPrev = _libs["pdfium"].get("FPDFText_FindPrev", "cdecl")
     FPDFText_FindPrev.argtypes = [FPDF_SCHHANDLE]
     FPDFText_FindPrev.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 486
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetSchResultIndex", "cdecl"):
-        continue
-    FPDFText_GetSchResultIndex = _lib.get("FPDFText_GetSchResultIndex", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetSchResultIndex", "cdecl"):
+    FPDFText_GetSchResultIndex = _libs["pdfium"].get("FPDFText_GetSchResultIndex", "cdecl")
     FPDFText_GetSchResultIndex.argtypes = [FPDF_SCHHANDLE]
     FPDFText_GetSchResultIndex.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 496
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_GetSchCount", "cdecl"):
-        continue
-    FPDFText_GetSchCount = _lib.get("FPDFText_GetSchCount", "cdecl")
+if _libs["pdfium"].has("FPDFText_GetSchCount", "cdecl"):
+    FPDFText_GetSchCount = _libs["pdfium"].get("FPDFText_GetSchCount", "cdecl")
     FPDFText_GetSchCount.argtypes = [FPDF_SCHHANDLE]
     FPDFText_GetSchCount.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 506
-for _lib in _libs.values():
-    if not _lib.has("FPDFText_FindClose", "cdecl"):
-        continue
-    FPDFText_FindClose = _lib.get("FPDFText_FindClose", "cdecl")
+if _libs["pdfium"].has("FPDFText_FindClose", "cdecl"):
+    FPDFText_FindClose = _libs["pdfium"].get("FPDFText_FindClose", "cdecl")
     FPDFText_FindClose.argtypes = [FPDF_SCHHANDLE]
     FPDFText_FindClose.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 528
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_LoadWebLinks", "cdecl"):
-        continue
-    FPDFLink_LoadWebLinks = _lib.get("FPDFLink_LoadWebLinks", "cdecl")
+if _libs["pdfium"].has("FPDFLink_LoadWebLinks", "cdecl"):
+    FPDFLink_LoadWebLinks = _libs["pdfium"].get("FPDFLink_LoadWebLinks", "cdecl")
     FPDFLink_LoadWebLinks.argtypes = [FPDF_TEXTPAGE]
     FPDFLink_LoadWebLinks.restype = FPDF_PAGELINK
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 537
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_CountWebLinks", "cdecl"):
-        continue
-    FPDFLink_CountWebLinks = _lib.get("FPDFLink_CountWebLinks", "cdecl")
+if _libs["pdfium"].has("FPDFLink_CountWebLinks", "cdecl"):
+    FPDFLink_CountWebLinks = _libs["pdfium"].get("FPDFLink_CountWebLinks", "cdecl")
     FPDFLink_CountWebLinks.argtypes = [FPDF_PAGELINK]
     FPDFLink_CountWebLinks.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 558
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetURL", "cdecl"):
-        continue
-    FPDFLink_GetURL = _lib.get("FPDFLink_GetURL", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetURL", "cdecl"):
+    FPDFLink_GetURL = _libs["pdfium"].get("FPDFLink_GetURL", "cdecl")
     FPDFLink_GetURL.argtypes = [FPDF_PAGELINK, c_int, POINTER(c_ushort), c_int]
     FPDFLink_GetURL.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 572
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_CountRects", "cdecl"):
-        continue
-    FPDFLink_CountRects = _lib.get("FPDFLink_CountRects", "cdecl")
+if _libs["pdfium"].has("FPDFLink_CountRects", "cdecl"):
+    FPDFLink_CountRects = _libs["pdfium"].get("FPDFLink_CountRects", "cdecl")
     FPDFLink_CountRects.argtypes = [FPDF_PAGELINK, c_int]
     FPDFLink_CountRects.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 595
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetRect", "cdecl"):
-        continue
-    FPDFLink_GetRect = _lib.get("FPDFLink_GetRect", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetRect", "cdecl"):
+    FPDFLink_GetRect = _libs["pdfium"].get("FPDFLink_GetRect", "cdecl")
     FPDFLink_GetRect.argtypes = [FPDF_PAGELINK, c_int, c_int, POINTER(c_double), POINTER(c_double), POINTER(c_double), POINTER(c_double)]
     FPDFLink_GetRect.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 618
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_GetTextRange", "cdecl"):
-        continue
-    FPDFLink_GetTextRange = _lib.get("FPDFLink_GetTextRange", "cdecl")
+if _libs["pdfium"].has("FPDFLink_GetTextRange", "cdecl"):
+    FPDFLink_GetTextRange = _libs["pdfium"].get("FPDFLink_GetTextRange", "cdecl")
     FPDFLink_GetTextRange.argtypes = [FPDF_PAGELINK, c_int, POINTER(c_int), POINTER(c_int)]
     FPDFLink_GetTextRange.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_text.h: 630
-for _lib in _libs.values():
-    if not _lib.has("FPDFLink_CloseWebLinks", "cdecl"):
-        continue
-    FPDFLink_CloseWebLinks = _lib.get("FPDFLink_CloseWebLinks", "cdecl")
+if _libs["pdfium"].has("FPDFLink_CloseWebLinks", "cdecl"):
+    FPDFLink_CloseWebLinks = _libs["pdfium"].get("FPDFLink_CloseWebLinks", "cdecl")
     FPDFLink_CloseWebLinks.argtypes = [FPDF_PAGELINK]
     FPDFLink_CloseWebLinks.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 28
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetDecodedThumbnailData", "cdecl"):
-        continue
-    FPDFPage_GetDecodedThumbnailData = _lib.get("FPDFPage_GetDecodedThumbnailData", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetDecodedThumbnailData", "cdecl"):
+    FPDFPage_GetDecodedThumbnailData = _libs["pdfium"].get("FPDFPage_GetDecodedThumbnailData", "cdecl")
     FPDFPage_GetDecodedThumbnailData.argtypes = [FPDF_PAGE, POINTER(None), c_ulong]
     FPDFPage_GetDecodedThumbnailData.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 43
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetRawThumbnailData", "cdecl"):
-        continue
-    FPDFPage_GetRawThumbnailData = _lib.get("FPDFPage_GetRawThumbnailData", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetRawThumbnailData", "cdecl"):
+    FPDFPage_GetRawThumbnailData = _libs["pdfium"].get("FPDFPage_GetRawThumbnailData", "cdecl")
     FPDFPage_GetRawThumbnailData.argtypes = [FPDF_PAGE, POINTER(None), c_ulong]
     FPDFPage_GetRawThumbnailData.restype = c_ulong
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_thumbnail.h: 53
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetThumbnailAsBitmap", "cdecl"):
-        continue
-    FPDFPage_GetThumbnailAsBitmap = _lib.get("FPDFPage_GetThumbnailAsBitmap", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetThumbnailAsBitmap", "cdecl"):
+    FPDFPage_GetThumbnailAsBitmap = _libs["pdfium"].get("FPDFPage_GetThumbnailAsBitmap", "cdecl")
     FPDFPage_GetThumbnailAsBitmap.argtypes = [FPDF_PAGE]
     FPDFPage_GetThumbnailAsBitmap.restype = FPDF_BITMAP
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 26
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetMediaBox", "cdecl"):
-        continue
-    FPDFPage_SetMediaBox = _lib.get("FPDFPage_SetMediaBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetMediaBox", "cdecl"):
+    FPDFPage_SetMediaBox = _libs["pdfium"].get("FPDFPage_SetMediaBox", "cdecl")
     FPDFPage_SetMediaBox.argtypes = [FPDF_PAGE, c_float, c_float, c_float, c_float]
     FPDFPage_SetMediaBox.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 41
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetCropBox", "cdecl"):
-        continue
-    FPDFPage_SetCropBox = _lib.get("FPDFPage_SetCropBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetCropBox", "cdecl"):
+    FPDFPage_SetCropBox = _libs["pdfium"].get("FPDFPage_SetCropBox", "cdecl")
     FPDFPage_SetCropBox.argtypes = [FPDF_PAGE, c_float, c_float, c_float, c_float]
     FPDFPage_SetCropBox.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 56
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetBleedBox", "cdecl"):
-        continue
-    FPDFPage_SetBleedBox = _lib.get("FPDFPage_SetBleedBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetBleedBox", "cdecl"):
+    FPDFPage_SetBleedBox = _libs["pdfium"].get("FPDFPage_SetBleedBox", "cdecl")
     FPDFPage_SetBleedBox.argtypes = [FPDF_PAGE, c_float, c_float, c_float, c_float]
     FPDFPage_SetBleedBox.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 71
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetTrimBox", "cdecl"):
-        continue
-    FPDFPage_SetTrimBox = _lib.get("FPDFPage_SetTrimBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetTrimBox", "cdecl"):
+    FPDFPage_SetTrimBox = _libs["pdfium"].get("FPDFPage_SetTrimBox", "cdecl")
     FPDFPage_SetTrimBox.argtypes = [FPDF_PAGE, c_float, c_float, c_float, c_float]
     FPDFPage_SetTrimBox.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 86
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_SetArtBox", "cdecl"):
-        continue
-    FPDFPage_SetArtBox = _lib.get("FPDFPage_SetArtBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_SetArtBox", "cdecl"):
+    FPDFPage_SetArtBox = _libs["pdfium"].get("FPDFPage_SetArtBox", "cdecl")
     FPDFPage_SetArtBox.argtypes = [FPDF_PAGE, c_float, c_float, c_float, c_float]
     FPDFPage_SetArtBox.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 104
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetMediaBox", "cdecl"):
-        continue
-    FPDFPage_GetMediaBox = _lib.get("FPDFPage_GetMediaBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetMediaBox", "cdecl"):
+    FPDFPage_GetMediaBox = _libs["pdfium"].get("FPDFPage_GetMediaBox", "cdecl")
     FPDFPage_GetMediaBox.argtypes = [FPDF_PAGE, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPage_GetMediaBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 122
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetCropBox", "cdecl"):
-        continue
-    FPDFPage_GetCropBox = _lib.get("FPDFPage_GetCropBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetCropBox", "cdecl"):
+    FPDFPage_GetCropBox = _libs["pdfium"].get("FPDFPage_GetCropBox", "cdecl")
     FPDFPage_GetCropBox.argtypes = [FPDF_PAGE, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPage_GetCropBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 140
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetBleedBox", "cdecl"):
-        continue
-    FPDFPage_GetBleedBox = _lib.get("FPDFPage_GetBleedBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetBleedBox", "cdecl"):
+    FPDFPage_GetBleedBox = _libs["pdfium"].get("FPDFPage_GetBleedBox", "cdecl")
     FPDFPage_GetBleedBox.argtypes = [FPDF_PAGE, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPage_GetBleedBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 158
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetTrimBox", "cdecl"):
-        continue
-    FPDFPage_GetTrimBox = _lib.get("FPDFPage_GetTrimBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetTrimBox", "cdecl"):
+    FPDFPage_GetTrimBox = _libs["pdfium"].get("FPDFPage_GetTrimBox", "cdecl")
     FPDFPage_GetTrimBox.argtypes = [FPDF_PAGE, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPage_GetTrimBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 176
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_GetArtBox", "cdecl"):
-        continue
-    FPDFPage_GetArtBox = _lib.get("FPDFPage_GetArtBox", "cdecl")
+if _libs["pdfium"].has("FPDFPage_GetArtBox", "cdecl"):
+    FPDFPage_GetArtBox = _libs["pdfium"].get("FPDFPage_GetArtBox", "cdecl")
     FPDFPage_GetArtBox.argtypes = [FPDF_PAGE, POINTER(c_float), POINTER(c_float), POINTER(c_float), POINTER(c_float)]
     FPDFPage_GetArtBox.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 198
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_TransFormWithClip", "cdecl"):
-        continue
-    FPDFPage_TransFormWithClip = _lib.get("FPDFPage_TransFormWithClip", "cdecl")
+if _libs["pdfium"].has("FPDFPage_TransFormWithClip", "cdecl"):
+    FPDFPage_TransFormWithClip = _libs["pdfium"].get("FPDFPage_TransFormWithClip", "cdecl")
     FPDFPage_TransFormWithClip.argtypes = [FPDF_PAGE, POINTER(FS_MATRIX), POINTER(FS_RECTF)]
     FPDFPage_TransFormWithClip.restype = FPDF_BOOL
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 215
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_TransformClipPath", "cdecl"):
-        continue
-    FPDFPageObj_TransformClipPath = _lib.get("FPDFPageObj_TransformClipPath", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_TransformClipPath", "cdecl"):
+    FPDFPageObj_TransformClipPath = _libs["pdfium"].get("FPDFPageObj_TransformClipPath", "cdecl")
     FPDFPageObj_TransformClipPath.argtypes = [FPDF_PAGEOBJECT, c_double, c_double, c_double, c_double, c_double, c_double]
     FPDFPageObj_TransformClipPath.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 233
-for _lib in _libs.values():
-    if not _lib.has("FPDFPageObj_GetClipPath", "cdecl"):
-        continue
-    FPDFPageObj_GetClipPath = _lib.get("FPDFPageObj_GetClipPath", "cdecl")
+if _libs["pdfium"].has("FPDFPageObj_GetClipPath", "cdecl"):
+    FPDFPageObj_GetClipPath = _libs["pdfium"].get("FPDFPageObj_GetClipPath", "cdecl")
     FPDFPageObj_GetClipPath.argtypes = [FPDF_PAGEOBJECT]
     FPDFPageObj_GetClipPath.restype = FPDF_CLIPPATH
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 241
-for _lib in _libs.values():
-    if not _lib.has("FPDFClipPath_CountPaths", "cdecl"):
-        continue
-    FPDFClipPath_CountPaths = _lib.get("FPDFClipPath_CountPaths", "cdecl")
+if _libs["pdfium"].has("FPDFClipPath_CountPaths", "cdecl"):
+    FPDFClipPath_CountPaths = _libs["pdfium"].get("FPDFClipPath_CountPaths", "cdecl")
     FPDFClipPath_CountPaths.argtypes = [FPDF_CLIPPATH]
     FPDFClipPath_CountPaths.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 251
-for _lib in _libs.values():
-    if not _lib.has("FPDFClipPath_CountPathSegments", "cdecl"):
-        continue
-    FPDFClipPath_CountPathSegments = _lib.get("FPDFClipPath_CountPathSegments", "cdecl")
+if _libs["pdfium"].has("FPDFClipPath_CountPathSegments", "cdecl"):
+    FPDFClipPath_CountPathSegments = _libs["pdfium"].get("FPDFClipPath_CountPathSegments", "cdecl")
     FPDFClipPath_CountPathSegments.argtypes = [FPDF_CLIPPATH, c_int]
     FPDFClipPath_CountPathSegments.restype = c_int
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 264
-for _lib in _libs.values():
-    if not _lib.has("FPDFClipPath_GetPathSegment", "cdecl"):
-        continue
-    FPDFClipPath_GetPathSegment = _lib.get("FPDFClipPath_GetPathSegment", "cdecl")
+if _libs["pdfium"].has("FPDFClipPath_GetPathSegment", "cdecl"):
+    FPDFClipPath_GetPathSegment = _libs["pdfium"].get("FPDFClipPath_GetPathSegment", "cdecl")
     FPDFClipPath_GetPathSegment.argtypes = [FPDF_CLIPPATH, c_int, c_int]
     FPDFClipPath_GetPathSegment.restype = FPDF_PATHSEGMENT
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 279
-for _lib in _libs.values():
-    if not _lib.has("FPDF_CreateClipPath", "cdecl"):
-        continue
-    FPDF_CreateClipPath = _lib.get("FPDF_CreateClipPath", "cdecl")
+if _libs["pdfium"].has("FPDF_CreateClipPath", "cdecl"):
+    FPDF_CreateClipPath = _libs["pdfium"].get("FPDF_CreateClipPath", "cdecl")
     FPDF_CreateClipPath.argtypes = [c_float, c_float, c_float, c_float]
     FPDF_CreateClipPath.restype = FPDF_CLIPPATH
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 289
-for _lib in _libs.values():
-    if not _lib.has("FPDF_DestroyClipPath", "cdecl"):
-        continue
-    FPDF_DestroyClipPath = _lib.get("FPDF_DestroyClipPath", "cdecl")
+if _libs["pdfium"].has("FPDF_DestroyClipPath", "cdecl"):
+    FPDF_DestroyClipPath = _libs["pdfium"].get("FPDF_DestroyClipPath", "cdecl")
     FPDF_DestroyClipPath.argtypes = [FPDF_CLIPPATH]
     FPDF_DestroyClipPath.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdf_transformpage.h: 301
-for _lib in _libs.values():
-    if not _lib.has("FPDFPage_InsertClipPath", "cdecl"):
-        continue
-    FPDFPage_InsertClipPath = _lib.get("FPDFPage_InsertClipPath", "cdecl")
+if _libs["pdfium"].has("FPDFPage_InsertClipPath", "cdecl"):
+    FPDFPage_InsertClipPath = _libs["pdfium"].get("FPDFPage_InsertClipPath", "cdecl")
     FPDFPage_InsertClipPath.argtypes = [FPDF_PAGE, FPDF_CLIPPATH]
     FPDFPage_InsertClipPath.restype = None
-    break
 
 # /home/manuel/projects/pypdfium/linux_tar/include/fpdfview.h: 28
 try:
