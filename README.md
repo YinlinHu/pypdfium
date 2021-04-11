@@ -72,3 +72,5 @@ if __name__ == "__main__":
 * Windows 32bit support
 
 * macOS ARM support
+
+* Upstream request to build binaries for more platforms, e. g. 32bit Linux (i386, armhf)
