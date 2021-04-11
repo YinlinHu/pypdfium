@@ -73,4 +73,4 @@ if __name__ == "__main__":
 
 * macOS ARM support
 
-* Upstream request to build binaries for more platforms, e. g. 32bit Linux (i386, armhf) or 64bit ARM Linux
+* Upstream request to build binaries for more platforms, e. g. 32bit Linux (i386, armhf) or 64bit Linux ARM
