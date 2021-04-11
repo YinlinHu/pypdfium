@@ -94,7 +94,8 @@ for platform, file in files.items():
     
     # macOS and Windows binary extraction
     elif platform == 'darwin':
-        # NOTE maybe we need to rename to pdfium.dylib for macOS too?
+        # NOTE we renamed the macOS binary to pdfium.dylib (previously, it was libpdfium.dylib)
+        # This was done because we noticed that naming the binary libpdfium does not work on Linux
         tar_flatextract('lib/libpdfium.dylib')
         os.rename(f'{thisdirectory}pypdfium/libpdfium.dylib', f'{thisdirectory}pypdfium/pdfium.dylib')
     elif platform == 'win32':
