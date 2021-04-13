@@ -37,9 +37,9 @@ print(base_url)
 
 # files to download
 filenames = {
-    'linux' : 'pdfium-linux.tgz',
+    'linux'  : 'pdfium-linux.tgz',
     'darwin' : 'pdfium-darwin-x64.tgz',
-    'win32' : 'pdfium-windows-x64.zip',
+    'win32'  : 'pdfium-windows-x64.zip',
 }
 
 # initialise dict to fill in the paths of the downloaded files
@@ -107,7 +107,7 @@ for platform, file in files.items():
 
 
 # finally, call ctypesgen
-ctypesgen_command = f"ctypesgen -lpdfium -L {thisdirectory}linux_tar/lib {thisdirectory}linux_tar/include/*.h -o pypdfium/pypdfium.py"
+ctypesgen_command = f"ctypesgen --library=pdfium -L {thisdirectory}linux_tar/lib {thisdirectory}linux_tar/include/*.h -o pypdfium/pypdfium.py"
 print(ctypesgen_command)
 subprocess.run([ctypesgen_command], shell=True)
 
