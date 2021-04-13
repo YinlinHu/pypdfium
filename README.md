@@ -2,7 +2,7 @@
 
 A simple, ctypes-based Python 3 binding to [PDFium](https://opensource.google/projects/pdfium), the lean and liberal-licensed PDF rendering library developed by Google for the Chromium project.
 
-This is an effort to take over development for PyPDFium, which became unmaintained in mid 2020.
+This is an effort to take over development for the original PyPDFium which became unmaintained in mid 2020.
 
 ## Quick start
 
