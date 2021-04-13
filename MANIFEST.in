@@ -1,4 +1,4 @@
 include pypdfium/pdfium_version.txt
 include pypdfium/pdfium
+include pypdfium/pdfium.dylib
 include pypdfium/pdfium.dll
-include pypdfium/libpdfium.dylib
