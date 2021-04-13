@@ -1,10 +1,10 @@
-# PyPDFium reboot
+# PyPDFium Reboot
 
 A simple, ctypes-based Python 3 binding to [PDFium](https://opensource.google/projects/pdfium), the lean and liberal-licensed PDF rendering library developed by Google for the Chromium project.
 
 If you are looking for a Python PDF rendering library that is not covered by a strong-copyleft license, this is it.
 
-PyPDFium reboot is an effort to take over development for the original program which became unmaintained in mid 2020. A new PyPI package is work in progress.
+PyPDFium Reboot is an effort to take over development for the original program which became unmaintained in mid 2020. A new PyPI package is work in progress.
 
 ## Quick start
 
