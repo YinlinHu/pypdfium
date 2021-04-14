@@ -21,7 +21,7 @@ setup(
       long_description=readme(),
       long_description_content_type="text/markdown",
       keywords='Python PDFium',
-      url='https://github.com/mara004/pypdfium',
+      url='https://github.com/YinlinHu/pypdfium',
       author='Yinlin Hu',
       author_email='huyinlin@gmail.com',
       maintainer='Manuel Geißer',
