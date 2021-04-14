@@ -22,6 +22,8 @@ setup(
       long_description_content_type="text/markdown",
       keywords='Python PDFium',
       url='https://github.com/mara004/pypdfium',
+      author='Yinlin Hu',
+      author_email='huyinlin@gmail.com',
       maintainer='Manuel Geißer',
       maintainer_email='geisserml@gmail.com',
       license='MIT License',
