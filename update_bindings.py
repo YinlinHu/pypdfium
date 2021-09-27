@@ -37,7 +37,7 @@ print(base_url)
 
 # files to download
 filenames = {
-    'linux'  : 'pdfium-linux.tgz',
+    'linux'  : 'pdfium-linux-x64.tgz',
     'darwin' : 'pdfium-darwin-x64.tgz',
     'win32'  : 'pdfium-windows-x64.zip',
 }
