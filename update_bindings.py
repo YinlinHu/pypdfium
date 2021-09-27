@@ -39,7 +39,7 @@ print(base_url)
 filenames = {
     'linux'  : 'pdfium-linux-x64.tgz',
     'darwin' : 'pdfium-darwin-x64.tgz',
-    'win32'  : 'pdfium-windows-x64.zip',
+    'win32'  : 'pdfium-windows-x64.tgz',
 }
 
 # initialise dict to fill in the paths of the downloaded files
@@ -80,10 +80,7 @@ def zip_flatextract(member):
 for platform, file in files.items():
     
     # open the archive
-    if file.endswith('.tgz'):
-        archive = tarfile.open(file, 'r')
-    elif file.endswith('.zip'):
-        archive = zipfile.ZipFile(file, 'r')
+    archive = tarfile.open(file, 'r')
     
     # Linux binary extraction
     # special because we will be using the Linux archive for ctypesgen
@@ -99,7 +96,7 @@ for platform, file in files.items():
         tar_flatextract('lib/libpdfium.dylib')
         os.rename(f'{thisdirectory}pypdfium/libpdfium.dylib', f'{thisdirectory}pypdfium/pdfium.dylib')
     elif platform == 'win32':
-        zip_flatextract('x64/bin/pdfium.dll')
+        tar_flatextract('x64/bin/pdfium.dll')
     
     # close the archive and delete it
     archive.close()
