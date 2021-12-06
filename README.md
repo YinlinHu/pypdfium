@@ -1,3 +1,7 @@
+# Important
+
+PyPDFium is no longer maintained. Please use [PyPDFium2](https://github.com/pypdfium2-team/pypdfium2) instead.
+
 # PyPDFium
 
 A simple python wrapper for [PDFium](https://opensource.google/projects/pdfium).
